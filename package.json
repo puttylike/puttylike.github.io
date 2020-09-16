@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://puttylike.github.io"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
