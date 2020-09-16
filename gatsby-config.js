@@ -21,7 +21,7 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://puttylike.github.io", // my blog url
+    siteUrl: `https://puttylike.github.io`, // my blog url
     title: `Pandas Eating Lots`, // title data 관리용
   },
   plugins: [
