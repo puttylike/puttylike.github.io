@@ -6,6 +6,13 @@
 <p><span style="color:blue">교수님께서 강의 내용은 교수님의 유튜브 NeoWizard 랑 비슷하다고 하셨으니 혼자 공부하는 게 좋은 사람은 거기로 가서 보면 될 듯 싶다. 아니면, 교수님이 집필해 올해 출간됐다는 책 <u> '머신러닝을 위한 파이썬 한 조각'</u>을 참고해도 될 듯 하다.</span></p>
 <p>cf. 교수님이 운영하는 유튜브 : <a href="https://www.youtube.com/channel/UCZAkjFAaT9gZk-nol6EIX9w">https://www.youtube.com/channel/UCZAkjFAaT9gZk-nol6EIX9w</a></p>
 <hr>
+<h3>수강생으로의 Tip (?)</h3>
+<ol>
+<li>타자 빠르면 좋을 듯. 직접 코딩할 시간 주시지만 뭐 빠르면 좋지 뭐.</li>
+<li>수업 40분, 쉬는시간 20분 반복해서 괜찮다. 그래서 따라갈 수 있다.</li>
+<li>배운 내용으로만 문제 푸는 것을 의도하셨으니 그렇게 해보자.</li>
+</ol>
+<hr>
 <h3>1일차</h3>
 <p>금일 강의는 OT+개요+파이썬 기초 순으로 진행됐다. 이 강의는 python + jupyter notebook을 쓴다. 뭘 쓰든 상관없다. 다만, 파이썬 api가 디폴트인 게 많을 뿐... ㅎㅎ</p>
 <ol>
@@ -18,4 +25,28 @@
 <li>더하기에는 평균이, 곱하기에는 원본에 대한 변환이 들어간다는 insight...! 오늘 가장 충격 받은 부분. 내가 대학교 전공이 수학과여서 더 그랬나 싶다.</li>
 <li>어지간한 data는 이미지여서, 행렬을 쓴다. 이유도 이제 알다니, 역시 과거의 나는 헛배웠다. 이렇게 명확하게 개념을 재정립할 수 있어서 이 강의가 너무 마음에 든다.</li>
 <li>파이썬에서 중요한 데이터 타입은, <b>list</b> / string / tuple / dictionary / set</li>
+<li>리스트 : 연속적 데이터 저장용 []. 값은 인덱스로 가져온다.
+<u>파이썬에서는 마이너스인덱스를 지원하여 리스트의 마지막부터 역순으로 값을 참조할 수 있음</u>
+cf. 리스트 안에 리스트는... C의 구조체 기능 덕분에 가능하다고.</li>
+<li>리스트에서 제일 중요한 건 슬라이싱 : 기능이다.</li>
+<li>그리고 append! 특정 수치에 대한 값 변화를 계속 append해서 그래프 만들 때 유용하다는 insight...!</li>
+<li>튜플 : readonly list ()
+cf. 파이썬 함수 return 값 > tuple</li>
+</ol>
+<p>{} >>> 딕셔너리, set</p>
+<ol start="3">
+<li>딕셔너리 {} : hash map 스타일의 데이터 타입</li>
+<li>key:value => 하나의 행 >> 인덱스 말고 키 값을 사용한다.</li>
+<li>입력한 순서대로 데이터가 들어가는 것이 아님. 순서대로 append 해보자.</li>
+<li>json 가공 최소화할 때 형태의 유사성 때문에 dictionary를 쓰자는 insight...!</li>
+<li>set : 데이터가 중복되지 않는다</li>
+<li>라벨링 시 차집합 매우 유용하다는 insight...!</li>
+<li>string : '' 또는 ""를 사용해서 생성하는데, 단, 시작과 끝이 같아야 함.</li>
+<li>split() / strip() 함수는 머신러닝 코드에서 문자열 데이터 전처리(pre-process) 하기 위해 자주 사용
+cf. split의 return 값은 리스트.</li>
+<li>glob 라이브러리 : 데이터 처리 시 사용
+cf. import glob
+glob.glob('<em>') => 현재 디렉토리의 모든 파일 목록 리스트로 리턴
+glob.glob('train/</em>') => train 디렉토리의 파일 목록을 리스트로 리턴
+*** 디렉토리 경로 다 나옴</li>
 </ol></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-1일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-503dd2f16f8da3f265ba.js"],"app":["/app-74cefe857728be04038b.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-c4acae227fcd55ed3da9.js"],"component---src-pages-about-js":["/component---src-pages-about-js-2f53e3b649e3cd6beac4.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-28b2e631ee373bb7cc7d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-248162a19a18cfad038a.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-8318d5cefdd698cf7169.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-e482780193a6907b7994.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-38e1d295c4dc8954b936.js"]};/*]]>*/</script><script src="/polyfill-503dd2f16f8da3f265ba.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-38e1d295c4dc8954b936.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-9b95b55bdb16f6144d54.js" async=""></script><script src="/app-74cefe857728be04038b.js" async=""></script><script src="/framework-a7bb16c5c6afeed647b2.js" async=""></script><script src="/webpack-runtime-a6ed62cfaf3ce7b1618c.js" async=""></script></body></html>
