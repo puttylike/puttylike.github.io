@@ -1,0 +1,340 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><meta name="generator" content="Gatsby 2.24.60"/><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-a6ed62cfaf3ce7b1618c.js"/><link as="script" rel="preload" href="/framework-a7bb16c5c6afeed647b2.js"/><link as="script" rel="preload" href="/app-74cefe857728be04038b.js"/><link as="script" rel="preload" href="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-9b95b55bdb16f6144d54.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-38e1d295c4dc8954b936.js"/><link as="fetch" rel="preload" href="/page-data\마크다운-문법-사용-정리\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1si8awd">.css-1si8awd{margin:0 auto;max-width:700px;padding:2.88rem;padding-top:2.16rem;}</style><div class="css-1si8awd"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div><h1>마크다운 문법 사용 정리 (업데이트 중)</h1><div><p>추석 기념으로 정리하는 마크다운 (Markdown) 문법을 찾아 봤다. 블로그에 글 쓸 때 나도 모르게 html 태그를 쓰게 된다. 이 방식에 익숙해 지려고 정리해 보는 글이다.</p>
+<hr>
+<p>(1) 마크다운 언어란<br>
+작성 예정</p>
+<hr>
+<p>(2) 마크다운 문법 정리  </p>
+<ol>
+<li>Heading Tags</li>
+</ol>
+<pre><code># H1  
+## H2  
+### H3  
+#### H4  
+##### H5  
+###### H6
+</code></pre>
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<hr>
+<ol start="2">
+<li>Headers  </li>
+</ol>
+<pre><code>This is an H1
+=============
+
+This is an H2
+-------------
+</code></pre>
+<h1>This is an H1</h1>
+<h2>This is an H2</h2>
+<hr>
+<ol start="3">
+<li>Horizontal Rule<br>
+=나 - 외에 다양한 기호로도 만들 수 있다.</li>
+</ol>
+<pre><code>* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<ol start="4">
+<li>목차</li>
+</ol>
+<p>[TOC]</p>
+<ol start="13">
+<li>글씨체</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>사용 방법</th>
+<th align="center">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>**굵게**</code></td>
+<td align="center"><strong>굵게</strong></td>
+</tr>
+<tr>
+<td><code>__굵게2__</code></td>
+<td align="center"><strong>굵게2</strong></td>
+</tr>
+<tr>
+<td><code>*기울임*</code></td>
+<td align="center"><em>기울임</em></td>
+</tr>
+<tr>
+<td><code>_기울임2_</code></td>
+<td align="center"><em>기울임2</em></td>
+</tr>
+<tr>
+<td><code>~~취소선~~</code></td>
+<td align="center"><del>취소선</del></td>
+</tr>
+</tbody>
+</table>
+<p>*this text is surrounded by literal asterisks*</p>
+<hr>
+<ol start="5">
+<li>줄바꿈<br>
+뒤에 space bar 2번 '  ' 하면 줄 바꿈이 되면서, 다음 줄에 표시된다.</li>
+</ol>
+<hr>
+<ol start="6">
+<li>문단<br>
+문장 사이에 하나 이상의 빈 줄을 사용하면 문단을 나눌 수 있다.</li>
+</ol>
+<pre><code>Markdown language is easy to use.
+
+
+
+Github blog is useful.
+</code></pre>
+<p>Markdown language is easy to use.</p>
+<p>Github blog is useful.</p>
+<hr>
+<ol start="7">
+<li>Numbered List (Ordered List)  </li>
+</ol>
+<p>앞의 숫자는 순서대로 늘어난다.</p>
+<pre><code>1. apple
+2. orange
+3. banana
+1986. test
+1986\. text
+</code></pre>
+<ol>
+<li>apple</li>
+<li>orange</li>
+<li>banana</li>
+<li>test
+1986. text</li>
+</ol>
+<p>순번으로 간주되지 않게 하려면 숫자 뒤에 <code>\</code>를 쓰면 된다.  </p>
+<hr>
+<ol start="8">
+<li>Bullet List (Unordered List)</li>
+</ol>
+<p> <code>*</code> 대신 + 나 - 를 써도 상관 없다.  </p>
+<pre><code>+ apple
+* orange
+- banana
+</code></pre>
+<ul>
+<li>apple</li>
+<li>orange</li>
+<li>banana</li>
+</ul>
+<p>계층을 나누고 싶다면 tab으로 구분하면 된다.</p>
+<pre><code>* fruits
+  * apple (tab 1)
+      * green (tab 3)
+          * red (tab 5)
+  * orange
+  * banana
+* animals
+  * cat
+  * dog
+</code></pre>
+<ul>
+<li>
+<p>fruits</p>
+<ul>
+<li>
+<p>apple (tab 1)</p>
+<ul>
+<li>
+<p>green (tab 3)</p>
+<ul>
+<li>red (tab 5)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>orange</li>
+<li>banana</li>
+</ul>
+</li>
+<li>
+<p>animals</p>
+<ul>
+<li>cat</li>
+<li>dog</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ol start="9">
+<li>코드 블럭  </li>
+</ol>
+<p><code>`&#x3C;blink>` tags.</code></p>
+<p><code>&#x3C;blink></code> tags.</p>
+<p>리스트 안에 코드를 쓰려면 space bar 8회 또는 tab 2회를 써야 한다.</p>
+<ol>
+<li>
+<p>삽입하는 코드의 모든 줄 앞에 스페이스 4개 또는 Tab 1번 씩 넣는다.</p>
+<pre><code> def sum(a, b):
+     return a+b
+</code></pre>
+<p>def sum(a, b):
+return a+b</p>
+</li>
+<li>
+<p>언어지정 코드블록 - 신택스 하이라이트 기능 지원  </p>
+<pre><code class="language-{.java}">class Test {
+ public static void main(String[] args) {
+     System.out.pritnln("hello world");
+ }
+}
+</code></pre>
+</li>
+</ol>
+<pre><code class="language-{.java}">class Test {
+    public static void main(String[] args) {
+        System.out.pritnln("hello world");
+    }
+}
+</code></pre>
+<p>지원하는 언어들:  </p>
+<ul>
+<li>Bash (bash)</li>
+<li>C# (cs)</li>
+<li>C++ (cpp)</li>
+<li>CSS (css)</li>
+<li>Diff (diff)</li>
+<li>HTML, XML (html)</li>
+<li>HTTP (http)</li>
+<li>Ini (ini)</li>
+<li>JSON (json)</li>
+<li>Java (java)</li>
+<li>JavaScript (javascript)</li>
+<li>PHP (php)</li>
+<li>Perl (perl)</li>
+<li>Python (python)</li>
+<li>Ruby (ruby)</li>
+<li>SQL (sql)</li>
+<li>no-highlighting  </li>
+</ul>
+<pre><code class="language-{.no-highlight}">class Test {
+    public static void main(String[] args) {
+        System.out.pritnln("hello world");
+    }
+}
+</code></pre>
+<hr>
+<p> 인용 blockquote</p>
+<p>앞에 <code>></code> 를 사용한다</p>
+<blockquote>
+<p>앞에 >를 사용한다.</p>
+</blockquote>
+<p>앞에 <code>></code>를 여러 개 쓸 수도 있다.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>앞에 >>>를 3 번 쓰면 이렇게 된다.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<p> 링크와 이미지  </p>
+<ol>
+<li>
+<p><a href="%EB%A7%81%ED%81%AC%EC%A3%BC%EC%86%8C">링크문구</a> 형태로 작성하면 된다.</p>
+<pre><code>An [example](https://avatars2.githubusercontent.com/u/52619972?s=60&#x26;v=4).
+</code></pre>
+</li>
+</ol>
+<p>An <a href="https://avatars2.githubusercontent.com/u/52619972?s=60&#x26;v=4">example</a>.</p>
+<p>This is an <a href="http://example.com/" title="With a Title">example link</a>.</p>
+<ol start="2">
+<li>reference style</li>
+</ol>
+<pre><code>I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/        "Google"
+[2]: http://search.yahoo.com/  "Yahoo Search"
+[3]: http://search.msn.com/    "MSN Search"
+</code></pre>
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
+<ol start="3">
+<li>같은 서버 내 에 있다면, 상대 경로를 써도 된다.</li>
+</ol>
+<pre><code>See my [About](/about/) page for details.   
+</code></pre>
+<p>See my <a href="/about/">About</a> page for details.   </p>
+<ol start="4">
+<li>이미지 링크 앞에는 ! 를 붙여야 한다.</li>
+</ol>
+<pre><code>![github profile icon](https://avatars2.githubusercontent.com/u/52619972?s=60&#x26;v=4)
+</code></pre>
+<p><img src="https://avatars2.githubusercontent.com/u/52619972?s=60&#x26;v=4" alt="github profile icon"></p>
+<hr>
+<p> 표 그리기</p>
+<table>
+<thead>
+<tr>
+<th>Header One</th>
+<th align="left">Header Two</th>
+<th align="center">Header Three</th>
+<th align="right">Header Four</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td align="left">Left</td>
+<td align="center">Center</td>
+<td align="right">Right</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Heading Tags</th>
+<th align="right">Heading Tags</th>
+<th align="right">Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heading Tags</td>
+<td align="right">### H3</td>
+<td align="right">right-aligned</td>
+</tr>
+<tr>
+<td>Heading Tags</td>
+<td align="right">#### H4</td>
+<td align="right">right-aligned</td>
+</tr>
+<tr>
+<td>Heading Tags</td>
+<td align="right">##### H5</td>
+<td align="right">right-aligned</td>
+</tr>
+<tr>
+<td>Heading Tags</td>
+<td align="right">###### H6</td>
+<td align="right">right-aligned</td>
+</tr>
+</tbody>
+</table></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/마크다운-문법-사용-정리/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-503dd2f16f8da3f265ba.js"],"app":["/app-74cefe857728be04038b.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-c4acae227fcd55ed3da9.js"],"component---src-pages-about-js":["/component---src-pages-about-js-2f53e3b649e3cd6beac4.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-28b2e631ee373bb7cc7d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-248162a19a18cfad038a.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-8318d5cefdd698cf7169.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-e482780193a6907b7994.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-38e1d295c4dc8954b936.js"]};/*]]>*/</script><script src="/polyfill-503dd2f16f8da3f265ba.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-38e1d295c4dc8954b936.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-9b95b55bdb16f6144d54.js" async=""></script><script src="/app-74cefe857728be04038b.js" async=""></script><script src="/framework-a7bb16c5c6afeed647b2.js" async=""></script><script src="/webpack-runtime-a6ed62cfaf3ce7b1618c.js" async=""></script></body></html>
