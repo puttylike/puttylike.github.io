@@ -1,0 +1,423 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><meta name="generator" content="Gatsby 2.24.67"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-814f78ff63e91269f71f.js"/><link as="script" rel="preload" href="/framework-445649399d1c721f1f74.js"/><link as="script" rel="preload" href="/app-e191869724175727e96b.js"/><link as="script" rel="preload" href="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-47265e2d566a01dceb45.js"/><link as="fetch" rel="preload" href="/page-data\파이썬-크롤링-등-기초\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnylx cLzLJj"><div class="sc-bdnylx hpeNWW"><nav class="sc-bdnylx jMsIAs table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnylx kCXbaB">TABLE OF CONTENTS</h3><div class="sc-bdnylx dBxSrG"><ul>
+<li><a href="/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%AC%EB%A1%A4%EB%A7%81-%EB%93%B1-%EA%B8%B0%EC%B4%88/#1%EC%9D%BC%EC%B0%A8---%EC%9B%B9%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91-%EC%9A%94%EC%95%BD">1일차 - 웹스크래핑 요약</a></li>
+<li><a href="/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%AC%EB%A1%A4%EB%A7%81-%EB%93%B1-%EA%B8%B0%EC%B4%88/#2%EC%9D%BC%EC%B0%A8---%EC%9B%B9%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91-%EA%B2%B0%EA%B3%BC%EB%AC%BC-%EB%A9%94%EC%9D%BC%EB%A1%9C-%EB%B3%B4%EB%82%B4%EA%B8%B0">2일차 - 웹스크래핑 결과물 메일로 보내기</a></li>
+<li><a href="/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%AC%EB%A1%A4%EB%A7%81-%EB%93%B1-%EA%B8%B0%EC%B4%88/#3%EC%9D%BC%EC%B0%A8---%EC%B9%B4%ED%86%A1-%EB%8C%80%ED%99%94-%EC%A0%84%EC%B2%98%EB%A6%AC%ED%95%98%EC%97%AC-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0">3일차 - 카톡 대화 전처리하여 워드클라우드 만들기</a></li>
+</ul></div></nav></div><header class="sc-bdnylx ccVqSj"><div font-size="24px" class="sc-bdnylx hakpkg">파이썬 웹스크래핑 (크롤링) 기초 등 정리</div><div color="#bbb" class="sc-bdnylx frTTFu"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnylx ccVqSj css-8xh4e7"><p>3년 만에 하는 크롤링이다. 개인 프로젝트 하려면 결국 데이터가 있어야 하니까, 그래서... 파이썬 크롤링을 다시 찾게 되었다. 마침 스파르타 코딩에서 추석 기념으로 관련 강의를 조금 수강할 기회가 있어서 신청했다. ㅎㅎ</p>
+<p>파이썬 3.x 버전대 기준으로 작성되었다.</p>
+<hr>
+<h2 id="1일차---웹스크래핑-요약" style="position:relative;">1일차 - 웹스크래핑 요약<a href="#1%EC%9D%BC%EC%B0%A8---%EC%9B%B9%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91-%EC%9A%94%EC%95%BD" aria-label="1일차   웹스크래핑 요약 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li>pycharm : 문서 작업에 용이하다.</li>
+</ul>
+<p>cf. dload 패키지 : url 넣으면 이미지 다운받게 하는 패키지</p>
+<pre><code class="language-python">import dload
+dload.save("https://spartacodingclub.kr/static/css/images/ogimage.png")
+</code></pre>
+<p>(1) 크롬 버전을 확인 : chrome > 설정 > chrome 정보  </p>
+<p>(2) 크롬웹드라이버 설치<br>
+<a href="https://chromedriver.storage.googleapis.com/index.html?path=85.0.4183.87/">https://chromedriver.storage.googleapis.com/index.html?path=85.0.4183.87/</a><br>
+(chromedriver_win32.zip 선택 > chromedriver.exe 다운로드)  </p>
+<p>(2) selenium 패키지 설치 : 브라우저 자동 제어</p>
+<ul>
+<li>크롬 85.x 버전으로 설치한다.</li>
+<li>셀레니움 기본 코드  </li>
+</ul>
+<pre><code class="language-python">from selenium import webdriver
+driver = webdriver.Chrome('chromedriver')
+driver.get("http://www.naver.com")
+</code></pre>
+<p>(3) BeautifulSoup 라이브러리 설치 : 브라우저가 보고 있는 것 중에서 내가 원하는 것을 솎아내는 작업<br>
+=> 이를 위해 bs4 패키지를 설치한다.</p>
+<ul>
+<li>BS4 기본 코드  </li>
+</ul>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome('chromedriver') # 웹드라이버 파일의 경로
+driver.get("https://search.daum.net/search?w=img&#x26;nil_search=btn&#x26;DA=NTB&#x26;enc=utf8&#x26;q=%EC%95%84%EC%9D%B4%EC%9C%A0")
+time.sleep(5) # 5초 동안 페이지 로딩 기다리기
+
+req = driver.page_source
+# HTML을 BeautifulSoup이라는 라이브러리를 활용해 검색하기 용이한 상태로 만듦  
+# soup이라는 변수에 "파싱 용이해진 html"이 담긴 상태가 됨  
+# 이제 코딩을 통해 필요한 부분을 추출하면 된다.  
+soup = BeautifulSoup(req, 'html.parser')
+driver.quit() # 끝나면 닫아주기
+</code></pre>
+<p>(4) 이미지 다운로드 예제</p>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+from selenium import webdriver
+import dload
+import time
+
+driver = webdriver.Chrome('chromedriver') # 웹드라이버 파일의 경로
+driver.get("https://search.daum.net/search?w=img&#x26;nil_search=btn&#x26;DA=NTB&#x26;enc=utf8&#x26;q=%EC%88%98%EC%A7%80")
+time.sleep(5) # 5초 동안 페이지 로딩 기다리기
+
+req = driver.page_source
+# HTML을 BeautifulSoup이라는 라이브러리를 활용해 검색하기 용이한 상태로 만듦
+# soup이라는 변수에 "파싱 용이해진 html"이 담긴 상태가 됨
+# 이제 코딩을 통해 필요한 부분을 추출하면 된다.
+soup = BeautifulSoup(req, 'html.parser')
+
+###################################
+# 이제 여기에 코딩을 하면 됩니다!
+# print(soup)
+# 검사 > copy > copy_selector
+# #imgList > div:nth-child(1) > a > img
+# thumbnails = soup.select("#imgList > div:nth-child(1) > a > img")['src']
+# print(thumbnails) # 이래서 src로 주소만 갖고 오게 위에서 수정
+# [&#x3C;img alt="미쓰에이 수지 프로필" class="thumb_img" data-size="178x200" data-src="https://search4.kakaocdn.net/argon/0x200_85_hr/8yJGBmOuV4o" onerror="SF.errorImage(this)" src="https://search4.kakaocdn.net/argon/0x200_85_hr/8yJGBmOuV4o" style="width:181px;height:200px;margin-left:-1px"/>]
+##################################
+
+# 여러 개의 이미지 가져오기
+thumbnails = soup.select("#imgList > div > a > img")
+
+i = 1
+for thumbnail in thumbnails:
+    img = thumbnail["src"]
+    # print(src)
+    dload.save(img,f'imgs_homework/{i}.jpg')
+    # dload.save(img, 'img/1.jpg')
+    i += 1
+
+
+driver.quit() # 끝나면 닫아주기
+</code></pre>
+<hr>
+<h2 id="2일차---웹스크래핑-결과물-메일로-보내기" style="position:relative;">2일차 - 웹스크래핑 결과물 메일로 보내기<a href="#2%EC%9D%BC%EC%B0%A8---%EC%9B%B9%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91-%EA%B2%B0%EA%B3%BC%EB%AC%BC-%EB%A9%94%EC%9D%BC%EB%A1%9C-%EB%B3%B4%EB%82%B4%EA%B8%B0" aria-label="2일차   웹스크래핑 결과물 메일로 보내기 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>(1) openpypl 패키지 설치 : 엑셀 저장하기 관련</p>
+<ul>
+<li>엑셀 저장 기본 코드</li>
+</ul>
+<pre><code class="language-python">from openpyxl import Workbook
+wb = Workbook()
+ws1 = wb.active
+ws1.title = "articles" # sheet명
+ws1.append(["제목", "링크", "신문사"])
+
+for article in articles:
+    title = article.select_one('dl > dt > a').text # 기사제목
+    url = article.select_one('dl > dt > a')['href'] # url
+    # 언론사명 copy_selector : #sp_nws1 > dl > dd.txt_inline > span._sp_each_source
+    comp = article.select_one('span._sp_each_source').text.split(' ')[0].replace('언론사','')
+    # print(title, url, comp)
+    ws1.append([title, url, comp])
+
+driver.quit()
+wb.save(filename='articles.xlsx') # 저장할파일명
+</code></pre>
+<p>(2) smtplib 패키지 설치 : 메일 서버 접속 패키지이다.<br>
+보내는 사람 주소는 gmail이어야 한다.  </p>
+<ul>
+<li>파일 첨부해서 이메일 보내기 기본 코드</li>
+</ul>
+<pre><code class="language-python"># 메일 서버 접속 패키지 smtplib
+# 보내는 사람 이메일 주소를 gmail 사용해야 함
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email import encoders
+
+
+# 보내는 사람 정보
+me = "    @gmail.com" # gmail만
+my_password = "          "
+
+# 로그인하기
+s = smtplib.SMTP_SSL('smtp.gmail.com')
+s.login(me, my_password)
+
+# 받는 사람 정보
+you = "      @naver.com"  # 아무_도메인
+
+# 메일 기본 정보 설정
+msg = MIMEMultipart('alternative')
+msg['Subject'] = "기사 리스트" # 제목
+msg['From'] = me
+msg['To'] = you
+
+# 메일 내용 쓰기
+content = "크롤링 결과물 입니다." # 메일 내용
+part2 = MIMEText(content, 'plain')
+msg.attach(part2)
+
+# 파일 첨부 하기
+# 여러 파일을 첨부할 때에는 똑같은 코드를 반복하여 각각 msg.attach()
+part = MIMEBase('application', "octet-stream")
+with open("   .xlsx", 'rb') as file:
+    part.set_payload(file.read())
+encoders.encode_base64(part)
+part.add_header('Content-Disposition', "attachment", filename="   .xlsx") # 보낼 파일명
+msg.attach(part)
+
+# 메일 보내고 서버 끄기
+s.sendmail(me, you, msg.as_string())
+
+s.quit()
+</code></pre>
+<p>(3) 참고 사항 - 에러 발생 관련</p>
+<ul>
+<li>계정 정보 오류
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  <a href="https://support.google.com/mail/?p=BadCredentials">https://support.google.com/mail/?p=BadCredentials</a> h9sm3842285pfc.28 - gsmtp')</li>
+<li>보안 수준이 낮은 앱의 액세스: 허용 변경 필요
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  <a href="https://support.google.com/mail/?p=BadCredentials">https://support.google.com/mail/?p=BadCredentials</a> r3sm4185855pfh.88 - gsmtp')
+=> <a href="https://myaccount.google.com/lesssecureapps">https://myaccount.google.com/lesssecureapps</a></li>
+<li>2-Step-Verification이 켜져있는 경우
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Application-specific password required. Learn more at\n5.7.9  <a href="https://support.google.com/mail/?p=InvalidSecondFactor">https://support.google.com/mail/?p=InvalidSecondFactor</a> n7sm4135021pfq.114 - gsmtp')</li>
+</ul>
+<p>(4) 최종 코드</p>
+<pre><code class="language-python"># -*- conding: utf-8 -*-
+# SyntaxError: Non-UTF-8 code starting with '\xea'
+
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from openpyxl import Workbook
+
+driver = webdriver.Chrome('chromedriver')
+
+url = "https://search.naver.com/search.naver?where=news&#x26;sm=tab_jum&#x26;query=추석"
+
+driver.get(url)
+req = driver.page_source
+soup = BeautifulSoup(req, 'html.parser')
+
+#####################
+# 여기에 코드 적기!
+
+# 첫번째기사제목 : #sp_nws1 > dl > dt > a
+# 기사제목에서 검사 > copy > copy_selector
+# articles  = soup.select_one('#sp_nws1 > dl > dt > a')
+# print(articles)
+# print(articles.text) # text만 가져오기
+
+# 두번째기사제목 : #sp_nws6 > dl > dt > a
+# => 규칙이 없다
+# => &#x3C;li id="sp_nws   이런 식이라 거기 위 쪽의 &#x3C;ul class="type01"> 에서 copy_selector
+# #main_pack > div.news.mynews.section._prs_nws > ul
+
+# ul 내의 li들 가져오기
+# articles  = soup.select('div.news.mynews.section._prs_nws > ul > li')
+# print(articles)
+# 리스트 형태네
+# for article in articles:
+#     print(article)
+
+# li 안에 dl 안에 dt 안에 a를 해보자
+#######################################################################
+
+articles = soup.select('div.news.mynews.section._prs_nws > ul > li')
+
+# 엑셀에 저장하기 : openpyxl 패키지
+# from openpyxl import Workbook
+wb = Workbook()
+ws1 = wb.active
+ws1.title = "articles" # sheet명
+ws1.append(["제목", "링크", "신문사"])
+
+for article in articles:
+    title = article.select_one('dl > dt > a').text # 기사제목
+    url = article.select_one('dl > dt > a')['href'] # url
+    # 언론사명 copy_selector : #sp_nws1 > dl > dd.txt_inline > span._sp_each_source
+    comp = article.select_one('span._sp_each_source').text.split(' ')[0].replace('언론사','')
+    # print(title, url, comp)
+    ws1.append([title, url, comp])
+
+
+driver.quit()
+wb.save(filename='articles.xlsx') # 파일명
+
+# 메일 서버 접속 패키지 smtplib
+# 보내는 사람 이메일 주소를 gmail 사용해야 함
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email import encoders
+
+
+# 보내는 사람 정보
+me = "생략@gmail.com" (어쨌든 gmail)
+my_password = "  " (비밀번호 입력)
+
+# 로그인하기
+s = smtplib.SMTP_SSL('smtp.gmail.com')
+s.login(me, my_password)
+
+# 받는 사람 정보
+# 아무_도메인이든 상관없다
+# 여러 사람에게 보내려면 이렇게 반복문
+email_list = ["    @naver.com","   @naver.com"]
+
+for you in email_list:
+    # 메일 기본 정보 설정
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = "       " # 제목
+    msg['From'] = me
+    msg['To'] = you
+
+    # 메일 내용 쓰기
+    content = "           " # 메일 내용
+    part2 = MIMEText(content, 'plain')
+    msg.attach(part2)
+
+    # 파일 첨부 하기
+    # 여러 파일을 첨부할 때에는 똑같은 코드를 반복하여 각각 msg.attach()
+    part = MIMEBase('application', "octet-stream")
+    with open("    .xlsx", 'rb') as file: # 로컬에 있는 파일명
+        part.set_payload(file.read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', "attachment", filename="   .xlsx") # 실제로 보낼 파일명
+    msg.attach(part)
+
+    # 메일 보내고 서버 끄기
+    s.sendmail(me, you, msg.as_string())
+
+s.quit()
+</code></pre>
+<hr>
+<h2 id="3일차---카톡-대화-전처리하여-워드클라우드-만들기" style="position:relative;">3일차 - 카톡 대화 전처리하여 워드클라우드 만들기<a href="#3%EC%9D%BC%EC%B0%A8---%EC%B9%B4%ED%86%A1-%EB%8C%80%ED%99%94-%EC%A0%84%EC%B2%98%EB%A6%AC%ED%95%98%EC%97%AC-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-label="3일차   카톡 대화 전처리하여 워드클라우드 만들기 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>(1) with 구문</p>
+<pre><code class="language-python">with open("text.txt","w",encoding+utf-8) as f: # r 읽기모드, w 쓰기모드
+   f.write("각 줄마다 번호를 적은 파일입니다.\n") # 쓰기모드는 덮어씌우니 주의
+   for i in [1,2,3,4,5]:
+       f.write(f"이것은 {i}번째 줄입니다.\n")
+f.close()
+</code></pre>
+<p>(2) 카톡 대화 데이터 전처리 작업 = 노가다</p>
+<pre><code class="language-python">text = ''
+with open("kakaotalk.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
+    for line in lines[5:]: # 처음부터 안 읽고
+        if '] [' in line: # 사람들 대화 특징만 보고 => ] [
+            text += line.split('] ')[2].replace('저도','').replace('저두','').replace('저는','').replace('ㅋ','').replace('ㅠ','').replace('이모티콘\n','').replace('사진\n','')
+
+print(text)
+</code></pre>
+<p>(3) 워드클라우드를 위한 폰트 선별 작업  </p>
+<pre><code class="language-python">import matplotlib.font_manager as fm
+
+# 이용 가능한 폰트 중 '고딕'만 선별
+for font in fm.fontManager.ttflist:
+    if 'Gothic' in font.name:
+        print(font.name, font.fname)
+
+font_path = 'C:/WINDOWS/Fonts/malgun.ttf' # 윈도우는 / 로 경로를 해 줘야함
+</code></pre>
+<p>(4) wordcloud 패키지 설치 : 워드클라우드용</p>
+<ul>
+<li>기본 코드</li>
+</ul>
+<pre><code class="language-python">from wordcloud import WordCloud
+
+wc = WordCloud(font_path=font_path, background_color="white", width=600, height=400)
+wc.generate(text)
+wc.to_file("result.png")
+</code></pre>
+<ul>
+<li>마스킹된 워드클라우드 만들기</li>
+</ul>
+<pre><code class="language-python">from PIL import Image
+import numpy as np
+
+mask = np.array(Image.open('cloud.png')) # 마스킹할 이미지 파일
+wc = WordCloud(font_path=font_path, background_color="white", mask=mask)
+wc.generate(text)
+wc.to_file("result_masked.png")
+</code></pre>
+<p>(5) 최종 예시 코드</p>
+<pre><code class="language-python">text = ''
+# r 읽기모드
+with open("kakaotalk.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
+    for line in lines[5:]: # 처음부터 안 읽고
+        if '] [' in line: # 사람들 대화 특징만 보고 => ] [
+            text += line.split('] ')[2].replace('저도','').replace('저두','').replace('저는','').replace('ㅋ','').replace('ㅠ','').replace('이모티콘\n','').replace('사진\n','')
+
+print(text)
+
+################################### 폰트 찾기용
+import matplotlib.font_manager as fm
+
+# 이용 가능한 폰트 중 '고딕'만 선별
+for font in fm.fontManager.ttflist:
+    if 'Gothic' in font.name:
+        print(font.name, font.fname)
+
+font_path = 'C:/WINDOWS/Fonts/malgun.ttf' # 윈도우는 / 로 경로를 해 줘야함
+
+############################################
+# 워드클라우드 패키지 설치 wordcloud
+
+from wordcloud import WordCloud
+
+wc = WordCloud(font_path=font_path, background_color="white", width=600, height=400)
+wc.generate(text)
+wc.to_file("result.png")
+
+# 마스킹된 워드클라우드 만들기
+
+from PIL import Image
+import numpy as np
+
+mask = np.array(Image.open('cloud.png')) # 마스킹할 이미지 파일
+wc = WordCloud(font_path=font_path, background_color="white", mask=mask)
+wc.generate(text)
+wc.to_file("result_masked.png")
+</code></pre></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/파이썬-크롤링-등-기초/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-6ed41a637bbcdd69b96c.js"],"app":["/app-e191869724175727e96b.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-623c2453a8b57dc5baa2.js"],"component---src-pages-about-js":["/component---src-pages-about-js-daf04363c890d89f4469.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-e06a189009ffadec4105.js"],"component---src-pages-index-js":["/component---src-pages-index-js-fb83c2d497366bfd06b2.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-8e9f88d050c94a3162e4.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b57a073787aa122ccdbf.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-47265e2d566a01dceb45.js"]};/*]]>*/</script><script src="/polyfill-6ed41a637bbcdd69b96c.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-47265e2d566a01dceb45.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js" async=""></script><script src="/app-e191869724175727e96b.js" async=""></script><script src="/framework-445649399d1c721f1f74.js" async=""></script><script src="/webpack-runtime-814f78ff63e91269f71f.js" async=""></script></body></html>
