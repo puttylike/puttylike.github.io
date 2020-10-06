@@ -49,52 +49,115 @@
       }
     })
   </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-814f78ff63e91269f71f.js"/><link as="script" rel="preload" href="/framework-445649399d1c721f1f74.js"/><link as="script" rel="preload" href="/app-e191869724175727e96b.js"/><link as="script" rel="preload" href="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-47265e2d566a01dceb45.js"/><link as="fetch" rel="preload" href="/page-data\oracle-sql-정규식으로-이름-컬럼-데이터-클렌징-하기\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnylx cLzLJj"><header class="sc-bdnylx ccVqSj"><div font-size="24px" class="sc-bdnylx hakpkg">데이터 클렌징 작업 - 이름 컬럼 (by SQL 정규식)</div><div color="#bbb" class="sc-bdnylx frTTFu"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnylx ccVqSj css-8xh4e7"><p>모 테이블에 이름이 들어가는 컬럼인데, 필수값 설정도 안 돼 있고 그렇다고 값 입력 받을 때 한글만 또는 영문만 제대로 입력하게끔 화면에서 제어하는 로직은 또 없었나 보다. 그렇다고 이게 뭔가 되게 중요한 정보로 잘 관리가 되던 거도 아닌 거 같다. 그래서 오류율이 상당히 높았다.</p>
+<hr>
 <p>클렌징 대상 데이터 유형은 다음과 같았다.</p>
 <ol>
-<li>숫자만 있는 경우<br>
-=> 알 수 없음으로 데이터 수정  </li>
-<li>공백+숫자만 있는 경우<br>
-=> 알 수 없음으로 데이터 수정  </li>
-<li>특수문자 포함 건 중 특수문자 제거 시 숫자만 있는 경우<br>
-=> 알 수 없음으로 데이터 수정  </li>
-<li>나머지 건들 중 공백 있는 건 (이름 앞에 스페이스 친 건이 눈에 띄었음)<br>
-=> 다행히 데이터가 전부 이름이어서 공백 제거  </li>
-<li>특수문자만 있는 경우<br>
-=> 알 수 없음으로 데이터 수정  </li>
-<li>특수문자 포함 시 한글이 3글자 이상 포함되는 경우<br>
-=> 정규식으로 특수문자 제거 시 데이터가 어떻게 보이는지에 따라 다르게 처리했다.<br>
+<li>
+<p>공란인 경우  </p>
+<pre><code class="language-sql">WHERE TRIM(NM) IS NULL
+</code></pre>
+<p>=> 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>숫자만 있는 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_LIKE(NM,'^[0-9]*$')
+</code></pre>
+<p>=> 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>공백+숫자만 있는 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_LIKE(TRIM(NM),'^[0-9]*$')
+</code></pre>
+<p>=> 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>특수문자 포함 건 중 특수문자 제거 시 숫자만 있는 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_LIKE(TRIM(NM),'[[:PUNCT:]]')
+</code></pre>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(REGEXP_LIKE(NM,'^[0-9]*$'),'[[:PUNCT]]')
+</code></pre>
+<p>=> 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>나머지 건들 중 공백 있는 건 (이름 앞에 공백 있는 건이 주로 많았음)  </p>
+<pre><code class="language-sql">WHERE TRIM(NM) &#x3C;> NM
+</code></pre>
+<p>=> 다행히 데이터가 전부 이름이어서 공백 제거  </p>
+</li>
+<li>
+<p>특수문자만 있는 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_LIKE(TRIM(NM),'^[[:PUNCT:]]*$')
+</code></pre>
+<p>=> 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>특수문자 포함 시 한글이 3글자 이상 포함되는 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[[:PUNCT:]]')
+AND REGEXP_LIKE(NM,'[가-힣]{3}')
+</code></pre>
+<p>=> 정규식으로 특수문자 제거 시 데이터가 어떻게 보이는지에 따라 다르게 처리했다.<br>
 ** 이름으로 보이는 건은(오타 추정) 확인하여 건별로 이름 수정<br>
 ** 이름 여러개 이면 수정 보류<br>
-** 특수문자 제거 시 온전한 한글의 형태이면 (=나머지) 그렇게 보이도록 데이터 수정  </li>
-<li>특수문자 ? 포함 건<br>
-=> 이름 식별이 안 돼 알 수 없음으로 데이터 수정  </li>
-<li>특수문자 ` 포함 건<br>
-=> 이름으로 보이는 경우 특수문자만 제거<br>
-=> 2건은 이름 식별 안 돼 알 수 없음으로 데이터 수정  </li>
-<li>자음 ㄱ~ㅎ 2개 이상인 건<br>
-=> 김을 ㄱㅁ으로 쓰는 경우가 생각보다 좀 있었다<br>
+** 특수문자 제거 시 온전한 한글의 형태이면 (=나머지) 그렇게 보이도록 데이터 수정  </p>
+</li>
+<li>
+<p>특수문자 ? 포함 건  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[[:PUNCT:]]')
+AND NM LIKE '%?%'
+</code></pre>
+<p>=> 이름 식별이 안 돼 알 수 없음으로 데이터 수정  </p>
+</li>
+<li>
+<p>특수문자 ` 포함 건  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[[:PUNCT:]]')
+AND NM LIKE '%`%'
+</code></pre>
+<p>=> 이름으로 보이는 경우 특수문자만 제거<br>
+=> 2건은 이름 식별 안 돼 알 수 없음으로 데이터 수정<br>
+특수문자 많은 건들은 이 2개 포함된 게 많아서 이렇게 진행했다.  </p>
+</li>
+<li>
+<p>자음 ㄱ~ㅎ 2개 이상인 건  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[ㄱ-ㅎㅏ-ㅣ]{2}')  ...
+</code></pre>
+<p>=> 김을 ㄱㅁ으로 쓰는 경우가 생각보다 좀 있었다<br>
 ** 이름이 정확히 식별되는 건 건별로 확인 후 수정<br>
 ** 이름 3글자가 온전한 경우에는 자음 제거
-** 나머지 알 수 없음을 데이터 수정  </li>
-<li>나머지 건들 중 숫자 포함되는 건<br>
-=> 해당 컬럼에 사람 이름이 들어가야 하는데, 사람 이름이 아닌 게 있었다.<br>
+** 나머지 알 수 없음을 데이터 수정  </p>
+</li>
+<li>
+<p>나머지 건들 중 숫자 포함되는 건  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[[:DIGIT:]]')  ...
+</code></pre>
+<p>=> 해당 컬럼에 사람 이름이 들어가야 하는데, 사람 이름이 아닌 게 있었다.<br>
 ** 기관이나 업체명이 들어가는 경우 수정 보류<br>
 => 동명이인을 구별한답시고 입력자가 이름 옆에 1,2 아니면 A,B,C 를 붙인 경우의 데이터도 포함돼 있었다.<br>
 ** 이런 경우 사람 이름만 남게 데이터 수정 (관련 고유식별번호 컬럼이 해당 테이블에 따로 있기 때문이다)<br>
---- 여기까지, 숫자 포함 된 데이터 클렌징 완료 ---  </li>
-<li>기타 특수문자 포함 건<br>
-=> ㄱ-ㅎ, ㅏ-ㅣ, 특수문자 제거 시의 글자 길이에 따라 구분해봤다.<br>
-** 이름이 여러개 적히거나 업체명, 기관명인 경우에는 수정 보류
+--- 여기까지, 숫자 포함 된 데이터 클렌징 완료 ---  </p>
+</li>
+<li>
+<p>기타 특수문자 포함 건<br>
+=> ㄱ-ㅎ, ㅏ-ㅣ, 특수문자 제거 시의 글자 길이에 따라 구분해봤다.  </p>
+<pre><code class="language-sql">SELECT REGEXP_REPLACE(REGEXP_REPLACE(NM,'[[:PUNCT:]]'),'[ㄱ-ㅎㅏ-ㅣ]')  ...
+FROM ...
+</code></pre>
+<p>** 이름이 여러개 적히거나 업체명, 기관명인 경우에는 수정 보류
 ** 글자 길이 2이하가 되는 경우, 알 수 없음으로 수정<br>
 ** 사람 이름인 경우, 이름으로 수정
-** 나머지 8건 : 건별로 확인 후 수정  </li>
-<li>한글 + 알파벳인 경우<br>
-** 이름이 보이면 이름으로, 업체명 같은 건 수정 보류
-** 그외 식별 불가한 경우 알 수 없음으로 데이터 수정</li>
+** 나머지 8건 : 건별로 확인 후 수정  </p>
+</li>
+<li>
+<p>한글 + 알파벳인 경우  </p>
+<pre><code class="language-sql">WHERE REGEXP_REPLACE(NM,'[a-zA-Z]') ...
+</code></pre>
+<p>** 이름이 보이면 이름으로, 업체명 같은 건 수정 보류
+** 그외 식별 불가한 경우 알 수 없음으로 데이터 수정</p>
+</li>
 <li>알파벳만 있는데, 글자 길이 2이하인 경우<br>
 => 알 수 없음으로 수정  </li>
 <li>알파벳은 건드리기 애매해서 보류했다. (...)  </li>
 </ol>
+<hr>
 <p>오라클 DB에 맞게 sql 정규식을 활용해서 쉬운 순서대로 update 쿼리를 작성했다.
 누가 봐도 ㅣ를 ;로 쓴 거 같은 오타는 건 별로 수정했다...</p>
 <p>데이터를 일괄적으로 알 수 없다고 표기하는 건 좀 아닌 거 같아서 ㅎㅎ...
