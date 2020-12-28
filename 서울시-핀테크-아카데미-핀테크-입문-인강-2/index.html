@@ -1,0 +1,354 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.fe74056afab935242a8c.css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.about-css-modules-module--user--1r5hF{display:flex;align-items:center;margin:0 auto 12px}.about-css-modules-module--user--1r5hF:last-child{margin-bottom:0}.about-css-modules-module--avatar--1-xsJ{flex:0 0 96px;width:96px;height:96px;margin:0}.about-css-modules-module--description--3EV0A{flex:1 1;margin-left:18px;padding:12px}.about-css-modules-module--username--1Craw{margin:0 0 12px;padding:0}.about-css-modules-module--excerpt--2hQyc{margin:0}.container-module--container--1stMa{margin:3rem auto;max-width:600px}</style><meta name="generator" content="Gatsby 2.24.67"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-cb02c9125117a9361c93.js"/><link as="script" rel="preload" href="/styles-7d4153d260c0197f0043.js"/><link as="script" rel="preload" href="/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/app-fbf1c2a054e7b5051540.js"/><link as="script" rel="preload" href="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-e1f4b58bbee721551875.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-1c204787ccc228163b60.js"/><link as="fetch" rel="preload" href="/page-data\서울시-핀테크-아카데미-핀테크-입문-인강-2\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnylx cLzLJj"><div class="sc-bdnylx hpeNWW"><nav class="sc-bdnylx jMsIAs table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnylx kCXbaB">TABLE OF CONTENTS</h3><div class="sc-bdnylx dBxSrG"><ul>
+<li>
+<ul>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#%EB%A9%94%EB%AA%A8">메모</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#6%EC%B0%A8%EC%8B%9C-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%BD%94%EC%9D%B8%EA%B3%BC-cbdc%EC%9D%98-%EC%9D%B4%ED%95%B4">6차시) 스테이블 코인과 CBDC의 이해</a></p>
+<ul>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#1-%EC%BD%94%EC%9D%B8%EC%9D%98-%EB%B0%9C%ED%96%89">1. 코인의 발행</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#2-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%BD%94%EC%9D%B8%EC%9D%98-%EA%B0%9C%EB%85%90">2. 스테이블 코인의 개념</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#3-cbdc%EC%99%80-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A6%AC%EB%B8%8C%EB%9D%BC">3. CBDC와 페이스북 리브라</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#7%EC%B0%A8%EC%8B%9C-%EB%8C%80%EC%B6%9C">7차시) 대출</a></p>
+<ul>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#1-p2p-%EB%8C%80%EC%B6%9C-%EC%84%9C%EB%B9%84%EC%8A%A4">1. P2P 대출 서비스</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#2-%EA%B5%AD%EB%82%B4%EC%99%B8-p2p-%EC%9C%A0%EB%AA%85-%EA%B8%B0%EC%97%85">2. 국내외 P2P 유명 기업</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#3-p2p-%EB%8C%80%EC%B6%9C%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90">3. P2P 대출의 장단점</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#cf-%EC%98%A8%ED%88%AC%EB%B2%95%EC%9C%BC%EB%A1%9C">cf. 온투법으로</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#8%EC%B0%A8%EC%8B%9C-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80">8차시) 로보어드바이저</a></p>
+<ul>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#1-%EA%B0%9C%EC%9D%B8%EC%9D%98-%EC%9E%AC%EB%AC%B4%EA%B4%80%EB%A6%AC">1. 개인의 재무관리</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#2-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80%EB%9E%80">2. 로보어드바이저란?</a></li>
+<li><a href="/%EC%84%9C%EC%9A%B8%EC%8B%9C-%ED%95%80%ED%85%8C%ED%81%AC-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-%ED%95%80%ED%85%8C%ED%81%AC-%EC%9E%85%EB%AC%B8-%EC%9D%B8%EA%B0%95-2/#3-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80%EA%B0%80-%EB%B6%80%EC%83%81%ED%95%98%EA%B2%8C-%EB%90%9C-%EA%B3%84%EA%B8%B0">3. 로보어드바이저가 부상하게 된 계기</a></li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnylx ccVqSj"><div font-size="24px" class="sc-bdnylx hakpkg">서울시 핀테크 아카데미 핀테크 입문 인강 6,7,8차시</div><div color="#bbb" class="sc-bdnylx frTTFu"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnylx ccVqSj css-8xh4e7"><p>...인강 듣고 내용 정리하는 거 참 오랜만이다. 강의는 무난한 수준인데 언번들링 같은 용어도 나오...긴 나오니까 하루에 2강 씩 듣든지 해야겠다.</p>
+<h4 id="메모" style="position:relative;">메모<a href="#%EB%A9%94%EB%AA%A8" aria-label="메모 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li><a href="http://www.kifin.or.kr/common/greeting/main.do?callbackGate=Y">금융투자교육원 홈페이지</a></li>
+</ul>
+<hr>
+<h3 id="6차시-스테이블-코인과-cbdc의-이해" style="position:relative;">6차시) 스테이블 코인과 CBDC의 이해<a href="#6%EC%B0%A8%EC%8B%9C-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%BD%94%EC%9D%B8%EA%B3%BC-cbdc%EC%9D%98-%EC%9D%B4%ED%95%B4" aria-label="6차시 스테이블 코인과 cbdc의 이해 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>12/27 이번 강의는 좀 생소한 내용이었다. 리브라는 알긴 한데...  </p>
+<h4 id="1-코인의-발행" style="position:relative;">1. 코인의 발행<a href="#1-%EC%BD%94%EC%9D%B8%EC%9D%98-%EB%B0%9C%ED%96%89" aria-label="1 코인의 발행 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>스테이블 코인 Stable coin ≒ 가상화폐 / CBCD  </p>
+<ul>
+<li>코인 = 누구나 발행 가능한 화폐 / 거래하는 방식만을 제공  </li>
+</ul>
+<p>코인의 목적 = 코인으로 무엇을 할 수 있는가?<br>
+=> ex) 기업에서 발행 시, 코인을 발행한 기업의 서비스만 이용 가능<br>
+=> 비트코인의 경우, 채굴 방식이 있는데, 이 방식에서는 거래하는 방식만 제공<br>
+=> 그래서 코인을 구매하려고 하는 회사에 대한 믿음이 필요<br>
+=> ICO를 통해 공개하여 가상화폐 거래소에 상장한다.  </p>
+<p>코인의 문제점  </p>
+<ul>
+<li>가격 측면 - 큰 가격 변동성<br>
+cf. 주식 시장과 달리 가상화폐 거래소는 24시간 거래가 가능하다.  </li>
+<li>해킹 측면 - 시스템 문제<br>
+=> 블록체인 base의 코인과 달리, 해킹에 노출된 거래소 : 인적 리스크 (내부자 도덕적 해이) / 외부 공격  </li>
+</ul>
+<h4 id="2-스테이블-코인의-개념" style="position:relative;">2. 스테이블 코인의 개념<a href="#2-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%BD%94%EC%9D%B8%EC%9D%98-%EA%B0%9C%EB%85%90" aria-label="2 스테이블 코인의 개념 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>지금까지 가격 변동성 / 탈중앙성을 언급했는데, 아직까지 코인은 보안에 취약하다.  </p>
+<p>=> <strong>스테이블 코인</strong> 탄생<br>
+: 기존의 화폐 또는 실물자산과 연동시켜 가격 안정성(달러, 원)을 보장하는 화폐로,<br>
+법정화폐 담보형(Fiat-Collateralized Stablecoin), 암호자산 담보형(Crypto-Collateralized Stablecoin) / 무담보형(Non-Collateralized Stableoin) 으로 분류된다.  </p>
+<ul>
+<li>스테이블 코인이 가격을 고정시킬 수 있는 방법<br>
+법정 화폐 담보형 - 특정 기관에 달러 등을 쌓아 두고, 그만큼의 코인을 발행<br>
+ex) GEMINI - Gemini Dollar (GUSD 제미니 달러) / Tether (Tether USDT 테더) / TrueUSD (TrueUSD TUSD)<br>
+cf. 이외에도 암호화폐를 담ㅂ로 만드는 방식, 알고리즘으로 만드는 스테이블 코인이 있다만, 법정 화폐 기반이 가장 안정성이 있다 볼 수 있다.  </li>
+</ul>
+<p>100% 신뢰할 수 있는가?<br>
+블록체인 방식이라 보안 면에서 해킹 대응은 용이하나,<br>
+(1코인에 해당하는 1달러가 예금돼 있는지) 장부미공개라 화폐가치 관점에서 불안정해 보이긴 하다.</p>
+<p>현금과 스테이블 코인의 비율이 같다면, 굳이 스테이블 코인으로 갖고 있을 필요가 있을까?<br>
+ex) 네이버페이 : (코인은 아니지만) 충전 포인트 결제 (3% 적립)</p>
+<ul>
+<li>&#x3C;디지털화폐 : 스테이블 코인의 부상><br>
+국제통화기구 said <strong>지불수단 혁신 네트워크 효과, 디지털 라이프와 사용자 중심 설계</strong> => 정부나 금융적 입장은 우호적!  </li>
+</ul>
+<h4 id="3-cbdc와-페이스북-리브라" style="position:relative;">3. CBDC와 페이스북 리브라<a href="#3-cbdc%EC%99%80-%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81-%EB%A6%AC%EB%B8%8C%EB%9D%BC" aria-label="3 cbdc와 페이스북 리브라 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>스테이블 코인은 왜 주목받았는가? 페이스북 때문.  </p>
+<ul>
+<li>페이스북 : 2019.06 전세계 금융 소외계층 17억명에게 금융서비스를 제공하겠다며, 페이스북 암호화폐 <strong>리브라</strong> 개발  </li>
+</ul>
+<p>cf. 세계 SNS : 왓츠앱 / 페북 / 인스타 순...<br>
+=> 페이스북 월드 외 Visa / Ebay / Paypal 에서도 쓸 수 있게...<br>
+=> 전세계를 자극한 페이스북 리브라 프로젝트<br>
+=> 뱅크런 등의 우려로 리브라에 대해 미국의 규제<br>
+=> Visa / Ebay / Paypal 탈퇴 후 Libra White Paper 리브라 백서 수정<br>
+: 지역기반 단일 화폐 이용 방식으로 변경 = 단일 통화 코인에서 다중으로 변화 <del>(2020년말 오픈 예정)</del></p>
+<ul>
+<li><strong>2020년 12월, 최근 디엠으로 개명했고, 빠르면 2021년 1월 출시라고 한다.</strong></li>
+</ul>
+<p>중국 : 위챗 > 위챗페이 / 알리페이<br>
+= 현금 결제에서 빠르게 모바일 결제로 전환  </p>
+<ul>
+<li><strong>CBCD (Central Bank Digital Currency)</strong> : 중앙은행에서 발행하는 디지털 화폐로 국가가 통제하는 신용화폐와 같은 구조.  </li>
+</ul>
+<p><del>* 페이스북 리브라 : 페이스북 암호화폐로 다국가에서 사용할 수 있는 통화를 만들고자 했으나, 미국의 규제로 중단</del></p>
+<ul>
+<li>페북&#x26;중국이 당긴 디지털 화폐 전쟁<br>
+2016년 중국, 디지털화폐 연구소 설립 - 디지털화폐에 대한 불신 해소<br>
+=> CBDC 베이징 동계올림픽 즈음 2022년 상용화 계획  </li>
+<li>CBDC의 발행 이유<br>
+지폐발급 비용의 절감<br>
+관리와 통제<br>
+화폐 주도권 탈환  </li>
+</ul>
+<p>ex) 중국 - 2020년도 10월, 디지털화폐 200위안 총 5만명 에게 제공하여(=> 17억), 7일간 소비 실험 : 시민들 새로운 결제방식 거부감 없음  </p>
+<ul>
+<li>이미 전세계는 CBDC 준비 중 - 다른 나라에 대비한 화폐 주권 보호도 주 목적<br>
+=> 한국은행도 마찬가지이다.  </li>
+<li>한국 : 2020년 3월 ~ 12월 CBDC 컨설팅<br>
+2021년 이후 파일럿 시스템 구축 및 테스트  </li>
+</ul>
+<hr>
+<h3 id="7차시-대출" style="position:relative;">7차시) 대출<a href="#7%EC%B0%A8%EC%8B%9C-%EB%8C%80%EC%B6%9C" aria-label="7차시 대출 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="1-p2p-대출-서비스" style="position:relative;">1. P2P 대출 서비스<a href="#1-p2p-%EB%8C%80%EC%B6%9C-%EC%84%9C%EB%B9%84%EC%8A%A4" aria-label="1 p2p 대출 서비스 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>P2P 대출 서비스 = 불특정 다수로부터 투자금을 모아 대출을 원하는 사람에게 약속한 기간동안 이자를 받는 대출 서비스로 일종의 크라우드 펀딩 개념  </li>
+<li>부동산 담보 대출 > 은행마다 금리 다름 서류 제출 후 확정 시 대출 실행되는 구조  </li>
+</ul>
+<p>급한 돈 대출을 개인에게 대출한다면?<br>
+(대부업 고금리 / 개인 사채)<br>
+=> 디지털 사채 = P2P 금융 : 개인간의 이동  </p>
+<ul>
+<li>2005년 영국회사 ZOPA, P2P 대출의 시작  </li>
+<li>신용등급에 따른 이자율 평가 > 위험등급일 수록 높은 이자 > 상환 리스크 최소화<br>
+cf. 현재까지도 다른 P2P 회사들도 이 회사 방식과 유사  </li>
+<li>개인들의 투자 - 소액 투자 가능
+상품 당 10파운드 투자 > (그 이상은) 분산투자 방식 > 투자자의 리스크 ↓  </li>
+<li>P2P 리스크 - 채무 불이행<br>
+=> 세이프 가드 - 보험 도입 : 투자 손실이 발생했을 경우 미리 모아두었던 기금에서 보상  </li>
+<li>특이하게, 2014년, 영국 금융업무 감독청에 규제 요청<br>
+=> 신뢰 구축 목적  </li>
+</ul>
+<h4 id="2-국내외-p2p-유명-기업" style="position:relative;">2. 국내외 P2P 유명 기업<a href="#2-%EA%B5%AD%EB%82%B4%EC%99%B8-p2p-%EC%9C%A0%EB%AA%85-%EA%B8%B0%EC%97%85" aria-label="2 국내외 p2p 유명 기업 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>미국<br>
+LendingClub : 2007년 설립, 2014년 상장<br>
+개인 대출 위주인 ZOPA와 달리, 기업 대출 / 대출 채권도 취급  </li>
+</ul>
+<p>cf. 중국 - 한 때 6천개가 넘는 P2P가 있기도 했다.  </p>
+<ul>
+<li>중국 Lufax 2011년 설립,<br>
+P2P를 비롯해 자산관리 및 금융기관 / 지방정부 대상 대출로 사업 확장  </li>
+<li>국내 : 테라펀딩/피플펀드/8퍼센트/펀다/렌딧/팝펀딩 등 ...<br>
+TERA FUNDING - 부동산 금융<br>
+=> 아파트 신축 대출 / 토지 담보 대출<br>
+(연 10% 이상 수익률)  </li>
+</ul>
+<p>People Fund - 1만원 투자<br>
+아파트 담보 대출 / 개인 신용 대출  </p>
+<p>8 Percent<br>
+"P2P 투자라 쓰고 분산투자라 읽어요"<br>
+개인 등급에 따라 다른 수익률 제공 A+ ~ D+<br>
+(A+ 에게 투자 시 5% D+이면 20% 제공 등)<br>
+8% 수익률을 위한 투자 한도 존재<br>
+ZOPA와 유사  </p>
+<p>Sofi 학자금 온라인 대출 서비스 - 학연 base<br>
+졸업생과 재학생을 연결하는 P2P 학자금 대출 모델<br>
+ex) 자산 100만 달러 이상, 연간 소득 20만 달러 이상인 동문 중 투자자 40인 선정 => 200만 달러 100명 대출<br>
+=> 하버드를 비롯해서 타대학교로 확산 중
+=> 학자금 대출에서 일반인 대출, 모기지 대출 등 은행 영역까지 사업 확장 중</p>
+<h4 id="3-p2p-대출의-장단점" style="position:relative;">3. P2P 대출의 장단점<a href="#3-p2p-%EB%8C%80%EC%B6%9C%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90" aria-label="3 p2p 대출의 장단점 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>공통점<br>
+금융사보다 나은 서비스 제공  </p>
+<ol>
+<li>대출 심사시간 단축 - SNS(맞춤법,인맥 ...)를 대출심사에 포함<br>
+"다양한 방법을 적용함으로써 바른 대출 가능"  </li>
+<li>은행보다 높은 금리  </li>
+<li>소액 투자  </li>
+</ol>
+<p>개인 투자는 제한<br>
+(온투법)&#x3C;온라인 투자 연계 금융업 및 이용자 보호에 대한 법률><br>
+2021년 5월 이전 업체 당 1천만원 부동산 최대 5백만원<br>
+=> P2P 전체 사업 3천만원 부동산 1천만원 확대  </p>
+<p>P2P 대출의 리스크 : 상환<br>
+Lufax : 2016년, 구조조정으로 인한 대출 사업 중단<br>
+cf. 부실+사기 90% 이상 폐업<br>
+ex) e주바오(Ezubao) - 10조원의 금융 사기<br>
+=> 이후, 허가에 필요한 최소 등록자본 : 10억 위안 (1740억)</p>
+<p>미국 LendingClub<br>
+창업자의 부당대출  </p>
+<p>Pop Funding 550억원 대 투자 사기로 폐업  </p>
+<p>TERA FUNDING 95억원 부동산 투자사기 20% 연체율로 집단소송  </p>
+<ul>
+<li>P2P 대출이 위험한 이유<br>
+평가 기준 불명확 / 공시 내용 이해 어려움 / 빠른 속도의 투자  </li>
+</ul>
+<p>카카오/토스 = P2P펀드 간편 투자방식 판매</p>
+<h4 id="cf-온투법으로" style="position:relative;">cf. 온투법으로<a href="#cf-%EC%98%A8%ED%88%AC%EB%B2%95%EC%9C%BC%EB%A1%9C" aria-label="cf 온투법으로 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>P2P 대출의 제도권화...  </p>
+<ol>
+<li>연계채권 잔액<br>
+300억 미만 - 자기자본 5억<br>
+300억~1000억 미만 - 자기자본 10억<br>
+1000억 이상 - 자기자본 30억  </li>
+<li>등록 후에도 최소 자기자본은 70% 이상 유지  </li>
+<li>받았던 투자금은 분리 보관 필요<br>
+=> 믿을 수 있는 기업 증가  </li>
+</ol>
+<p>절세 : 기존 27%(25% 이자소득세 / 2.5% 지방소득세) => 온투법으로 등록된 업체로 투자시 15.4%<br>
+금융 기관들의 P2P 참여로 장려<br>
+투자금 무제한 - 기관 투자자들  </p>
+<p>전문적인 금융지식을 가지고 있는 기관들이 투자하는 P2P 상품은 믿을 수 있지 않을까?  </p>
+<p>카카오페이 / 토스 간편투자 변경 : P2P 홈페이지 접속해 진행  </p>
+<p>P2P Market<br>
+대출 / 리워드 펀딩 / 증권형 펀딩 / 주식형 펀딩<br>
+ㄴ개인투자자의 빠른 접근/High Risk, High Return</p>
+<p>인공지능 > Risk Hedge &#x3C; 정보  </p>
+<p>개인데이터/마이데이터/P2P 사업에 영향을 줄 듯  </p>
+<ul>
+<li>장단점 정리<br>
+은행에서 대출받기 어려운 자영업자나 소상공인들의 자금 마련<br>
+전통적인 금융기관에 비해 간접비와 운영비를 절감<br>
+저금리 시대에 수익을 얻기 위한 방법으로 활용<br>
+원금보장이 되지 않으며 손실 가능성이 있음<br>
+국내의 경우 투자자 보호를 위한 장치가 마련되어 있지 않아 위험도가 큼  </li>
+</ul>
+<hr>
+<h3 id="8차시-로보어드바이저" style="position:relative;">8차시) 로보어드바이저<a href="#8%EC%B0%A8%EC%8B%9C-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80" aria-label="8차시 로보어드바이저 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="1-개인의-재무관리" style="position:relative;">1. 개인의 재무관리<a href="#1-%EA%B0%9C%EC%9D%B8%EC%9D%98-%EC%9E%AC%EB%AC%B4%EA%B4%80%EB%A6%AC" aria-label="1 개인의 재무관리 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>개인의 재무관리 : 개인의 현재 상태를 파악해서 어떻게 가지고 있는 자산을 분산해서 관리하면 좋은지, 어디에 투자하면 좋은지, 노후 준비를 어떻게 해야할지 등을 총체적으로 분석/관리하는 것  </li>
+</ul>
+<p>가계부  </p>
+<p>재무관리  </p>
+<p>재무학 - 자금의 흐름을 파악하고 분석하는 학문  </p>
+<p>재무상태표 > 재무관리자 참고<br>
+=> 개인 차원 도입 : 개인 재무관리 - 개인의 현재 상태를 파악해서 총체적으로 분석/관리  </p>
+<ul>
+<li>재무상태표  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>자산</th>
+<th>부채</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>순자산</td>
+<td>대출</td>
+</tr>
+<tr>
+<td>원금/현금/예적금/펀드</td>
+<td>은행담보/신용대츨/차용...</td>
+</tr>
+</tbody>
+</table>
+<p>자산 - 현금자산 (현금)/고정자산 (예적금 장투하는주식)/유형자산  </p>
+<p>순자산 = 자산 - 부채  </p>
+<p>재무상태표를 만드는 목적은<br>
+"현재를 파악하고 주기적으로 관리하며, 미래를 준비한다"  </p>
+<h4 id="2-로보어드바이저란" style="position:relative;">2. 로보어드바이저란?<a href="#2-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80%EB%9E%80" aria-label="2 로보어드바이저란 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>재무상태표에는, 자산관리를 하기 위한 핵심적인 내용이 모두 들어있다.<br>
+=> 일일 확인해야 하는 번거로움<br>
+=> 믿음이 가지 않을 수 있음<br>
+=> 주기적으로 관리하기가 어려움  </p>
+<p>누군가에게 맡기면 되지 않을까? PB (Private Banker)<br>
+"모든 재무적인 고민들을 해결해 주는 역할"<br>
+=> But, 고객자산가의 서비스 / 높은 수수료<br>
+=> 로보어드바이저 : 저렴한 수수료 / 시공간 제약 없음<br>
+cf. 기존에 있던 시스템 트레이딩 로보어드바이저 랑은 다르다.  </p>
+<ul>
+<li>로보어드바이저 = 고도화된 알고리즘과 빅데이터를 통해 인간 프라이빗 뱅커 PB 대신 모바일 기기나 PC를 통해 포트폴리오 관리를 수행하는 온라인 자산관리 서비스  </li>
+</ul>
+<h4 id="3-로보어드바이저가-부상하게-된-계기" style="position:relative;">3. 로보어드바이저가 부상하게 된 계기<a href="#3-%EB%A1%9C%EB%B3%B4%EC%96%B4%EB%93%9C%EB%B0%94%EC%9D%B4%EC%A0%80%EA%B0%80-%EB%B6%80%EC%83%81%ED%95%98%EA%B2%8C-%EB%90%9C-%EA%B3%84%EA%B8%B0" aria-label="3 로보어드바이저가 부상하게 된 계기 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>금융 위기 있던 2008년, 로보어드바이저 탄생  </p>
+<ol>
+<li>저금리의 일상화 : 분산 투자해서 시장 수익률보다 조금 더 높은 수준  </li>
+<li>낮아진 자산관리의 문턱 : 최소 투자금액 10만 달러 / IT이해도가 빠른 밀레니얼 새데 겨냥  </li>
+<li>저렴한 수수료 : 1년 0.5%(PB 1년 최소 1%)  </li>
+</ol>
+<p>미국 2020년까지 연평균 68% 이상 성장<br>
+세계규모 2015년 상반기 200억 달러 -> 2020년 4500억 달러 (23배 성장)  </p>
+<p>미국의 대표적인 로보어드바이저 회사<br>
+wealthfront (1만 달러 이하 투자의 경우 수수료 없음) / Betterment (최소투자금액 없음)<br>
+2008년 설립, 2010년 &#x26; 2011년 서비스 시작  </p>
+<p>국내에서는 2016년 알파고 이후 성장,<br>
+로보어드바이저는 어떻게 이용할 수 있을까?  </p>
+<p>투자자 설문(수입이 증가할지? 주 수입원은? 투자 경험이 있는지? 원금 손실은 몇 %까지?)<br>
+=> 투자성향과 펀드 종목 및 투자 비율 추천<br>
+=> 시장 분석을 통한 자산의 재배분 리밸런싱 제안  </p>
+<p>cf. 국내 은행 로보어드바이저 추천 서비스 보유<br>
+2019년 6월 기준, 9개 은행 19개 증권사 2개 자산운용사 5개 투자자문사 운용 중  </p>
+<p>로보어드바이저 이용할 경우 -> 미리 체험 -> 편리한 진행  </p>
+<p>로봇의 추천 방식은<br>
+핀테크 기술들이 향상, 정교해짐  </p>
+<p>수익률 - 미래에는 또 모름<br>
+ex) 2019년 10월 기준, 로보어드바이저 펀드 10개 평균 수익률 8.45%<br>
+펀드매니저 운용 펀드 1.93%  </p>
+<p>국내 규모 역시 커졌다.<br>
+2017년 8월 전체 가입자 5825명 => 2020년 8월 22만명<br>
+금액 또한 115억 => 1조 2626억 (108배)  </p>
+<p>관련 상품 추천 / 수수료 X<br>
+=> 오토 리밸런싱 지원 X<br>
+투자자문형 위주여서 그렇다.  </p>
+<p>cf. 투자일임형<br>
+대표적인 회사로 쿼터백, 핀트, 에임, 파운트가 있다.  </p>
+<p>ex)<br>
+자문형 - 에임 : 연관 관리 금액의 1%<br>
+일임형 - 핀트 : 투자 수익의 9.5% - MZ세대 주고객  </p>
+<p>로보어드바이저라고 했는데 자산관리보다 투자에 초점이 맞추어져 있다.  </p>
+<p>오픈뱅킹 / 데이터3법의개정 / 마이데이터 사업으로 좀 더 진정한 의미의 로보어드바이저가 나올 거로 기대됨  </p></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/서울시-핀테크-아카데미-핀테크-입문-인강-2/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7c901da89ae399af5f7c.js"],"app":["/app-fbf1c2a054e7b5051540.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-b51cb464f65fa229a53b.js"],"component---src-pages-about-js":["/component---src-pages-about-js-7f8816863caba3d42171.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-1a3ee44c3893510b6ea1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1751c22f659a463658e6.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-925981375e7edcc336a2.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b63fe5dece28406e92c8.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1c204787ccc228163b60.js"]};/*]]>*/</script><script src="/polyfill-7c901da89ae399af5f7c.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-1c204787ccc228163b60.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-e1f4b58bbee721551875.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js" async=""></script><script src="/app-fbf1c2a054e7b5051540.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/styles-7d4153d260c0197f0043.js" async=""></script><script src="/webpack-runtime-cb02c9125117a9361c93.js" async=""></script></body></html>
