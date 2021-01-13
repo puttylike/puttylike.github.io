@@ -59,6 +59,46 @@ cf. <a href="https://www.opentutorials.org/course/3085">생활코딩 - WEB2 Java
 <p>(1) JavaScript 데이터 타입<br>
 크게 6종류의 데이터 타입이 있다.  </p>
 <ul>
-<li>문자열(String)  </li>
 <li>숫자(Number)  </li>
-</ul></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/부스트코스-자바스크립트의-시작-2/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7c901da89ae399af5f7c.js"],"app":["/app-fbf1c2a054e7b5051540.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-b51cb464f65fa229a53b.js"],"component---src-pages-about-js":["/component---src-pages-about-js-7f8816863caba3d42171.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-1a3ee44c3893510b6ea1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1751c22f659a463658e6.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-925981375e7edcc336a2.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b63fe5dece28406e92c8.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1c204787ccc228163b60.js"]};/*]]>*/</script><script src="/polyfill-7c901da89ae399af5f7c.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-1c204787ccc228163b60.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-e1f4b58bbee721551875.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js" async=""></script><script src="/app-fbf1c2a054e7b5051540.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/styles-7d4153d260c0197f0043.js" async=""></script><script src="/webpack-runtime-cb02c9125117a9361c93.js" async=""></script></body></html>
+</ul>
+<p>콘솔 창에서...<br>
+alert(1+1); => 2<br>
+=> + : 이항 연산자<br>
+계산을 하기 때문에 산술 연산자(+, -, *, /)라고 부르기도 한다.  </p>
+<ul>
+<li>문자열(String)<br>
+"로 시작할 땐 "로, '로 시작할 땐 '로 끝낸다.  </li>
+</ul>
+<p>콘솔 창에서...<br>
+"Hello world".length => 11</p>
+<p>콘솔 창에서...<br>
+"Hello world".toUpperCase() => "HELLO WORLD"  </p>
+<p>콘솔 창에서...<br>
+"Hello world".indexOf('o') => 4  </p>
+<p>(2) 데이터 타입의 중요성  </p>
+<ul>
+<li>"1"+"1" => 문자열이므로 "11"  </li>
+<li>1+1 => 숫자이므로 2  </li>
+</ul>
+<p>cf. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures">자바스크립트의 자료형</a><br>
+cf. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String">문자열(String)</a>  </p>
+<p>(3) 변수와 대입연산자  </p>
+<p>변수(variable) = 바뀔 수 있는 수</p>
+<p>콘솔 창에서...<br>
+x = 1 ;
+=> x : 변수 &#x3C;-  = : 대입연산자 (=의 오른쪽 값 왼쪽에 대입)  </p>
+<p>콘솔 창에서...<br>
+1 = 2; => err (1은 변수가 아님)  </p>
+<p>cf. 상수(constant) = 바뀌지 않는 수  </p>
+<p>(4) 변수의 필요성<br>
+변수를 이용하면, 여러군데 흩어져 있는 값들을 한 번에 바꿀 수 있다.  </p>
+<p>cf. 변수 이름 앞에 var을 붙이면 좋다. 이 때 var은 변수의 영어 단어인 variable의 약자이다.</p>
+<p>콘솔 창에서...<br>
+var word = "hello"  </p>
+<p>(4) 웹브라우저 제어  </p>
+<p>Javascript를 이용하면 웹 브라우저를 제어할 수 있다.  </p>
+<div class="gatsby-highlight" data-language="html"><pre style="counter-reset: linenumber NaN" class="language-html line-numbers"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>가령, 웹사이트의 색깔이 바뀌기 위해서는 <body> 태그의 속성이 이런 식으로 바뀌어야 한다.  </p>
+<p>위 style 속성에 들어있는 코드는 CSS이다.<br>
+HTML은 한 번 표시되면 바뀌지 않는 정적인 언어이므로, javascript를 이용해 이 부분을 해결할 수 있다.  </p></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/부스트코스-자바스크립트의-시작-2/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-7c901da89ae399af5f7c.js"],"app":["/app-fbf1c2a054e7b5051540.js"],"component---src-pages-about-css-modules-js":["/component---src-pages-about-css-modules-js-b51cb464f65fa229a53b.js"],"component---src-pages-about-js":["/component---src-pages-about-js-7f8816863caba3d42171.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-1a3ee44c3893510b6ea1.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1751c22f659a463658e6.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-925981375e7edcc336a2.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-b63fe5dece28406e92c8.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1c204787ccc228163b60.js"]};/*]]>*/</script><script src="/polyfill-7c901da89ae399af5f7c.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-1c204787ccc228163b60.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-e1f4b58bbee721551875.js" async=""></script><script src="/dfa5a892a4c19ca29c8a268222c9e781195e80f4-567a0397816d68a0115e.js" async=""></script><script src="/app-fbf1c2a054e7b5051540.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/styles-7d4153d260c0197f0043.js" async=""></script><script src="/webpack-runtime-cb02c9125117a9361c93.js" async=""></script></body></html>
