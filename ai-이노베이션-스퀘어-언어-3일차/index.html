@@ -72,6 +72,28 @@
 </li>
 <li>
 <p><a href="#7-split-sub">(7) split(), sub()</a></p>
+<ul>
+<li><a href="#-%ED%80%B4%EC%A6%88">* 퀴즈</a></li>
+<li><a href="#-text-processing">* text Processing</a></li>
+<li><a href="#-spacy">* spacy</a></li>
+<li><a href="#-%ED%80%B4%EC%A6%88-1">* 퀴즈</a></li>
+<li><a href="#-%EC%98%88%EC%A0%9C-%EC%8B%A4%EC%8A%B5">* 예제 실습</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-%ED%95%A8%EC%88%98">* 함수</a></p>
+</li>
+<li>
+<p><a href="#-one-hot-encoding">* One-Hot Encoding</a></p>
+</li>
+<li>
+<p><a href="#-n-gram-%EA%B5%AC%ED%98%84">* n-gram 구현</a></p>
+<ul>
+<li><a href="#-w2i-i2w">* W2I, I2W</a></li>
+<li><a href="#-one-hot-vector">* One Hot Vector</a></li>
+<li><a href="#-%ED%80%B4%EC%A6%88-2">* 퀴즈</a></li>
+<li><a href="#-%EB%8B%A8%EC%96%B4-%EB%B9%88%EB%8F%84">* 단어 빈도</a></li>
+</ul>
 </li>
 </ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 언어반 3일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>오늘부터 본격적으로 진도가 나가는 느낌.<br>
 원래 강의 들을 때 깃허브 블로그에 올릴 내용까지 다 정리하는 편인데, 이번엔 좀 힘들 거 같다 ㅠㅠ</p>
@@ -257,35 +279,32 @@ doc <span class="token operator">=</span> <span class="token string">"This test,
 p <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"\w+"</span><span class="token punctuation">)</span>
 p<span class="token punctuation">.</span>split<span class="token punctuation">(</span>doc<span class="token punctuation">)</span>
 
-<span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">', --++**\\ '</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">' ,,... '</span><span class="token punctuation">,</span> <span class="token string">'&amp;&amp;##'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">]</span>
-
+<span class="token comment"># ['', ' ', ', --++**\\ ', ' ', ' ', ' ', ' ,,... ', '&amp;&amp;##', '']</span>
 
 doc <span class="token operator">=</span> <span class="token string">"This test, --++**\\ is short and sweet ,,... 45u4__&amp;&amp;##buft"</span>
 p <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"\W+"</span><span class="token punctuation">)</span>
 p<span class="token punctuation">.</span>split<span class="token punctuation">(</span>doc<span class="token punctuation">)</span>
-<span class="token punctuation">[</span><span class="token string">'This'</span><span class="token punctuation">,</span> <span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'is'</span><span class="token punctuation">,</span> <span class="token string">'short'</span><span class="token punctuation">,</span> <span class="token string">'and'</span><span class="token punctuation">,</span> <span class="token string">'sweet'</span><span class="token punctuation">,</span> <span class="token string">'45u4__'</span><span class="token punctuation">,</span> <span class="token string">'buft'</span><span class="token punctuation">]</span>
+<span class="token comment"># ['This', 'test', 'is', 'short', 'and', 'sweet', '45u4__', 'buft']</span>
 
 doc<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
 
-<span class="token punctuation">[</span><span class="token string">'This'</span><span class="token punctuation">,</span>
-<span class="token string">'test,'</span><span class="token punctuation">,</span>
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token comment"># ['This',</span>
+<span class="token comment"># 'test,',</span>
+<span class="token comment"># ...</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <ul>
 <li>sub()</li>
 </ul>
-<p>단어 교체에 유용하다</p>
+<p>단어 교체에 유용하다.</p>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">p <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"(blue\s|white\s|red\s)+"</span><span class="token punctuation">)</span>
 p<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"color "</span><span class="token punctuation">,</span><span class="token string">"blue red shoes and white blue red socks"</span><span class="token punctuation">)</span>
 
-<span class="token string">'color shoes and color socks'</span>
+<span class="token comment"># 'color shoes and color socks'</span>
 
 p <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">"(blue|white|red)+"</span><span class="token punctuation">)</span>
 p<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"color "</span><span class="token punctuation">,</span><span class="token string">"blue red shoes and white blue red socks"</span><span class="token punctuation">)</span>
 
-<span class="token string">'color color shoes and color color color socks'</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>퀴즈</li>
-</ul>
+<span class="token comment"># 'color color shoes and color color color socks'</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-퀴즈" style="position:relative;">* 퀴즈<a href="#-%ED%80%B4%EC%A6%88" aria-label=" 퀴즈 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 마지막 실습 및 퀴즈</span>
 <span class="token comment"># 1) 연결된 공백 문자를 1개로 교체</span>
 <span class="token comment"># 2) 앞에 있는 공백 제거(교체)</span>
@@ -305,13 +324,9 @@ p2 <span class="token operator">=</span> re<span class="token punctuation">.</sp
 <span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> doc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 abd asd kluoeiur liueou lkuioe lieoj sd</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-text-processing" style="position:relative;">* text Processing<a href="#-text-processing" aria-label=" text processing permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <ul>
-<li>
-<p>text Processing</p>
-</li>
-<li>
-<p><a href="https://spacy.io/">spacy</a>는 오픈 소스 기반 라이브러리로, 한글은 별로 없다.</p>
-</li>
+<li><a href="https://spacy.io/">spacy</a>는 오픈 소스 기반 라이브러리로, 한글은 별로 없다.</li>
 </ul>
 <p>CJK : Chinese, Japanese, Korean</p>
 <ul>
@@ -321,26 +336,27 @@ abd asd kluoeiur liueou lkuioe lieoj sd</code><span aria-hidden="true" class="li
 <ul>
 <li>text_precessing.ipynb</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">## I always uh do the main um processing, I mean, the uh um data-processing.
-## => I always do the main processing, the data processing.
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment">## I always uh do the main um processing, I mean, the uh um data-processing.</span>
+<span class="token comment">## => I always do the main processing, the data processing.</span>
 
 
-# 토스마스터즈 : 영어 발표 관련 모임
-# 단어를 처리하기 전에, 그럼 어떤 것이 단어인가?
-# 단어의 정의가 필요하고..
+<span class="token comment"># 토스마스터즈 : 영어 발표 관련 모임</span>
+<span class="token comment"># 단어를 처리하기 전에, 그럼 어떤 것이 단어인가?</span>
+<span class="token comment"># 단어의 정의가 필요하고..</span>
 
-# vocabulary
-# 유사한 단어 형태들의 집합
+<span class="token comment"># vocabulary</span>
+<span class="token comment"># 유사한 단어 형태들의 집합</span>
 
-## I always uh do the main um processing, I mean, the uh um data-processing.
-## => { I, always, uh do, the main, um, processing, mean, data } (vocabulary)
+<span class="token comment">## I always uh do the main um processing, I mean, the uh um data-processing.</span>
+<span class="token comment">## => { I, always, uh do, the main, um, processing, mean, data } (vocabulary)</span>
 
-## 말뭉치 (Corpus)
+<span class="token comment">## 말뭉치 (Corpus)</span>
 
-# Token : 문서 및 문장에서 단어들 (Token)의 리스트(목록)
-# I always uh do the main um processing, I mean, the uh um data-processing.
-# 1   2   3   4   5   6   7   8   9   10   11   12   13   14   15
+<span class="token comment"># Token : 문서 및 문장에서 단어들 (Token)의 리스트(목록)</span>
+<span class="token comment"># I always uh do the main um processing, I mean, the uh um data-processing.</span>
+<span class="token comment"># 1   2   3   4   5   6   7   8   9   10   11   12   13   14   15</span>
 </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-spacy" style="position:relative;">* spacy<a href="#-spacy" aria-label=" spacy permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <ul>
 <li>spacy 라이브러리를 설치한다.</li>
 </ul>
@@ -356,30 +372,33 @@ stats <span class="token operator">=</span> nlp<span class="token punctuation">(
 
 <span class="token builtin">type</span><span class="token punctuation">(</span>stats<span class="token punctuation">)</span><span class="token punctuation">,</span> stats
 
+<span class="token comment"># 실행 결과</span>
 <span class="token punctuation">(</span>spacy<span class="token punctuation">.</span>tokens<span class="token punctuation">.</span>doc<span class="token punctuation">.</span>Doc<span class="token punctuation">,</span>
 I always uh do the main um processing<span class="token punctuation">,</span> I mean<span class="token punctuation">,</span> the uh um data<span class="token operator">-</span>processing<span class="token punctuation">.</span><span class="token punctuation">)</span>
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">
 <span class="token keyword">for</span> token <span class="token keyword">in</span> stats<span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>text<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">,</span> token<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
+<span class="token comment"># 실행 결과</span>
 I <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">></span> I <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'spacy.tokens.token.Token'</span><span class="token operator">></span>
 always <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">></span> always <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'spacy.tokens.token.Token'</span><span class="token operator">></span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">.</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">></span> <span class="token punctuation">.</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'spacy.tokens.token.Token'</span><span class="token operator">></span>
+
+
 
 doc2 <span class="token operator">=</span> <span class="token string">"Korea has a reasonable population."</span>
 stats <span class="token operator">=</span> nlp<span class="token punctuation">(</span>doc2<span class="token punctuation">)</span>
 <span class="token keyword">for</span> token <span class="token keyword">in</span> stats<span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
 
+<span class="token comment"># 실행 결과</span>
 Korea
 has
 a
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>퀴즈</li>
-</ul>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-퀴즈-1" style="position:relative;">* 퀴즈<a href="#-%ED%80%B4%EC%A6%88-1" aria-label=" 퀴즈 1 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">
 <span class="token comment"># spacy의 nlp 방식 말고 이전에 re 방식으로 doc를 token화 해서 for 로 출력해보세요</span>
 
@@ -389,6 +408,7 @@ m <span class="token operator">=</span> p<span class="token punctuation">.</span
 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
 
+<span class="token comment"># 실행 결과</span>
 I
 always
 uh
@@ -399,23 +419,25 @@ do
 <span class="token comment"># 정답</span>
 <span class="token keyword">for</span> token <span class="token keyword">in</span> re<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"\W+"</span><span class="token punctuation">,</span>doc<span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>token<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 실행 결과  </span>
 I <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">></span>
 always <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'str'</span><span class="token operator">></span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>__</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">$ python -m spacy download en_core_web_trf</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">L <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>nlp<span class="token punctuation">.</span>vocab<span class="token punctuation">.</span>strings<span class="token punctuation">)</span>
-
 <span class="token builtin">type</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token comment"># (list, 83814)</span>
 
 
 <span class="token builtin">type</span><span class="token punctuation">(</span>nlp<span class="token punctuation">.</span>vocab<span class="token punctuation">.</span>strings<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span>
-
+<span class="token comment"># 실행 결과</span>
 <span class="token punctuation">(</span>spacy<span class="token punctuation">.</span>strings<span class="token punctuation">.</span>StringStore<span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">83814</span><span class="token punctuation">)</span>
 
 
 L<span class="token punctuation">[</span><span class="token number">50000</span><span class="token punctuation">]</span><span class="token punctuation">,</span> L<span class="token punctuation">[</span><span class="token number">50001</span><span class="token punctuation">]</span><span class="token punctuation">,</span> L<span class="token punctuation">[</span><span class="token number">83813</span><span class="token punctuation">]</span>  <span class="token comment"># en_core_web_sm에서 특정 위치의 단어 보기</span>
+<span class="token comment"># 실행 결과</span>
 <span class="token punctuation">(</span><span class="token string">'glands'</span><span class="token punctuation">,</span> <span class="token string">'glandular'</span><span class="token punctuation">,</span> <span class="token string">'￥dd'</span><span class="token punctuation">)</span>
 </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 파이썬 말고 주피터 노트북 에서 패키지 설치하기</span>
@@ -425,10 +447,11 @@ L<span class="token punctuation">[</span><span class="token number">50000</span>
 nlp_accuracy <span class="token operator">=</span> spacy<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">"en_core_web_trf"</span><span class="token punctuation">)</span>
 L_accuracy <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>nlp_accuracy<span class="token punctuation">.</span>vocab<span class="token punctuation">.</span>strings<span class="token punctuation">)</span>
 <span class="token builtin">type</span><span class="token punctuation">(</span>nlp_accuracy<span class="token punctuation">.</span>vocab<span class="token punctuation">.</span>strings<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>L_accuracy<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L_accuracy<span class="token punctuation">)</span>
-
+<span class="token comment"># 실행 결과</span>
 <span class="token punctuation">(</span>spacy<span class="token punctuation">.</span>strings<span class="token punctuation">.</span>StringStore<span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">83931</span><span class="token punctuation">)</span>
 </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <hr>
+<h4 id="-예제-실습" style="position:relative;">* 예제 실습<a href="#-%EC%98%88%EC%A0%9C-%EC%8B%A4%EC%8A%B5" aria-label=" 예제 실습 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <ul>
 <li>강사님으로 부터 reviews.csv 파일을 제공받았다.</li>
 </ul>
@@ -441,6 +464,7 @@ L_accuracy <span class="token operator">=</span> <span class="token builtin">lis
 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"reviews.csv"</span><span class="token punctuation">)</span>
 df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
+<span class="token comment"># 실행 결과</span>
 rating review
 <span class="token number">0</span> negative terrible place to work <span class="token keyword">for</span> i just heard a stor<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token number">1</span> negative hours <span class="token punctuation">,</span> minutes total time <span class="token keyword">for</span> an extremely s<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -449,56 +473,55 @@ rating review
 
 
 vocab <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token builtin">type</span><span class="token punctuation">(</span>vocab<span class="token punctuation">)</span> <span class="token comment"># dict</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>함수</li>
-</ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">def initializeVocabulary():
-  unkToken = "&lt;UNK>"
-  vocab["t_2_i"] = {}
-  vocab["I_2_t"] = {}
-  vocab["unkToken"] = unkToken
-  idx = addToken(unkToken)
-  vocab["unkTokenIdx"] = idx
+<span class="token builtin">type</span><span class="token punctuation">(</span>vocab<span class="token punctuation">)</span> <span class="token comment"># dict</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h3 id="-함수" style="position:relative;">* 함수<a href="#-%ED%95%A8%EC%88%98" aria-label=" 함수 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">def</span> <span class="token function">initializeVocabulary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  unkToken <span class="token operator">=</span> <span class="token string">"&lt;UNK>"</span>
+  vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  vocab<span class="token punctuation">[</span><span class="token string">"I_2_t"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  vocab<span class="token punctuation">[</span><span class="token string">"unkToken"</span><span class="token punctuation">]</span> <span class="token operator">=</span> unkToken
+  idx <span class="token operator">=</span> addToken<span class="token punctuation">(</span>unkToken<span class="token punctuation">)</span>
+  vocab<span class="token punctuation">[</span><span class="token string">"unkTokenIdx"</span><span class="token punctuation">]</span> <span class="token operator">=</span> idx
 
-def addToken(token):
-  if token in vocab["t_2_i"]:
-    idx = vocab["t_2_i"][token]
-  else:
-    idx = len(vocab["t_2_i"])
-    vocab["t_2_i"][token] = idx
-    vocab["I_2_t"][idx] = token
-  return idx
+<span class="token keyword">def</span> <span class="token function">addToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> token <span class="token keyword">in</span> vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    idx <span class="token operator">=</span> vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>token<span class="token punctuation">]</span>
+  <span class="token keyword">else</span><span class="token punctuation">:</span>
+    idx <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>token<span class="token punctuation">]</span> <span class="token operator">=</span> idx
+    vocab<span class="token punctuation">[</span><span class="token string">"I_2_t"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> token
+  <span class="token keyword">return</span> idx
 
-def addManyTokens(tokens):
-  idxes = [addToken(token) for token in tokens]
-  return idxes
+<span class="token keyword">def</span> <span class="token function">addManyTokens</span><span class="token punctuation">(</span>tokens<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  idxes <span class="token operator">=</span> <span class="token punctuation">[</span>addToken<span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token keyword">for</span> token <span class="token keyword">in</span> tokens<span class="token punctuation">]</span>
+  <span class="token keyword">return</span> idxes
 
 
-def lookupToken(token):
-  if vocab["unkTokenIdx"] >= 0:
-    return vocab["t_2_i"].get(token, vocab["unkTokenIdx"])
-  else:
-    return vocab["t_2_i"][token]
+<span class="token keyword">def</span> <span class="token function">lookupToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> vocab<span class="token punctuation">[</span><span class="token string">"unkTokenIdx"</span><span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>get<span class="token punctuation">(</span>token<span class="token punctuation">,</span> vocab<span class="token punctuation">[</span><span class="token string">"unkTokenIdx"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>token<span class="token punctuation">]</span>
 
-def lookupIndex(idx):
-  if idx not in vocab["I_2_t"]:
-    raise KeyError("the idx (%d) is not there" % idx)
-    return vocab["I_2_t"][idx]
+<span class="token keyword">def</span> <span class="token function">lookupIndex</span><span class="token punctuation">(</span>idx<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> idx <span class="token keyword">not</span> <span class="token keyword">in</span> vocab<span class="token punctuation">[</span><span class="token string">"I_2_t"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">raise</span> KeyError<span class="token punctuation">(</span><span class="token string">"the idx (%d) is not there"</span> <span class="token operator">%</span> idx<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> vocab<span class="token punctuation">[</span><span class="token string">"I_2_t"</span><span class="token punctuation">]</span><span class="token punctuation">[</span>idx<span class="token punctuation">]</span>
 
-def vocabularyFromDataFrame(df, cutoff=25):
-  initializeVocabulary()
-  wordCounts = Counter()
-  for r in df.review:
-    for word in re.split("\W+",r): # token 화
-    wordCounts[word] += 1
-  for word, count in wordCounts.items():
-    if count > cutoff:
-      addToken(word)
+<span class="token keyword">def</span> <span class="token function">vocabularyFromDataFrame</span><span class="token punctuation">(</span>df<span class="token punctuation">,</span> cutoff<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  initializeVocabulary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  wordCounts <span class="token operator">=</span> Counter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> r <span class="token keyword">in</span> df<span class="token punctuation">.</span>review<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> word <span class="token keyword">in</span> re<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"\W+"</span><span class="token punctuation">,</span>r<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># token 화</span>
+    wordCounts<span class="token punctuation">[</span>word<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+  <span class="token keyword">for</span> word<span class="token punctuation">,</span> count <span class="token keyword">in</span> wordCounts<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> count <span class="token operator">></span> cutoff<span class="token punctuation">:</span>
+      addToken<span class="token punctuation">(</span>word<span class="token punctuation">)</span>
 </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">for</span> r <span class="token keyword">in</span> df<span class="token punctuation">.</span>review<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
 
+<span class="token comment"># 실행 결과</span>
 terrible place to work <span class="token keyword">for</span> i just heard a story of them find a girl over her biological father coming <span class="token keyword">in</span> there who she hadn t seen <span class="token keyword">in</span> years she said hi to him which upset his wife <span class="token keyword">and</span> they left she finished the rest of her day working fine the <span class="token builtin">next</span> day when she went into work they fired over that situation <span class="token punctuation">.</span> i <span class="token keyword">for</span> one <span class="token keyword">and</span> boycotting texas roadhouse because <span class="token builtin">any</span> place that could be that cruel to their staff does <span class="token keyword">not</span> deserve my business <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span> yelp wants me to give them a star but i don t believe they deserve it
 
 
@@ -511,90 +534,93 @@ lookupIndex<span class="token punctuation">(</span><span class="token number">38
 vocabularyFromDataFrame<span class="token punctuation">(</span>df<span class="token punctuation">)</span>
 
 vocab <span class="token comment"># 300s # 단어 빈도</span>
-<span class="token punctuation">{</span><span class="token string">'t_2_i'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'&lt;UNK>'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-<span class="token string">'the'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-<span class="token string">'to'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-<span class="token string">'i'</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+<span class="token comment"># 실행 결과</span>
+<span class="token comment"># {'t_2_i': {'&lt;UNK>': 0,</span>
+<span class="token comment">#'the': 1,</span>
+<span class="token comment"># 'to': 2,</span>
+<span class="token comment"># 'i': 3,</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
 vocab<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'t_2_i'</span><span class="token punctuation">,</span> <span class="token string">'I_2_t'</span><span class="token punctuation">,</span> <span class="token string">'unkToken'</span><span class="token punctuation">,</span> <span class="token string">'unkTokenIdx'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token comment"># 실행 결과</span>
+<span class="token comment"># dict_keys(['t_2_i', 'I_2_t', 'unkToken', 'unkTokenIdx'])</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h3 id="-one-hot-encoding" style="position:relative;">* One-Hot Encoding<a href="#-one-hot-encoding" aria-label=" one hot encoding permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
 <ul>
-<li>
-<p>One-Hot Encoding</p>
-</li>
-<li>
-<p>함수</p>
-</li>
+<li>함수</li>
 </ul>
-<p>``python
-def oneHotVector(token, N):
-oneHot = np.zeros((N,1))
-oneHot[lookupToken(token)]=1
-return oneHot</p>
-<p>N = len(vocab["t_2_i"])
-print(N) # 8946개
-token = "sure"
-print(lookupToken(token)) # 200번째</p>
-<p>oneHot = oneHotVector(token, N)
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">def</span> <span class="token function">oneHotVector</span><span class="token punctuation">(</span>token<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  oneHot <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>N<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  oneHot<span class="token punctuation">[</span>lookupToken<span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span>
+  <span class="token keyword">return</span> oneHot
+
+N <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>vocab<span class="token punctuation">[</span><span class="token string">"t_2_i"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span> <span class="token comment"># 8946개</span>
+token <span class="token operator">=</span> <span class="token string">"sure"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lookupToken<span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 200번째</span>
+
+oneHot <span class="token operator">=</span> oneHotVector<span class="token punctuation">(</span>token<span class="token punctuation">,</span> N<span class="token punctuation">)</span>
 oneHot
-array([[0.],
-[0.],
-[0.],
-...</p>
-<p>oneHot.shape, type(oneHot)
-((8946, 1), numpy.ndarray)</p>
-<p>[0, 0, ... , 0, ... ] 생긴 numpy array 생성, 즉, 0으로 채워진 numpy array 생성</p>
-<p>oneHot[200], oneHot[199], oneHot[201]
-(array([1.]), array([0.]), array([0.]))</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">
-__
 
-* text_processing.ipynb
+<span class="token comment"># 실행 결과</span>
+<span class="token comment"># array([[0.],</span>
+<span class="token comment"># [0.],</span>
+<span class="token comment"># [0.],</span>
+<span class="token comment"># ...</span>
 
+oneHot<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>oneHot<span class="token punctuation">)</span>
+<span class="token comment"># 실행 결과</span>
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">8946</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> numpy<span class="token punctuation">.</span>ndarray<span class="token punctuation">)</span>
 
-```python
+<span class="token comment"># [0, 0, ... , 0, ... ] 생긴 numpy array 생성, 즉, 0으로 채워진 numpy array 생성</span>
 
-import spacy
+oneHot<span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">]</span><span class="token punctuation">,</span> oneHot<span class="token punctuation">[</span><span class="token number">199</span><span class="token punctuation">]</span><span class="token punctuation">,</span> oneHot<span class="token punctuation">[</span><span class="token number">201</span><span class="token punctuation">]</span>
+<span class="token comment"># 실행 결과</span>
+<span class="token punctuation">(</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>__</p>
+<ul>
+<li>text_processing.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">
+<span class="token keyword">import</span> spacy
 
-nlp = spacy.load("en_core_web_sm")
+nlp <span class="token operator">=</span> spacy<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">"en_core_web_sm"</span><span class="token punctuation">)</span>
 
-analytics_document = nlp("He is reading books with other students while eating meal.")
+analytics_document <span class="token operator">=</span> nlp<span class="token punctuation">(</span><span class="token string">"He is reading books with other students while eating meal."</span><span class="token punctuation">)</span>
 
-for token in analytics_document:
-  print(token.text, token.lemma_, token.is_stop) # 단어, 원형, stop어 여부
+<span class="token keyword">for</span> token <span class="token keyword">in</span> analytics_document<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>text<span class="token punctuation">,</span> token<span class="token punctuation">.</span>lemma_<span class="token punctuation">,</span> token<span class="token punctuation">.</span>is_stop<span class="token punctuation">)</span> <span class="token comment"># 단어, 원형, stop어 여부</span>
 
-He he True
-is be True
-reading read False
-...
+<span class="token comment"># 실행 결과</span>
+He he <span class="token boolean">True</span>
+<span class="token keyword">is</span> be <span class="token boolean">True</span>
+reading read <span class="token boolean">False</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
-txt = "This is the first sentence. However, all the other Ph.D. students are working on , say , second sentence."
-txt_analytics = nlp(txt)
+txt <span class="token operator">=</span> <span class="token string">"This is the first sentence. However, all the other Ph.D. students are working on , say , second sentence."</span>
+txt_analytics <span class="token operator">=</span> nlp<span class="token punctuation">(</span>txt<span class="token punctuation">)</span>
 
-for sentence in txt_analytics:
-  print(sentence) # 단어 단위
+<span class="token keyword">for</span> sentence <span class="token keyword">in</span> txt_analytics<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span> <span class="token comment"># 단어 단위</span>
 
+<span class="token comment"># 실행 결과</span>
 This
-is
+<span class="token keyword">is</span>
 the
 first
-...
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
-for sentence in txt_analytics.sents:
-  print(sentence) # 문장 단위
+<span class="token keyword">for</span> sentence <span class="token keyword">in</span> txt_analytics<span class="token punctuation">.</span>sents<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span> <span class="token comment"># 문장 단위</span>
 
-This is the first sentence.
-However, all the other Ph.D. students are working on , say , second sentence.
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token comment"># 실행 결과</span>
+This <span class="token keyword">is</span> the first sentence<span class="token punctuation">.</span>
+However<span class="token punctuation">,</span> <span class="token builtin">all</span> the other Ph<span class="token punctuation">.</span>D<span class="token punctuation">.</span> students are working on <span class="token punctuation">,</span> say <span class="token punctuation">,</span> second sentence<span class="token punctuation">.</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h3 id="-n-gram-구현" style="position:relative;">* n-gram 구현<a href="#-n-gram-%EA%B5%AC%ED%98%84" aria-label=" n gram 구현 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
 <ul>
-<li>
-<p>n-gram 구현</p>
-</li>
-<li>
-<p>함수</p>
-</li>
+<li>함수</li>
 </ul>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">def</span> <span class="token function">nGrams</span><span class="token punctuation">(</span>doc_string_or_list<span class="token punctuation">,</span> n<span class="token punctuation">,</span> docIsAlreadyTokenized<span class="token punctuation">)</span><span class="token punctuation">:</span>
   doc <span class="token operator">=</span> doc_string_or_list
@@ -610,23 +636,27 @@ n <span class="token operator">=</span> <span class="token number">4</span>
 grams <span class="token operator">=</span> nGrams<span class="token punctuation">(</span>doc<span class="token punctuation">,</span> n <span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
 grams
 
-<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'how'</span><span class="token punctuation">,</span> <span class="token string">'old'</span><span class="token punctuation">,</span> <span class="token string">'are'</span><span class="token punctuation">,</span> <span class="token string">'you'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">[</span><span class="token string">'old'</span><span class="token punctuation">,</span> <span class="token string">'are'</span><span class="token punctuation">,</span> <span class="token string">'you'</span><span class="token punctuation">,</span> <span class="token string">'today'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">[</span><span class="token string">'are'</span><span class="token punctuation">,</span> <span class="token string">'you'</span><span class="token punctuation">,</span> <span class="token string">'today'</span><span class="token punctuation">,</span> <span class="token string">'or'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token comment"># 실행 결과</span>
+<span class="token comment"># [['how', 'old', 'are', 'you'],</span>
+<span class="token comment"># ['old', 'are', 'you', 'today'],</span>
+<span class="token comment"># ['are', 'you', 'today', 'or'],</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
 nGrams<span class="token punctuation">(</span>doc<span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token comment"># n이 1이면 tokenized 랑 동일</span>
-<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'how'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">[</span><span class="token string">'old'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">[</span><span class="token string">'are'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment"># 실행 결과</span>
+<span class="token comment"># [['how'],</span>
+<span class="token comment"># ['old'],</span>
+<span class="token comment"># ['are'],</span>
+<span class="token comment"># ...</span>
 
 
 <span class="token comment"># n = 1 : 유니그램 (unigram)</span>
 <span class="token comment"># n = 2 : 바이그램 (bigram)</span>
 <span class="token comment"># n = 3 : 트라이그램 (trigram)</span>
 <span class="token comment"># n >= 4 : n-gram</span>
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-w2i-i2w" style="position:relative;">* W2I, I2W<a href="#-w2i-i2w" aria-label=" w2i i2w permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>위에서 만든 lookupIndex, lookupToken 함수와 흡사한데, 더 간단하게 만들 수 있다.</p>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> spacy
 nlp <span class="token operator">=</span> spacy<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">"en_core_web_sm"</span><span class="token punctuation">)</span>
 
@@ -641,32 +671,31 @@ I2W <span class="token operator">=</span> <span class="token builtin">dict</span
 <span class="token comment"># print(L[:30]) # 단어들</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">[</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token number">83811</span> <span class="token number">83812</span> <span class="token number">83813</span><span class="token punctuation">]</span>
+<span class="token comment"># [ 0 1 2 ... 83811 83812 83813]</span>
 
 W2I
-<span class="token punctuation">{</span><span class="token string">'\t'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-<span class="token string">'\n'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token comment"># {'\t': 0,</span>
+<span class="token comment"># '\n': 1,</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
 
 W2I<span class="token punctuation">[</span><span class="token string">"game"</span><span class="token punctuation">]</span> <span class="token comment"># 49410</span>
 I2W<span class="token punctuation">[</span><span class="token number">49410</span><span class="token punctuation">]</span> <span class="token comment"># 'game'</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-one-hot-vector" style="position:relative;">* One Hot Vector<a href="#-one-hot-vector" aria-label=" one hot vector permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <ul>
 <li>함수</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">def oneHotVector(word, doc, numWords):
-  v = np.zeros(numWords)
-  v[W2I[word]] = 1
-  return v
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">def</span> <span class="token function">oneHotVector</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> doc<span class="token punctuation">,</span> numWords<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  v <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span>
+  v<span class="token punctuation">[</span>W2I<span class="token punctuation">[</span>word<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+  <span class="token keyword">return</span> v
 
-v = oneHotVector("game",W2I,numWords)
+v <span class="token operator">=</span> oneHotVector<span class="token punctuation">(</span><span class="token string">"game"</span><span class="token punctuation">,</span>W2I<span class="token punctuation">,</span>numWords<span class="token punctuation">)</span>
 
-v, v.shape, v[49410], v[W2I["game"]]
-(array([0., 0., 0., ..., 0., 0., 0.]), (83814,), 1.0, 1.0)
+v<span class="token punctuation">,</span> v<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> v<span class="token punctuation">[</span><span class="token number">49410</span><span class="token punctuation">]</span><span class="token punctuation">,</span> v<span class="token punctuation">[</span>W2I<span class="token punctuation">[</span><span class="token string">"game"</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token comment"># (array([0., 0., 0., ..., 0., 0., 0.]), (83814,), 1.0, 1.0)</span>
 </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>퀴즈</li>
-</ul>
+<h4 id="-퀴즈-2" style="position:relative;">* 퀴즈<a href="#-%ED%80%B4%EC%A6%88-2" aria-label=" 퀴즈 2 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">doc <span class="token operator">=</span> <span class="token string">"How are you today. I know most of the time how you feel."</span>
 
 <span class="token comment"># 이 doc를 토큰화한 다음, 리스트로 만들어보세요</span>
@@ -677,20 +706,18 @@ a <span class="token operator">=</span> <span class="token punctuation">[</span>
   a<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sentence<span class="token punctuation">)</span> <span class="token comment"># 단어 단위</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
-<span class="token punctuation">[</span>How<span class="token punctuation">,</span> are<span class="token punctuation">,</span> you<span class="token punctuation">,</span> today<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">,</span> I<span class="token punctuation">,</span> know<span class="token punctuation">,</span> most<span class="token punctuation">,</span> of<span class="token punctuation">,</span> the<span class="token punctuation">,</span> time<span class="token punctuation">,</span> how<span class="token punctuation">,</span> you<span class="token punctuation">,</span> feel<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">]</span>
+<span class="token comment"># [How, are, you, today, ., I, know, most, of, the, time, how, you, feel, .]</span>
 
 <span class="token comment"># 정답</span>
 
 tokens <span class="token operator">=</span> <span class="token punctuation">[</span>token<span class="token punctuation">.</span>text <span class="token keyword">for</span> token <span class="token keyword">in</span> nlp<span class="token punctuation">(</span>doc<span class="token punctuation">)</span><span class="token punctuation">]</span>
 tokens
 
-<span class="token punctuation">[</span><span class="token string">'How'</span><span class="token punctuation">,</span>
-<span class="token string">'are'</span><span class="token punctuation">,</span>
-<span class="token string">'you'</span><span class="token punctuation">,</span>
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>단어 빈도</li>
-</ul>
+<span class="token comment"># ['How',</span>
+<span class="token comment"># 'are',</span>
+<span class="token comment"># 'you',</span>
+<span class="token comment"># ...</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="-단어-빈도" style="position:relative;">* 단어 빈도<a href="#-%EB%8B%A8%EC%96%B4-%EB%B9%88%EB%8F%84" aria-label=" 단어 빈도 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">doc <span class="token operator">=</span> <span class="token string">"How are you today. I know most of the time with him!"</span>
 tokens <span class="token operator">=</span> <span class="token punctuation">[</span>token<span class="token punctuation">.</span>text <span class="token keyword">for</span> token <span class="token keyword">in</span> nlp<span class="token punctuation">(</span>doc<span class="token punctuation">)</span><span class="token punctuation">]</span>
 
@@ -703,7 +730,6 @@ I2W <span class="token operator">=</span> <span class="token builtin">dict</span
 <span class="token keyword">print</span><span class="token punctuation">(</span>W2I<span class="token punctuation">[</span><span class="token string">"him"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 12</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>I2W<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># him</span>
 
-
 v <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>numWords<span class="token punctuation">)</span>
 <span class="token keyword">for</span> token <span class="token keyword">in</span> tokens<span class="token punctuation">:</span>
   v <span class="token operator">+=</span> oneHotVector<span class="token punctuation">(</span>token<span class="token punctuation">,</span> W2I<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -711,4 +737,4 @@ v <span class="token operator">=</span> np<span class="token punctuation">.</spa
 v <span class="token comment"># 단어 빈도</span>
 
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-3일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-893866d828268bdf98d5.js"],"app":["/app-0dfcf1d989dd570d1f8d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0a5d30d80a86a6beaaa6.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-04658c393fc078044a6e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7d3303cf2ff5e504b9af.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-46aa3abf40fa3f68b9fe.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-893866d828268bdf98d5.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0dfcf1d989dd570d1f8d.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-2ed2469d67f21d902031.js" async=""></script></body></html>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-3일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-893866d828268bdf98d5.js"],"app":["/app-0dfcf1d989dd570d1f8d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0a5d30d80a86a6beaaa6.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-04658c393fc078044a6e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7d3303cf2ff5e504b9af.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-46aa3abf40fa3f68b9fe.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-893866d828268bdf98d5.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0dfcf1d989dd570d1f8d.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-2ed2469d67f21d902031.js" async=""></script></body></html>
