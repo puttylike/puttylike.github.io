@@ -1,0 +1,835 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.10.1"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-2ed2469d67f21d902031.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-0dfcf1d989dd570d1f8d.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-언어-5일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li>
+<p><a href="#5%EC%9D%BC%EC%B0%A8">5일차</a></p>
+</li>
+<li>
+<p><a href="#web-crawling">Web Crawling</a></p>
+<ul>
+<li><a href="#-%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%98%EB%A0%A4%EB%A9%B4">* 크롤링 하려면?</a></li>
+<li><a href="#-%ED%81%AC%EB%A1%A4%EB%A7%81-%EA%B4%80%EB%A0%A8-%ED%8C%A8%ED%82%A4%EC%A7%80">* 크롤링 관련 패키지</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#nlp-by-nltk">NLP (by nltk)</a></p>
+<ul>
+<li>
+<p><a href="#tokenize">tokenize</a></p>
+<ul>
+<li><a href="#wordpunct_tokenize">wordpunct_tokenize</a></li>
+<li><a href="#regexp_tokenize">regexp_tokenize</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#stemming">stemming</a></p>
+<ul>
+<li><a href="#porter-stemmer">Porter stemmer</a></li>
+<li><a href="#regexp-stemmer">Regexp stemmer</a></li>
+<li><a href="#lancaster-stemmer">Lancaster stemmer</a></li>
+<li><a href="#snowball-stemmer">Snowball stemmer</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#stop-word">Stop Word</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#word-cloud">Word Cloud</a></p>
+</li>
+<li>
+<p><a href="#pos">POS</a></p>
+</li>
+<li>
+<p><a href="#%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D">감정 분석</a></p>
+<ul>
+<li><a href="#dataset-%EC%83%9D%EC%84%B1-feat-func">dataset 생성 (feat. func)</a></li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 언어반 5일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>7-8주차에 할 app을 소개해 줬다. SW 마에스트로에서 개발에 4시간이 걸렸다고 한다. 실습 위주를 지향하시는 듯 싶다.</p>
+<p>오늘은 크롤링을 배웠다. 웹페이지에서 데이터를 가지고 온 후에 xlsx에 저장하는 것을 배웠다. 내일은 내일은 웹페이지에서 데이터를 가지고 온 후에 database에 저장하여 NLP에 활용하게 하고, 감정분석 dataset으로 model trian을 할 예정이라고 한다.</p>
+<hr>
+<h3 id="5일차" style="position:relative;">5일차<a href="#5%EC%9D%BC%EC%B0%A8" aria-label="5일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>오늘도 만드는 가상환경.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">PS C:\20210724> python -m venv venv_20210725
+PS C:\20210724> venv_20210725\Scripts\activate
+(venv_20210724) PS C:\20210724> pip install -r requirements.txt</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<h3 id="web-crawling" style="position:relative;">Web Crawling<a href="#web-crawling" aria-label="web crawling permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>07.31 : 웹페이지에서 데이터를 가지고 온 후에 xlsx에 저장</li>
+<li>08.01 : 내일은 웹페이지에서 데이터를 가지고 온 후에 database에 저장</li>
+<li>4주차 : Document 형 NoSql은 MongoDB를 배운 후, 이곳에 데이터를 저장</li>
+</ul>
+<h4 id="-크롤링-하려면" style="position:relative;">* 크롤링 하려면?<a href="#-%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%98%EB%A0%A4%EB%A9%B4" aria-label=" 크롤링 하려면 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p><a href="http://singsing.sejong.go.kr/pages/sub02_01.do">http://singsing.sejong.go.kr/pages/sub02_01.do</a></p>
+<ol>
+<li>직접 입력 (너무 많은 시간이 소용, <del>데이터 바뀌면</del> 의미도 없음)</li>
+<li>Copy &#x26; Paste (위 예제의 경우 2654번 해야하고, 정리도 필요함. 시간도 소요)</li>
+<li>Web Crawling을 한다!</li>
+</ol>
+<h4 id="-크롤링-관련-패키지" style="position:relative;">* 크롤링 관련 패키지<a href="#-%ED%81%AC%EB%A1%A4%EB%A7%81-%EA%B4%80%EB%A0%A8-%ED%8C%A8%ED%82%A4%EC%A7%80" aria-label=" 크롤링 관련 패키지 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a></li>
+<li><a href="https://scrapy.org/">Scrapy</a></li>
+<li><a href="https://www.selenium.dev/">Selenium</a></li>
+</ul>
+<p>Selenium은 자동화 용이다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> pip install beautifulsoup4
+> pip install html5lib
+> pip install openpyxl
+> pip freeze > requirements.txt</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>get_list.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> datetime
+
+<span class="token comment"># df_all = pd.DataFrame(columns = ["NO","대분류","중분류","NEIS식품명/상세식품명","식품설명","중량단위","포장단위"])</span>
+df_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+url <span class="token operator">=</span> <span class="token string">"http://singsing.sejong.go.kr/pages/sub02_01.do?pageIndex=1&amp;tmpcls2=&amp;searchMenu=&amp;searchMenu2=&amp;searchKeyword1="</span>
+<span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token comment"># print(f.read()) # 한글 안 가져옴</span>
+    <span class="token comment"># print(type(f.read().decode("utf-8"))) #  &lt;class 'str'> # String - 단순한 문자열</span>
+    target_page <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"html5lib"</span><span class="token punctuation">)</span> <span class="token comment"># html5로 해석 # html5lib 패키지 설치 필요</span>
+    <span class="token comment"># sample</span>
+    <span class="token comment"># print(type(target_page)) # &lt;class 'bs4.BeautifulSoup'></span>
+    <span class="token comment"># page_num = target_page.select("div.page_num a")</span>
+    <span class="token comment"># print(page_num)</span>
+    <span class="token comment"># for i in page_num:</span>
+        <span class="token comment"># print(i)</span>
+
+    tr_list <span class="token operator">=</span> target_page<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"tbody tr"</span><span class="token punctuation">)</span>
+    <span class="token comment"># print(type(tr_list)) # &lt;class 'bs4.element.ResultSet'></span>
+    <span class="token comment"># print(len(tr_list)) # 10</span>
+    <span class="token comment"># print(tr_list)</span>
+    <span class="token keyword">for</span> tr <span class="token keyword">in</span> tr_list<span class="token punctuation">:</span>
+        <span class="token comment"># print(tr)</span>
+        <span class="token comment"># print(type(tr)) # &lt;class 'bs4.element.Tag'></span>
+        list_td <span class="token operator">=</span> tr<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"td"</span><span class="token punctuation">)</span>
+        <span class="token comment"># print(type(list_td)) # &lt;class 'bs4.element.ResultSet'></span>
+        <span class="token comment"># print(len(list_td)) # 8</span>
+        <span class="token comment"># print(list_td) # tr이 빠짐</span>
+        <span class="token comment"># print(f"{list_td[0]} {list_td[1]} {list_td[2]} {list_td[3]} {list_td[4]} {list_td[5]} {list_td[6]} {list_td[7]}")</span>
+        <span class="token comment"># print(type(list_td[0])) # &lt;class 'bs4.element.Tag'></span>
+        <span class="token comment"># print(f"{list_td[0].text} {list_td[1].text} {list_td[2].text} {list_td[3].text} {list_td[4].text} {list_td[5].text} {list_td[6].text} {list_td[7]}.text")</span>
+        df_all <span class="token operator">=</span> df_all<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token string">"NO"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"대분류"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"중분류"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"NEIS식품명/상세식품명"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"식품설명"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"포장중량"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"중량단위"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"포장단위"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment"># print(df_all)</span>
+<span class="token comment"># print(df_all.shape)        </span>
+
+<span class="token comment"># 데이터를 xlsx에 저장하고 싶다</span>
+<span class="token comment"># xlsx에서 데이터의 형식은 pandas의 dataframe과 유사 (행과 열로 이루어진다)</span>
+
+now <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df_all<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">"식재료 종류_"</span><span class="token operator">+</span> now<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">"%Y%m%d%H%M%S"</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token string">".xlsx"</span><span class="token punctuation">,</span>index <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token comment"># openpyxl 패키지 설치 필요</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>여러 페이지를 긁고 싶다면?</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> datetime
+
+<span class="token keyword">def</span> <span class="token function">loading_target_page</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url <span class="token operator">=</span> <span class="token string">"http://singsing.sejong.go.kr/pages/sub02_01.do?pageIndex=+%PAGE_NUM%&amp;tmpcls2=&amp;searchMenu=&amp;searchMenu2=&amp;searchKeyword1="</span>
+    <span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>url<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"%PAGE_NUM%"</span><span class="token punctuation">,</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        <span class="token comment"># print(f.read()) # 한글 안 가져옴</span>
+        <span class="token comment"># print(type(f.read().decode("utf-8"))) #  &lt;class 'str'> # String - 단순한 문자열</span>
+        html<span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> html
+
+
+<span class="token comment"># df_all = pd.DataFrame(columns = ["NO","대분류","중분류","NEIS식품명/상세식품명","식품설명","중량단위","포장단위"])</span>
+df_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 전체 페이지 수 count</span>
+target_page <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>loading_target_page<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"html5lib"</span><span class="token punctuation">)</span>
+page_num <span class="token operator">=</span> target_page<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"div.page_num a"</span><span class="token punctuation">)</span>
+total_page_counter <span class="token operator">=</span> page_num<span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>page_num<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"href"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"="</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>total_page_counter<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>total_page_counter<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    target_page <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>loading_target_page<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"html5lib"</span><span class="token punctuation">)</span>  <span class="token comment"># html5로 해석 # 패키지 설치 필요</span>
+    <span class="token comment"># sample</span>
+    <span class="token comment"># print(type(target_page)) # &lt;class 'bs4.BeautifulSoup'></span>
+    <span class="token comment"># page_num = target_page.select("div.page_num a")</span>
+    <span class="token comment"># print(page_num)</span>
+    <span class="token comment"># for i in page_num:</span>
+        <span class="token comment"># print(i)        </span>
+    tr_list <span class="token operator">=</span> target_page<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"tbody tr"</span><span class="token punctuation">)</span>
+    <span class="token comment"># print(type(tr_list)) # &lt;class 'bs4.element.ResultSet'></span>
+    <span class="token comment"># print(len(tr_list)) # 10</span>
+    <span class="token comment"># print(tr_list)</span>
+    <span class="token keyword">for</span> tr <span class="token keyword">in</span> <span class="token builtin">reversed</span><span class="token punctuation">(</span>tr_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># print(tr)</span>
+        <span class="token comment"># print(type(tr)) # &lt;class 'bs4.element.Tag'></span>
+        list_td <span class="token operator">=</span> tr<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"td"</span><span class="token punctuation">)</span>
+        <span class="token comment"># print(type(list_td)) # &lt;class 'bs4.element.ResultSet'></span>
+        <span class="token comment"># print(len(list_td)) # 8</span>
+        <span class="token comment"># print(list_td) # tr이 빠짐</span>
+        <span class="token comment"># print(f"{list_td[0]} {list_td[1]} {list_td[2]} {list_td[3]} {list_td[4]} {list_td[5]} {list_td[6]} {list_td[7]}")</span>
+        <span class="token comment"># print(type(list_td[0])) # &lt;class 'bs4.element.Tag'></span>
+        <span class="token comment"># print(f"{list_td[0].text} {list_td[1].text} {list_td[2].text} {list_td[3].text} {list_td[4].text} {list_td[5].text} {list_td[6].text} {list_td[7]}.text")</span>
+        df_all <span class="token operator">=</span> df_all<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token string">"NO"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"대분류"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"중분류"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"NEIS식품명/상세식품명"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"식품설명"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"포장중량"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"중량단위"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+            <span class="token string">"포장단위"</span><span class="token punctuation">:</span>list_td<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment"># print(df_all)</span>
+<span class="token comment"># print(df_all.shape)        </span>
+<span class="token comment"># 데이터를 xlsx에 저장하고 싶다</span>
+<span class="token comment"># xlsx에서 데이터의 형식은 pandas의 dataframe과 유사 (행과 열로 이루어진다)</span>
+
+now <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df_all<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">"식재료 종류_"</span><span class="token operator">+</span> now<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">"%Y%m%d%H%M%S"</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token string">".xlsx"</span><span class="token punctuation">,</span>index <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token comment"># openpyxl 패키지 설치 필요</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h3 id="nlp-by-nltk" style="position:relative;">NLP (by nltk)<a href="#nlp-by-nltk" aria-label="nlp by nltk permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>study_nltk.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># NLTK 설치</span>
+! pip install nltk
+
+<span class="token keyword">import</span> nltk
+<span class="token keyword">print</span><span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span> <span class="token comment"># 3.6.2</span>
+
+nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>NLTK DOWNLOADER를 통해 아래 목록을 다운로드 받는다.<br>
+내 컴퓨터의 경우, C:\Users\Choi\AppData\Roaming\nltk_data 경로 하위에 종류 별로 폴더 안에 다운로드가 되었다.</p>
+<p>1 brown
+2 gutenberg
+3 maxent_ne_chunker
+4 movie_reviews
+5 product_reviews_1
+6 punkt
+7 treebank
+8 twitter_samples
+9 universal_tagset
+10 webtext
+11 wordnet
+12 words</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 자연어 처리를 위한 과정 중 가장 기초적인 과정</span>
+<span class="token comment"># Text Preprocessing 과 exploratory analysis</span>
+<span class="token comment"># Text Preprocessing 에는 tokenization, stemming, stop word 제거</span>
+<span class="token comment"># exploratory analysis에는 text의 주요 주제 및 단어들의 빈도 등등을 통해 해당 text 특징을 이해하려 하는 것</span>
+
+<span class="token keyword">import</span> nltk
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> twitter_samples <span class="token keyword">as</span> ts
+
+ts<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span><span class="token string">'negative_tweets.json'</span><span class="token punctuation">,</span> <span class="token string">'positive_tweets.json'</span><span class="token punctuation">,</span> <span class="token string">'tweets.20150430-223406.json'</span><span class="token punctuation">]</span>
+
+sample_tw <span class="token operator">=</span> ts<span class="token punctuation">.</span>strings<span class="token punctuation">(</span><span class="token string">"tweets.20150430-223406.json"</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>sample_tw<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sample_tw<span class="token punctuation">)</span> <span class="token comment"># (list, 20000)</span>
+
+sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span>
+
+<span class="token string">"@B0MBSKARE the anti-Scottish feeling is largely a product of Tory press scaremongering. In practice most people won't give a toss!"</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="tokenize" style="position:relative;">tokenize<a href="#tokenize" aria-label="tokenize permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> word_tokenize <span class="token keyword">as</span> wtoken
+
+wtoken<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># tokenized</span>
+
+<span class="token punctuation">[</span><span class="token string">'@'</span><span class="token punctuation">,</span>
+ <span class="token string">'B0MBSKARE'</span><span class="token punctuation">,</span>
+ <span class="token string">'the'</span><span class="token punctuation">,</span>
+ <span class="token string">'anti-Scottish'</span><span class="token punctuation">,</span>
+ <span class="token string">'feeling'</span><span class="token punctuation">,</span>
+ <span class="token string">'is'</span><span class="token punctuation">,</span>
+ <span class="token string">'largely'</span><span class="token punctuation">,</span>
+ <span class="token string">'a'</span><span class="token punctuation">,</span>
+ <span class="token string">'product'</span><span class="token punctuation">,</span>
+ <span class="token string">'of'</span><span class="token punctuation">,</span>
+ <span class="token string">'Tory'</span><span class="token punctuation">,</span>
+ <span class="token string">'press'</span><span class="token punctuation">,</span>
+ <span class="token string">'scaremongering'</span><span class="token punctuation">,</span>
+ <span class="token string">'.'</span><span class="token punctuation">,</span>
+ <span class="token string">'In'</span><span class="token punctuation">,</span>
+ <span class="token string">'practice'</span><span class="token punctuation">,</span>
+ <span class="token string">'most'</span><span class="token punctuation">,</span>
+ <span class="token string">'people'</span><span class="token punctuation">,</span>
+ <span class="token string">'wo'</span><span class="token punctuation">,</span>
+ <span class="token string">"n't"</span><span class="token punctuation">,</span>
+ <span class="token string">'give'</span><span class="token punctuation">,</span>
+ <span class="token string">'a'</span><span class="token punctuation">,</span>
+ <span class="token string">'toss'</span><span class="token punctuation">,</span>
+ <span class="token string">'!'</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="wordpunct_tokenize" style="position:relative;">wordpunct_tokenize<a href="#wordpunct_tokenize" aria-label="wordpunct_tokenize permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<p>기호 - 이런 걸 자르려면, wordpunct_tokenize를 사용하면 된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 빈 칸과 문장 기호로 tokenize</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> wordpunct_tokenize
+
+wordpunct_tokenize<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># tokenized</span>
+
+<span class="token punctuation">[</span><span class="token string">'@'</span><span class="token punctuation">,</span>
+ <span class="token string">'B0MBSKARE'</span><span class="token punctuation">,</span>
+ <span class="token string">'the'</span><span class="token punctuation">,</span>
+ <span class="token string">'anti'</span><span class="token punctuation">,</span>
+ <span class="token string">'-'</span><span class="token punctuation">,</span>
+ <span class="token string">'Scottish'</span><span class="token punctuation">,</span>
+ <span class="token string">'feeling'</span><span class="token punctuation">,</span>
+ <span class="token string">'is'</span><span class="token punctuation">,</span>
+ <span class="token string">'largely'</span><span class="token punctuation">,</span>
+ <span class="token string">'a'</span><span class="token punctuation">,</span>
+ <span class="token string">'product'</span><span class="token punctuation">,</span>
+ <span class="token string">'of'</span><span class="token punctuation">,</span>
+ <span class="token string">'Tory'</span><span class="token punctuation">,</span>
+ <span class="token string">'press'</span><span class="token punctuation">,</span>
+ <span class="token string">'scaremongering'</span><span class="token punctuation">,</span>
+ <span class="token string">'.'</span><span class="token punctuation">,</span>
+ <span class="token string">'In'</span><span class="token punctuation">,</span>
+ <span class="token string">'practice'</span><span class="token punctuation">,</span>
+ <span class="token string">'most'</span><span class="token punctuation">,</span>
+ <span class="token string">'people'</span><span class="token punctuation">,</span>
+ <span class="token string">'won'</span><span class="token punctuation">,</span>
+ <span class="token string">"'"</span><span class="token punctuation">,</span>
+ <span class="token string">'t'</span><span class="token punctuation">,</span>
+ <span class="token string">'give'</span><span class="token punctuation">,</span>
+ <span class="token string">'a'</span><span class="token punctuation">,</span>
+ <span class="token string">'toss'</span><span class="token punctuation">,</span>
+ <span class="token string">'!'</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="regexp_tokenize" style="position:relative;">regexp_tokenize<a href="#regexp_tokenize" aria-label="regexp_tokenize permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<p>nltk도 정규식이 지원된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 정규식을 이용해서 tokenize 1</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> regexp_tokenize
+pattern <span class="token operator">=</span> <span class="token string">"\w+"</span> <span class="token comment"># 단어만 추출</span>
+regexp_tokenize<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> pattern<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>regexp_tokenize<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> pattern<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'B0MBSKARE'</span><span class="token punctuation">,</span>
+  <span class="token string">'the'</span><span class="token punctuation">,</span>
+  <span class="token string">'anti'</span><span class="token punctuation">,</span>
+  <span class="token string">'Scottish'</span><span class="token punctuation">,</span>
+  <span class="token string">'feeling'</span><span class="token punctuation">,</span>
+  <span class="token string">'is'</span><span class="token punctuation">,</span>
+  <span class="token string">'largely'</span><span class="token punctuation">,</span>
+  <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token string">'product'</span><span class="token punctuation">,</span>
+  <span class="token string">'of'</span><span class="token punctuation">,</span>
+  <span class="token string">'Tory'</span><span class="token punctuation">,</span>
+  <span class="token string">'press'</span><span class="token punctuation">,</span>
+  <span class="token string">'scaremongering'</span><span class="token punctuation">,</span>
+  <span class="token string">'In'</span><span class="token punctuation">,</span>
+  <span class="token string">'practice'</span><span class="token punctuation">,</span>
+  <span class="token string">'most'</span><span class="token punctuation">,</span>
+  <span class="token string">'people'</span><span class="token punctuation">,</span>
+  <span class="token string">'won'</span><span class="token punctuation">,</span>
+  <span class="token string">'t'</span><span class="token punctuation">,</span>
+  <span class="token string">'give'</span><span class="token punctuation">,</span>
+  <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token string">'toss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token number">22</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>정규식에서 단어에 특수문자까지 나오게 하려면 pattern으로 해주면 된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 정규식을 이용해서 tokenize 2</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> regexp_tokenize
+
+pattern <span class="token operator">=</span> <span class="token string">"\w+|[@!,\-]"</span>
+regexp_tokenize<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> pattern<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>regexp_tokenize<span class="token punctuation">(</span>sample_tw<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> pattern<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'@'</span><span class="token punctuation">,</span>
+  <span class="token string">'B0MBSKARE'</span><span class="token punctuation">,</span>
+  <span class="token string">'the'</span><span class="token punctuation">,</span>
+  <span class="token string">'anti'</span><span class="token punctuation">,</span>
+  <span class="token string">'-'</span><span class="token punctuation">,</span>
+  <span class="token string">'Scottish'</span><span class="token punctuation">,</span>
+  <span class="token string">'feeling'</span><span class="token punctuation">,</span>
+  <span class="token string">'is'</span><span class="token punctuation">,</span>
+  <span class="token string">'largely'</span><span class="token punctuation">,</span>
+  <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token string">'product'</span><span class="token punctuation">,</span>
+  <span class="token string">'of'</span><span class="token punctuation">,</span>
+  <span class="token string">'Tory'</span><span class="token punctuation">,</span>
+  <span class="token string">'press'</span><span class="token punctuation">,</span>
+  <span class="token string">'scaremongering'</span><span class="token punctuation">,</span>
+  <span class="token string">'In'</span><span class="token punctuation">,</span>
+  <span class="token string">'practice'</span><span class="token punctuation">,</span>
+  <span class="token string">'most'</span><span class="token punctuation">,</span>
+  <span class="token string">'people'</span><span class="token punctuation">,</span>
+  <span class="token string">'won'</span><span class="token punctuation">,</span>
+  <span class="token string">'t'</span><span class="token punctuation">,</span>
+  <span class="token string">'give'</span><span class="token punctuation">,</span>
+  <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token string">'toss'</span><span class="token punctuation">,</span>
+  <span class="token string">'!'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token number">25</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="stemming" style="position:relative;">stemming<a href="#stemming" aria-label="stemming permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<h5 id="porter-stemmer" style="position:relative;">Porter stemmer<a href="#porter-stemmer" aria-label="porter stemmer permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Stemming => 어떤 단어의 base form 을 찾는 과정</span>
+<span class="token comment"># 영어의 경우, 복수를 단수로 바꾸는 과정부터 시작</span>
+<span class="token comment"># Porter stemmer : Martin Porter가 만듦</span>
+
+<span class="token keyword">import</span> nltk
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> PorterStemmer
+
+stemming <span class="token operator">=</span> PorterStemmer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># example L enjoying, enjoys, enjoyable</span>
+stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"enjoying"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"enjoys"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"enjoyable"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'enjoy'</span><span class="token punctuation">,</span> <span class="token string">'enjoy'</span><span class="token punctuation">,</span> <span class="token string">'enjoy'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>참고로 Porter Stemmer는 뒤에 있는 접미사를 떼는 방식이라 안 되는 게 있긴 하다. 이렇게 조금씩 차이가 있다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"variation"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"variate"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'variat'</span><span class="token punctuation">,</span> <span class="token string">'variat'</span><span class="token punctuation">)</span>
+
+stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"unkind"</span><span class="token punctuation">)</span>
+
+<span class="token string">'unkind'</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="regexp-stemmer" style="position:relative;">Regexp stemmer<a href="#regexp-stemmer" aria-label="regexp stemmer permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"flyable"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> stemming<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"flying"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'flyabl'</span><span class="token punctuation">,</span> <span class="token string">'fli'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> RegexpStemmer
+regexp_stemmer <span class="token operator">=</span> RegexpStemmer<span class="token punctuation">(</span><span class="token string">"able$|ing$"</span><span class="token punctuation">,</span> <span class="token builtin">min</span><span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment"># ^ 문장의 처음 부분, $ 문장의 마지막 부분, min은 stemmed word의 최소한의 길이</span>
+
+regexp_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"flyable"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> regexp_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"flying"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'fly'</span><span class="token punctuation">,</span> <span class="token string">'fly'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="lancaster-stemmer" style="position:relative;">Lancaster stemmer<a href="#lancaster-stemmer" aria-label="lancaster stemmer permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">regexp_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"cooking"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> regexp_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"cookery"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'cook'</span><span class="token punctuation">,</span> <span class="token string">'cookery'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> LancasterStemmer
+Lancaster_stemmer <span class="token operator">=</span> LancasterStemmer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+Lancaster_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"cooking"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Lancaster_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"cookery"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'cook'</span><span class="token punctuation">,</span> <span class="token string">'cookery'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="snowball-stemmer" style="position:relative;">Snowball stemmer<a href="#snowball-stemmer" aria-label="snowball stemmer permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Porter, Lancaster의 경우 영어를 처리, SnowballStemmer는 영어 외에 13개 국가 언어에 대해서 stemming을 지원</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> SnowballStemmer
+snowball_stemmer <span class="token operator">=</span> SnowballStemmer<span class="token punctuation">(</span><span class="token string">"spanish"</span><span class="token punctuation">)</span>
+snowball_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"variation"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> snowball_stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">"variate"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'variation'</span><span class="token punctuation">,</span> <span class="token string">'variat'</span><span class="token punctuation">)</span>
+
+SnowballStemmer<span class="token punctuation">.</span>languages<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>SnowballStemmer<span class="token punctuation">.</span>languages<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'arabic'</span><span class="token punctuation">,</span>
+  <span class="token string">'danish'</span><span class="token punctuation">,</span>
+  <span class="token string">'dutch'</span><span class="token punctuation">,</span>
+  <span class="token string">'english'</span><span class="token punctuation">,</span>
+  <span class="token string">'finnish'</span><span class="token punctuation">,</span>
+  <span class="token string">'french'</span><span class="token punctuation">,</span>
+  <span class="token string">'german'</span><span class="token punctuation">,</span>
+  <span class="token string">'hungarian'</span><span class="token punctuation">,</span>
+  <span class="token string">'italian'</span><span class="token punctuation">,</span>
+  <span class="token string">'norwegian'</span><span class="token punctuation">,</span>
+  <span class="token string">'porter'</span><span class="token punctuation">,</span>
+  <span class="token string">'portuguese'</span><span class="token punctuation">,</span>
+  <span class="token string">'romanian'</span><span class="token punctuation">,</span>
+  <span class="token string">'russian'</span><span class="token punctuation">,</span>
+  <span class="token string">'spanish'</span><span class="token punctuation">,</span>
+  <span class="token string">'swedish'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token number">16</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="stop-word" style="position:relative;">Stop Word<a href="#stop-word" aria-label="stop word permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 불용어 (stop words) 제거</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> stopwords
+sw_1 <span class="token operator">=</span> stopwords<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">"English"</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>sw_1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sw_1<span class="token punctuation">)</span>
+
+sw_1<span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span><span class="token string">'she'</span><span class="token punctuation">,</span>
+ <span class="token string">"she's"</span><span class="token punctuation">,</span>
+ <span class="token string">'her'</span><span class="token punctuation">,</span>
+ <span class="token string">'hers'</span><span class="token punctuation">,</span>
+ <span class="token string">'herself'</span><span class="token punctuation">,</span>
+ <span class="token string">'it'</span><span class="token punctuation">,</span>
+ <span class="token string">"it's"</span><span class="token punctuation">,</span>
+ <span class="token string">'its'</span><span class="token punctuation">,</span>
+ <span class="token string">'itself'</span><span class="token punctuation">,</span>
+ <span class="token string">'they'</span><span class="token punctuation">,</span>
+ <span class="token string">'them'</span><span class="token punctuation">,</span>
+ <span class="token string">'their'</span><span class="token punctuation">,</span>
+ <span class="token string">'theirs'</span><span class="token punctuation">,</span>
+ <span class="token string">'themselves'</span><span class="token punctuation">,</span>
+ <span class="token string">'what'</span><span class="token punctuation">,</span>
+ <span class="token string">'which'</span><span class="token punctuation">,</span>
+ <span class="token string">'who'</span><span class="token punctuation">,</span>
+ <span class="token string">'whom'</span><span class="token punctuation">,</span>
+ <span class="token string">'this'</span><span class="token punctuation">]</span>
+
+
+example_text <span class="token operator">=</span> <span class="token string">"This is an example sentence to test stopwords"</span>
+example_txst_without_stopwords <span class="token operator">=</span> <span class="token punctuation">[</span>word <span class="token keyword">for</span> word <span class="token keyword">in</span> example_text<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> word <span class="token keyword">not</span> <span class="token keyword">in</span> sw_1<span class="token punctuation">]</span>
+example_txst_without_stopwords <span class="token comment"># stopword 아닌 것만 보여줌</span>
+
+<span class="token punctuation">[</span><span class="token string">'This'</span><span class="token punctuation">,</span> <span class="token string">'example'</span><span class="token punctuation">,</span> <span class="token string">'sentence'</span><span class="token punctuation">,</span> <span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'stopwords'</span><span class="token punctuation">]</span>  </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>다른 예제를 활용해 보았다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> gutenberg
+words_in_hamlet <span class="token operator">=</span> gutenberg<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">"Shakespeare-hamlet.txt"</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>words_in_hamlet<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>words_in_hamlet<span class="token punctuation">)</span>
+<span class="token comment"># (nltk.corpus.reader.util.StreamBackedCorpusView, 37360)</span>
+
+words_in_hamlet_without_stopwords <span class="token operator">=</span> <span class="token punctuation">[</span>word <span class="token keyword">for</span> word <span class="token keyword">in</span> words_in_hamlet <span class="token keyword">if</span> word <span class="token keyword">not</span> <span class="token keyword">in</span> sw_1<span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>words_in_hamlet_without_stopwords<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>words_in_hamlet_without_stopwords<span class="token punctuation">)</span> <span class="token comment"># (list, 25876)</span>
+
+words_in_hamlet_without_stopwords
+
+<span class="token comment"># ['[',</span>
+<span class="token comment">#  'The',</span>
+<span class="token comment">#  'Tragedie',</span>
+<span class="token comment">#  'Hamlet',</span>
+<span class="token comment">#  'William',</span>
+<span class="token comment">#  'Shakespeare',</span>
+<span class="token comment">#  '1599',</span>
+<span class="token comment">#  ']',</span>
+<span class="token comment">#  'Actus',</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>words_in_hamlet_without_stopwords<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>words_in_hamlet<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token comment"># 69.26124197002142</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>이렇게 불용어 비율도 확인할 수 있다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 문장이 존재해서, tokenize -> stemming -> stop word remove</span>
+<span class="token comment"># 이제 text를 exploratory analysis할 시간입니다.</span>
+<span class="token comment"># 숫자 데이터의 경우, scatter plot이나 histogram 등을 그려서 분포 등을 확인한다.</span>
+
+<span class="token keyword">import</span> nltk
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> webtext
+webtext<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># ['firefox.txt',</span>
+<span class="token comment">#  'grail.txt',</span>
+<span class="token comment">#  'overheard.txt',</span>
+<span class="token comment">#  'pirates.txt',</span>
+<span class="token comment">#  'singles.txt',</span>
+<span class="token comment">#  'wine.txt']</span>
+
+webtext_sentences <span class="token operator">=</span> webtext<span class="token punctuation">.</span>sents<span class="token punctuation">(</span><span class="token string">"firefox.txt"</span><span class="token punctuation">)</span> <span class="token comment"># 문장 단위</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>webtext_sentences<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>webtext_sentences<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>corpus<span class="token punctuation">.</span>reader<span class="token punctuation">.</span>util<span class="token punctuation">.</span>StreamBackedCorpusView<span class="token punctuation">,</span> <span class="token number">1142</span><span class="token punctuation">)</span>
+
+webtext_words <span class="token operator">=</span> webtext<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">"firefox.txt"</span><span class="token punctuation">)</span> <span class="token comment"># 단어 단위</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>webtext_words<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>webtext_words<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>corpus<span class="token punctuation">.</span>reader<span class="token punctuation">.</span>util<span class="token punctuation">.</span>StreamBackedCorpusView<span class="token punctuation">,</span> <span class="token number">102457</span><span class="token punctuation">)</span>
+
+vocabulary <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>webtext_words<span class="token punctuation">)</span> <span class="token comment"># 중복 제거</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>vocabulary<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>vocabulary<span class="token punctuation">)</span> <span class="token comment"># (set, 8296)</span>
+
+frequency_dist <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>webtext_words<span class="token punctuation">)</span> <span class="token comment"># 갯수 분포</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>frequency_dist<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>frequency_dist<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>probability<span class="token punctuation">.</span>FreqDist<span class="token punctuation">,</span> <span class="token number">8296</span><span class="token punctuation">)</span>
+
+frequency_dist
+
+FreqDist<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'.'</span><span class="token punctuation">:</span> <span class="token number">2428</span><span class="token punctuation">,</span> <span class="token string">'in'</span><span class="token punctuation">:</span> <span class="token number">2203</span><span class="token punctuation">,</span> <span class="token string">'to'</span><span class="token punctuation">:</span> <span class="token number">2130</span><span class="token punctuation">,</span> <span class="token string">'"'</span><span class="token punctuation">:</span> <span class="token number">1971</span><span class="token punctuation">,</span> <span class="token string">'the'</span><span class="token punctuation">:</span> <span class="token number">1762</span><span class="token punctuation">,</span> <span class="token string">"'"</span><span class="token punctuation">:</span> <span class="token number">1507</span><span class="token punctuation">,</span> <span class="token string">'not'</span><span class="token punctuation">:</span> <span class="token number">1472</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">:</span> <span class="token number">1372</span><span class="token punctuation">,</span> <span class="token string">'when'</span><span class="token punctuation">:</span> <span class="token number">1255</span><span class="token punctuation">,</span> <span class="token string">'on'</span><span class="token punctuation">:</span> <span class="token number">1193</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment"># text() 존재하는 상위 30개 단어</span>
+<span class="token builtin">sorted</span><span class="token punctuation">(</span>frequency_dist<span class="token punctuation">,</span> key<span class="token operator">=</span>frequency_dist<span class="token punctuation">.</span>__getitem__<span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span> <span class="token comment"># 빈도 수 대로 내림차순 정렬</span>
+
+<span class="token comment"># ['.',</span>
+<span class="token comment">#  'in',</span>
+<span class="token comment">#  'to',</span>
+<span class="token comment">#  '"',</span>
+<span class="token comment">#  'the',</span>
+<span class="token comment">#  "'",</span>
+<span class="token comment">#  ...</span>
+
+large_words <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token punctuation">(</span>k<span class="token punctuation">,</span>v<span class="token punctuation">)</span> <span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> frequency_dist<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+large_words
+
+
+<span class="token comment"># {'Cookie': 22,</span>
+<span class="token comment">#  'Manager': 179,</span>
+<span class="token comment">#  'allow': 53,</span>
+<span class="token comment">#  'sites': 63,</span>
+<span class="token comment">#  'that': 145,</span>
+<span class="token comment">#  'removed': 21,</span>
+<span class="token comment">#  'cookies': 57,</span>
+<span class="token comment">#  ...</span>
+
+frequency_dist <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>large_words<span class="token punctuation">)</span>
+<span class="token builtin">sorted</span><span class="token punctuation">(</span>frequency_dist<span class="token punctuation">,</span> key <span class="token operator">=</span> frequency_dist<span class="token punctuation">.</span>__getitem__<span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">]</span>
+
+<span class="token comment"># ['when',</span>
+<span class="token comment">#  'page',</span>
+<span class="token comment">#  'with',</span>
+<span class="token comment">#  'window',</span>
+<span class="token comment">#  'Firefox',</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+frequency_dist<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> cumulative<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token comment"># 빈도 시각화</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>시각화로는 워드 클라우드 방법이 대표적이다.</p>
+<hr>
+<h3 id="word-cloud" style="position:relative;">Word Cloud<a href="#word-cloud" aria-label="word cloud permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">! pip install wordcloud
+<span class="token keyword">from</span> wordcloud <span class="token keyword">import</span> WordCloud
+wcloud <span class="token operator">=</span> WordCloud<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>generate_from_frequencies<span class="token punctuation">(</span>frequency_dist<span class="token punctuation">)</span>
+
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>wcloud<span class="token punctuation">,</span> interpolation<span class="token operator">=</span><span class="token string">"bilinear"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">"off"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>불용어를 제거한 뒤에 시각화하면 다르게 보인다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 불용어 (stop words) 제거</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> stopwords
+sw_l <span class="token operator">=</span> stopwords<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">"english"</span><span class="token punctuation">)</span>
+
+webtext_words_without_sw <span class="token operator">=</span> <span class="token punctuation">[</span>word <span class="token keyword">for</span> word <span class="token keyword">in</span> webtext_words <span class="token keyword">if</span> word <span class="token keyword">not</span> <span class="token keyword">in</span> sw_l<span class="token punctuation">]</span>
+
+<span class="token string">"when"</span> <span class="token keyword">in</span> webtext_words_without_sw <span class="token comment"># False</span>
+<span class="token string">"from"</span> <span class="token keyword">in</span> webtext_words_without_sw <span class="token comment"># False</span>
+
+frequency_dist <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>webtext_words_without_sw<span class="token punctuation">)</span>
+large_words_without_sw <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">(</span>k<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> frequency_dist<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">3</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+frequency_dist <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>large_words_without_sw<span class="token punctuation">)</span>
+
+frequency_dist<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> cumulative <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>wcloud<span class="token punctuation">,</span> interpolation<span class="token operator">=</span><span class="token string">"bilinear"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">"off"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h3 id="pos" style="position:relative;">POS<a href="#pos" aria-label="pos permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>study_pos.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># POS tagging</span>
+<span class="token comment"># Parts of Speech : 문장에 존재하는 단어를 특정 문법적 기능으로 분류하는 것</span>
+<span class="token comment"># English 의 경우 : parts of speech는 noun, pronoun, adjective, verb, adverb, preposition, determiner, conjunction</span>
+
+<span class="token comment"># NLTK에서 가장 많이 사용하는 tagging dataset : Penn Treebank, Brown Corpus</span>
+
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> brown
+<span class="token builtin">type</span><span class="token punctuation">(</span>brown<span class="token punctuation">.</span>tagged_words<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>brown<span class="token punctuation">.</span>tagged_words<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>corpus<span class="token punctuation">.</span>reader<span class="token punctuation">.</span>util<span class="token punctuation">.</span>ConcatenatedCorpusView<span class="token punctuation">,</span> <span class="token number">1161192</span><span class="token punctuation">)</span>
+
+brown<span class="token punctuation">.</span>tagged_words<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">]</span>
+
+<span class="token comment"># [('term-end', 'NN'),</span>
+<span class="token comment">#  ('presentments', 'NNS'),</span>
+<span class="token comment">#  ('that', 'CS'),</span>
+<span class="token comment">#  ('the', 'AT'),</span>
+<span class="token comment">#  ('City', 'NN-TL'),</span>
+<span class="token comment">#  ('Executive', 'JJ-TL'),</span>
+<span class="token comment">#  ('Committee', 'NN-TL'),</span>
+<span class="token comment">#  (',', ','),</span>
+<span class="token comment">#  ('which', 'WDT'),</span>
+<span class="token comment">#  ('had', 'HVD')]</span>
+
+<span class="token comment">#  ('City', 'NN-TL') : noun 이고 (contet of a title</span>
+
+brown<span class="token punctuation">.</span>tagged_words<span class="token punctuation">(</span>tagset<span class="token operator">=</span><span class="token string">"universal"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">]</span>
+
+<span class="token comment"># [('term-end', 'NOUN'),</span>
+<span class="token comment">#  ('presentments', 'NOUN'),</span>
+<span class="token comment">#  ('that', 'ADP'),</span>
+<span class="token comment">#  ('the', 'DET'),</span>
+<span class="token comment">#  ('City', 'NOUN'),</span>
+<span class="token comment">#  ('Executive', 'ADJ'),</span>
+<span class="token comment">#  ('Committee', 'NOUN'),</span>
+<span class="token comment">#  (',', '.'),</span>
+<span class="token comment">#  ('which', 'DET'),</span>
+<span class="token comment">#  ('had', 'VERB')]</span>
+
+<span class="token comment"># POS tagging : Named Entity Recognition (NER), 감정 분석, 응답 시스템, 단어 의도 확인에 사용</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token string">"averaged_perceptron_tagger"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span> Downloading package averaged_perceptron_tagger to
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>     C<span class="token punctuation">:</span>\Users\Choi\AppData\Roaming\nltk_data<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>   Unzipping taggers\averaged_perceptron_tagger<span class="token punctuation">.</span><span class="token builtin">zip</span><span class="token punctuation">.</span>
+
+<span class="token comment"># POS tagging : Named Entity Recognition (NER), 감정 분석, 응답 시스템, 단어 의도 확인에 사용</span>
+
+<span class="token keyword">import</span> nltk
+
+text1 <span class="token operator">=</span> nltk<span class="token punctuation">.</span>word_tokenize<span class="token punctuation">(</span><span class="token string">"I left the room"</span><span class="token punctuation">)</span>
+text2 <span class="token operator">=</span> nltk<span class="token punctuation">.</span>word_tokenize<span class="token punctuation">(</span><span class="token string">"Left of the room"</span><span class="token punctuation">)</span>
+
+nltk<span class="token punctuation">.</span>pos_tag<span class="token punctuation">(</span>text1<span class="token punctuation">,</span> tagset<span class="token operator">=</span><span class="token string">"universal"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'I'</span><span class="token punctuation">,</span> <span class="token string">'PRON'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token string">'VERB'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'the'</span><span class="token punctuation">,</span> <span class="token string">'DET'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'room'</span><span class="token punctuation">,</span> <span class="token string">'NOUN'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+nltk<span class="token punctuation">.</span>pos_tag<span class="token punctuation">(</span>text2<span class="token punctuation">,</span> tagset<span class="token operator">=</span><span class="token string">"universal"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'Left'</span><span class="token punctuation">,</span> <span class="token string">'NOUN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'of'</span><span class="token punctuation">,</span> <span class="token string">'ADP'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'the'</span><span class="token punctuation">,</span> <span class="token string">'DET'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'room'</span><span class="token punctuation">,</span> <span class="token string">'NOUN'</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> nltk
+
+example_sentence <span class="token operator">=</span> nltk<span class="token punctuation">.</span>word_tokenize<span class="token punctuation">(</span><span class="token string">"The company is located in South Africa."</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> example_sentence
+
+<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'The'</span><span class="token punctuation">,</span> <span class="token string">'company'</span><span class="token punctuation">,</span> <span class="token string">'is'</span><span class="token punctuation">,</span> <span class="token string">'located'</span><span class="token punctuation">,</span> <span class="token string">'in'</span><span class="token punctuation">,</span> <span class="token string">'South'</span><span class="token punctuation">,</span> <span class="token string">'Africa'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+tagging_example_sentence <span class="token operator">=</span> nltk<span class="token punctuation">.</span>pos_tag<span class="token punctuation">(</span>example_sentence<span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>tagging_example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>tagging_example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> tagging_example_sentence
+
+<span class="token comment"># (list,</span>
+<span class="token comment">#  7,</span>
+<span class="token comment">#  [('The', 'DT'),</span>
+<span class="token comment">#   ('company', 'NN'),</span>
+<span class="token comment">#   ('is', 'VBZ'),</span>
+<span class="token comment">#   ('located', 'VBN'),</span>
+<span class="token comment">#   ('in', 'IN'),</span>
+<span class="token comment">#   ('South', 'NNP'),</span>
+<span class="token comment">#   ('Africa', 'NNP')])</span>
+
+tagging_example_sentence <span class="token operator">=</span> nltk<span class="token punctuation">.</span>ne_chunk<span class="token punctuation">(</span>tagging_example_sentence<span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>tagging_example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>tagging_example_sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> tagging_example_sentence
+<span class="token comment"># GPE : geopolitical entity의 약자</span>
+
+<span class="token comment"># (nltk.tree.Tree,</span>
+<span class="token comment">#  6,</span>
+<span class="token comment">#  Tree('S', [('The', 'DT'), ('company', 'NN'), ('is', 'VBZ'), ('located', 'VBN'), ('in', 'IN'), Tree('GPE', [('South', 'NNP'), ('Africa', 'NNP')])]))</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h3 id="감정-분석" style="position:relative;">감정 분석<a href="#%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D" aria-label="감정 분석 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>모델 학습을 위한 dataset 준비 과정이다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> movie_reviews
+
+cats <span class="token operator">=</span> movie_reviews<span class="token punctuation">.</span>categories<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>cats<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>cats<span class="token punctuation">)</span><span class="token punctuation">,</span> cats
+
+<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'neg'</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+reviews <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token builtin">len</span><span class="token punctuation">(</span>movie_reviews<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>movie_reviews<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span><span class="token string">"neg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>movie_reviews<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+
+reviews <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> cat <span class="token keyword">in</span> cats<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> fid <span class="token keyword">in</span> movie_reviews<span class="token punctuation">.</span>fileids<span class="token punctuation">(</span>cat<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># print(movie_reviews.words(fid))</span>
+        review <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>movie_reviews<span class="token punctuation">.</span>words<span class="token punctuation">(</span>fid<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cat<span class="token punctuation">)</span>
+        reviews<span class="token punctuation">.</span>append<span class="token punctuation">(</span>review<span class="token punctuation">)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>reviews<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>reviews<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+
+<span class="token keyword">import</span> random
+
+random<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>reviews<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>neg, pos가 순서대로 append되어서 random으로 섞었다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">all_wd_id_reviews <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>ws<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> ws <span class="token keyword">in</span> movie_reviews<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+all_wd_id_reviews
+
+FreqDist<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">','</span><span class="token punctuation">:</span> <span class="token number">77717</span><span class="token punctuation">,</span> <span class="token string">'the'</span><span class="token punctuation">:</span> <span class="token number">76529</span><span class="token punctuation">,</span> <span class="token string">'.'</span><span class="token punctuation">:</span> <span class="token number">65876</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token number">38106</span><span class="token punctuation">,</span> <span class="token string">'and'</span><span class="token punctuation">:</span> <span class="token number">35576</span><span class="token punctuation">,</span> <span class="token string">'of'</span><span class="token punctuation">:</span> <span class="token number">34123</span><span class="token punctuation">,</span> <span class="token string">'to'</span><span class="token punctuation">:</span> <span class="token number">31937</span><span class="token punctuation">,</span> <span class="token string">"'"</span><span class="token punctuation">:</span> <span class="token number">30585</span><span class="token punctuation">,</span> <span class="token string">'is'</span><span class="token punctuation">:</span> <span class="token number">25195</span><span class="token punctuation">,</span> <span class="token string">'in'</span><span class="token punctuation">:</span> <span class="token number">21822</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token builtin">len</span><span class="token punctuation">(</span>all_wd_id_reviews<span class="token punctuation">)</span> <span class="token comment"># 39768</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>all_wd_id_reviews<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>all_wd_id_reviews<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># (list, 2000)</span>
+
+all_wd_id_reviews<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">,</span> <span class="token number">77717</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'the'</span><span class="token punctuation">,</span> <span class="token number">76529</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">,</span> <span class="token number">65876</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">38106</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'and'</span><span class="token punctuation">,</span> <span class="token number">35576</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'of'</span><span class="token punctuation">,</span> <span class="token number">34123</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'to'</span><span class="token punctuation">,</span> <span class="token number">31937</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">"'"</span><span class="token punctuation">,</span> <span class="token number">30585</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'is'</span><span class="token punctuation">,</span> <span class="token number">25195</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token string">'in'</span><span class="token punctuation">,</span> <span class="token number">21822</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment"># for wds in zip(*all_wd_id_reviews.most_common(2000)):</span>
+<span class="token comment">#     print(wds)</span>
+
+top_wd_in_reviews <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">list</span><span class="token punctuation">(</span>wds<span class="token punctuation">)</span> <span class="token keyword">for</span> wds <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>all_wd_id_reviews<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>top_wd_in_reviews<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>top_wd_in_reviews<span class="token punctuation">)</span> <span class="token comment"># (list, 2000)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="dataset-생성-feat-func" style="position:relative;">dataset 생성 (feat. func)<a href="#dataset-%EC%83%9D%EC%84%B1-feat-func" aria-label="dataset 생성 feat func permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># binary features</span>
+<span class="token keyword">def</span> <span class="token function">extract_feature</span><span class="token punctuation">(</span>review<span class="token punctuation">,</span> top_words<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    reviews_wds <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>review<span class="token punctuation">)</span> <span class="token comment"># vocabulary</span>
+    feature <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">for</span> wd <span class="token keyword">in</span> top_words<span class="token punctuation">:</span>
+        feature<span class="token punctuation">[</span><span class="token string">"word_presen()"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>wd<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>wd <span class="token keyword">in</span> reviews_wds<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> feature
+
+featuresets <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">(</span>extract_feature<span class="token punctuation">(</span>d<span class="token punctuation">,</span> top_wd_in_reviews<span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token punctuation">)</span> <span class="token keyword">for</span> <span class="token punctuation">(</span>d<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token keyword">in</span> reviews
+<span class="token punctuation">]</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>featuresets<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>featuresets<span class="token punctuation">)</span> <span class="token comment"># (list, 2000)</span>
+
+featuresets<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'neg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'neg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'neg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'pos'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'neg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'word_presen()'</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'neg'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+train_set<span class="token punctuation">,</span> test_set <span class="token operator">=</span> featuresets<span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> featuresets<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>내일 모델 학습할 dataset이 생성되었다.</p></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-5일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-893866d828268bdf98d5.js"],"app":["/app-0dfcf1d989dd570d1f8d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0a5d30d80a86a6beaaa6.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-04658c393fc078044a6e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7d3303cf2ff5e504b9af.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-46aa3abf40fa3f68b9fe.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-893866d828268bdf98d5.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0dfcf1d989dd570d1f8d.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-2ed2469d67f21d902031.js" async=""></script></body></html>
