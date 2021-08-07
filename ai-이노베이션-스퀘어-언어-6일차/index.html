@@ -1,0 +1,770 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.10.1"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-2ed2469d67f21d902031.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-0dfcf1d989dd570d1f8d.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-언어-6일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li>
+<p><a href="#6%EC%9D%BC%EC%B0%A8">6일차</a></p>
+<ul>
+<li><a href="#%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%9D%BC%EC%A0%95">앞으로의 일정</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%81%AC%EB%A1%A4%EB%A7%81--db-%EC%A0%80%EC%9E%A5">크롤링 (+ DB 저장)</a></p>
+<ul>
+<li><a href="#%EB%AC%B8%EC%9E%A5-%EC%B2%98%EB%A6%AC">문장 처리</a></li>
+<li><a href="#custom-tokenize">Custom Tokenize</a></li>
+<li><a href="#pos-tagging">POS Tagging</a></li>
+<li><a href="#%EB%8B%A8%EC%96%B4-%EC%9C%A0%EC%82%AC%EB%8F%84">단어 유사도</a></li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 언어반 6일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>Sqlite를 활용해 크롤링 데이터를 db에 저장했다. 특정 단어의 유사한 단어를 찾아본 게 인상적이다.</p>
+<hr>
+<h3 id="6일차" style="position:relative;">6일차<a href="#6%EC%9D%BC%EC%B0%A8" aria-label="6일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="앞으로의-일정" style="position:relative;">앞으로의 일정<a href="#%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%9D%BC%EC%A0%95" aria-label="앞으로의 일정 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>오전 데이터 수집<br>
+오후 자연어 처리</p>
+<p>MongoDB : PDF에서 문서 추출</p>
+<p>5~6주차 : Tensorflow 기초, Tnesorflow로 하는 자연어 처리</p>
+<p>6~10주차:오후 4시간 씩 프로젝트 시간</p>
+<p>7~10주차</p>
+<ul>
+<li>웹 프로그래밍</li>
+<li>챗봇 만들기</li>
+<li>OCR 해보기 (OpenCV)</li>
+<li>REST API 서버 구현</li>
+</ul>
+<p>다음주에 16시 30분에서 1시간 분량 토, 일<br>
+SQL 기초</p>
+<hr>
+<h3 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>데이터 분석 그리고 AI -> 데이터가 없으면 의미가 없다.</p>
+<p>장기과정에서 프로젝트를 하는 학생이나 데이터 분석 컨설팅<br>
+계획이나 주제는 참 좋습니다! => 그 데이터가 있는지? 왜 의미가 있는지?</p>
+<ol>
+<li>공개된 데이터를 사용하기 (Kaggle, aihub, 공공데이터 등등)</li>
+<li>web crawling : 특정 사이트의 웹페이지 내용을 가져오는 것</li>
+</ol>
+<p>web scraping : 특정 사이트에서 가져온 웹페이지에서 원하는 부분을 추려내는 것<br>
+=> 문제점 : 비공식적 방법이다!</p>
+<ol>
+<li>웹페이지 내용이 오늘과 내일이 다를 수 있습니다.</li>
+</ol>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text"> => 어제까지 잘 추출하던 내용이 오늘 없을 수가 있다.  </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<ol start="2">
+<li>웹페이지의 내용은 해당 사이트에 존재 컨텐츠</li>
+<li>해당 서버에 부담을 준다.</li>
+</ol>
+<p>cf. <a href="https://httpbin.org/">https://httpbin.org/</a><br>
+=> ben을 당할 수가 있다.<br>
+=> 어제 예제의 경우 1초에 1페이지씩 처리가 되었다.<br>
+사회공학적으로 보았을 때 사람이라면 1초에 1페이지씩 이동한다는 것은 불가능하다고 가정<br>
+=> 이런 패턴을 해당 사이트에서는 감시를 한다. 이상한 동작이 발생하면 IP 주소를 차단<br>
+[1] 해당 페이지 처리 간에 지연을 준다 2초 정도<br>
+[2] proxy 서버를 통해 우회해서 나를 속이는 경우<br>
+[3] 헤더 부분을 변경<br>
+[4] browserless 방식으로 웹 접속<br>
+3) REST API : 공식적인 방법!<br>
+REST API는 endpoint라는 것을 사용합니다.<br>
+endpoint 제공하는 서버가 별도로 존재합니다.<br>
+돈이 든다. 서비스화가 필요!<br>
+사례)<br>
+- 날씨 : <a href="https://openweathermap.org/">https://openweathermap.org/</a><br>
+- 언어 확인 : <a href="https://languagelayer.com/">https://languagelayer.com/</a><br>
+- 공공 데이터 : <a href="https://www.data.go.kr/">https://www.data.go.kr/</a></p>
+<p>[특징]</p>
+<ol>
+<li>공식적인 API (Application Programming Interface)가 존재</li>
+</ol>
+<p>-> 이것만 따라하면 이상없이 데이터를 얻을 수 있다.<br>
+-> sample program도 제공<br>
+2. 사용량만큼 돈을 내야하는 서비스들이 대부분.<br>
+-> 사용자가 누구인지 파악하는 API Key가 존재!<br>
+-> 만약에 내가 API 서비스를 사용하는 프로그램을 github나 누군가에게 공개할 때, API Key를 삭제하고 제공해야 한다.<br>
+3. API의 버전이 존재!<br>
+-> 공식적인 서버에서 제공하는 데이터가 더 많아질 수도 있다.<br>
+-> 더 좋은 방식으로 데이터의 결과를 주고 싶은 경우가 있다.<br>
+-> 공식적인 서비스이기 때문에, 최소 1개월 전에는 사용자들에게 알림을 전달<br>
+4. API 호출의 결과는 대부분 JSON 형식을 사용!</p>
+<p><a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">https://dev.mysql.com/downloads/windows/installer/8.0.html</a></p>
+<h3 id="크롤링--db-저장" style="position:relative;">크롤링 (+ DB 저장)<a href="#%ED%81%AC%EB%A1%A4%EB%A7%81--db-%EC%A0%80%EC%9E%A5" aria-label="크롤링  db 저장 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>API key를 지웠습니다.</li>
+</ul>
+<p>prettytable 설치 후 vsc를 재시작한다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> pip install prettytable</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<ul>
+<li>get_data_from_api.py</li>
+</ul>
+<p><a href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a></p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> prettytable <span class="token keyword">import</span> PrettyTable
+dataTable <span class="token operator">=</span> PrettyTable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+URL <span class="token operator">=</span> <span class="token string">"http://api.openweathermap.org/data/2.5/weather?q={city name}&amp;appid={API key}"</span>
+CITY <span class="token operator">=</span> <span class="token string">"seoul"</span>
+API_KEY <span class="token operator">=</span> <span class="token string">"   "</span>
+
+<span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>URL<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{city name}"</span><span class="token punctuation">,</span> CITY<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{API key}"</span><span class="token punctuation">,</span> API_KEY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> response<span class="token punctuation">:</span>
+    <span class="token comment"># print(response.read())</span>
+    result_json <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+parsed_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>result_json<span class="token punctuation">)</span>
+<span class="token comment"># print(parsed_json["weather"])</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+dataTable<span class="token punctuation">.</span>field_names <span class="token operator">=</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    list_values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>list_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    dataTable<span class="token punctuation">.</span>add_row<span class="token punctuation">(</span>parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dataTable<span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>table에 저장된 거처럼 터미널 상에 보여진다.</p>
+<ul>
+<li>문제 : seoul과 busan의 날씨를 가져오고, 또한, description이 한글이었으면 좋겠다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> prettytable <span class="token keyword">import</span> PrettyTable
+dataTable <span class="token operator">=</span> PrettyTable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+URL <span class="token operator">=</span> <span class="token string">"http://api.openweathermap.org/data/2.5/weather?q={city name}&amp;appid={API key}"</span>
+<span class="token comment"># CITY = "seoul"</span>
+CITY <span class="token operator">=</span> <span class="token string">"busan"</span>
+URL <span class="token operator">=</span> URL <span class="token operator">+</span> <span class="token string">"&amp;lang=KR"</span>
+API_KEY <span class="token operator">=</span> <span class="token string">"   "</span>
+
+<span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>URL<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{city name}"</span><span class="token punctuation">,</span> CITY<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{API key}"</span><span class="token punctuation">,</span> API_KEY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> response<span class="token punctuation">:</span>
+    <span class="token comment"># print(response.read())</span>
+    result_json <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+parsed_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>result_json<span class="token punctuation">)</span>
+<span class="token comment"># print(parsed_json["weather"])</span>
+<span class="token comment"># print(parsed_json["weather"][0])</span>
+<span class="token comment"># print(parsed_json["weather"][0].keys())</span>
+dataTable<span class="token punctuation">.</span>field_names <span class="token operator">=</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    list_values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>list_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> list_values<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    dataTable<span class="token punctuation">.</span>add_row<span class="token punctuation">(</span>parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dataTable<span class="token punctuation">)</span>
+
+<span class="token comment"># 문제 : seoul과 busan의 날씨를 가져오고, 또한, description이 한글이었으면 좋겠다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>city 3개를 크롤링 하기</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> prettytable <span class="token keyword">import</span> PrettyTable
+dataTable <span class="token operator">=</span> PrettyTable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+URL <span class="token operator">=</span> <span class="token string">"http://api.openweathermap.org/data/2.5/weather?q={city name}&amp;lang={lang}&amp;appid={API key}"</span>
+<span class="token comment"># CITY = "seoul"</span>
+<span class="token comment"># CITY = "busan"</span>
+CITIES <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"seoul"</span><span class="token punctuation">,</span><span class="token string">"busan"</span><span class="token punctuation">,</span><span class="token string">"chuncheon"</span><span class="token punctuation">]</span>
+LANG <span class="token operator">=</span> <span class="token string">"kr"</span>
+API_KEY <span class="token operator">=</span> <span class="token string">"   "</span>
+
+<span class="token keyword">for</span> CITY <span class="token keyword">in</span> CITIES<span class="token punctuation">:</span>
+    <span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>URL<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{city name}"</span><span class="token punctuation">,</span> CITY<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{lang}"</span><span class="token punctuation">,</span> LANG<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{API key}"</span><span class="token punctuation">,</span> API_KEY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> response<span class="token punctuation">:</span>
+        <span class="token comment"># print(response.read())</span>
+        result_json <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    parsed_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>result_json<span class="token punctuation">)</span>
+    <span class="token comment"># print(parsed_json["weather"])</span>
+    <span class="token comment"># print(parsed_json["weather"][0])</span>
+    <span class="token comment"># print(parsed_json["weather"][0].keys())</span>
+    dataTable<span class="token punctuation">.</span>field_names <span class="token operator">=</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        list_values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># print(list_values[0], list_values[1], list_values[2], list_values[3])</span>
+        dataTable<span class="token punctuation">.</span>add_row<span class="token punctuation">(</span>parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dataTable<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>
+<p><a href="https://db-engines.com/en/ranking">https://db-engines.com/en/ranking</a></p>
+</li>
+<li>
+<p><a href="https://www.python.org/dev/peps/pep-0249/">https://www.python.org/dev/peps/pep-0249/</a></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>SQL command</li>
+</ul>
+<ul>
+<li>DDL : Data Define Language</li>
+<li>DML : Manipulation</li>
+<li>DCL : Control</li>
+</ul>
+<ul>
+<li>REST API 방식으로 가져온 데이터를 DB에 저장해 보자</li>
+</ul>
+<p>여기서는 sqlite3를 활용하였고, 실행 시 weather.db가 생성된다.</p>
+<p>SQLite를 설치하여 해당 db 데이터를 확인할 수 있다.</p>
+<ul>
+<li><a href="https://sqlitebrowser.org/">https://sqlitebrowser.org/</a></li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> sqlite3
+<span class="token keyword">from</span> prettytable <span class="token keyword">import</span> PrettyTable
+
+dataTable <span class="token operator">=</span> PrettyTable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+URL <span class="token operator">=</span> <span class="token string">"http://api.openweathermap.org/data/2.5/weather?q={city name}&amp;lang={lang}&amp;appid={API key}"</span>
+CITIES <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"seoul"</span><span class="token punctuation">,</span><span class="token string">"busan"</span><span class="token punctuation">,</span><span class="token string">"chuncheon"</span><span class="token punctuation">]</span>
+LANG <span class="token operator">=</span> <span class="token string">"kr"</span>
+API_KEY <span class="token operator">=</span> <span class="token string">"   "</span>
+
+connection_sqlite3 <span class="token operator">=</span> sqlite3<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token string">"weather.db"</span><span class="token punctuation">)</span>
+cursor_sqlite3 <span class="token operator">=</span> connection_sqlite3<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+city_weather_table_create <span class="token operator">=</span> <span class="token string">"CREATE TABLE IF NOT EXISTS city_weather (id integer, main text, description text, icon text)"</span>
+cursor_sqlite3<span class="token punctuation">.</span>execute<span class="token punctuation">(</span>city_weather_table_create<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> CITY <span class="token keyword">in</span> CITIES<span class="token punctuation">:</span>
+    <span class="token keyword">with</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>URL<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{city name}"</span><span class="token punctuation">,</span> CITY<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{lang}"</span><span class="token punctuation">,</span> LANG<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"{API key}"</span><span class="token punctuation">,</span> API_KEY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> response<span class="token punctuation">:</span>
+        result_json <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        parsed_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>result_json<span class="token punctuation">)</span>
+        dataTable<span class="token punctuation">.</span>field_names <span class="token operator">=</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> parsed_json<span class="token punctuation">[</span><span class="token string">"weather"</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            list_values <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            dataTable<span class="token punctuation">.</span>add_row<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            cursor_sqlite3<span class="token punctuation">.</span>execute<span class="token punctuation">(</span>
+                    <span class="token string">"INSERT INTO city_weather VALUES ('"</span> <span class="token operator">+</span>
+                    <span class="token builtin">str</span><span class="token punctuation">(</span>list_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"', '"</span> <span class="token operator">+</span>
+                    list_values<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"', '"</span> <span class="token operator">+</span>
+                    list_values<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"', '"</span> <span class="token operator">+</span>
+                    list_values<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"')"</span>
+        <span class="token punctuation">)</span>
+connection_sqlite3<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># print(dataTable)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>1시간 20분 만에</p>
+<ol>
+<li>REST API 사용법을 배웠고</li>
+<li>JSON 처리 및 파이썬 딕셔너리 방법도 배웠고</li>
+<li>SQLite3를 활용한 데이터베이스 개념을 간단히 알아보고,</li>
+</ol>
+<p>간단한 데이터 입력만 해보고, dbsqlitebrowser를 통해서 데이터를 확인</p>
+<hr>
+<ul>
+<li>study_sqlite.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 파이썬으로 database 생성</span>
+<span class="token comment"># SQLite3의 경우 connection을 할 때, 해당 database 파일이 존재하지 않으면 생성</span>
+<span class="token comment"># 다른 관계형 (Relational) DBMS (Database Management System) 의 경우, 사전에 database가 생성되어 있어야 한다.</span>
+<span class="token keyword">import</span> sqlite3
+
+conn <span class="token operator">=</span> sqlite3<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token string">"coffee.db"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Database 연결"</span><span class="token punctuation">)</span>
+
+Database 연결</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Database라는 곳은 데이터들을 보관하는 곳</span>
+<span class="token comment"># table : 데이터들을 기준에 의해서 논리적으로 묶은 것</span>
+<span class="token comment"># 행 (row, record) 및 열 (column, )으로 이루어 짐</span>
+<span class="token comment"># table schema : 어떤 데이터들로 구성이 돼 있고, 각 열이 어떤 데이터 형식을 가지는지 정의</span>
+<span class="token comment"># 테이블 생성하고 데이터를 입력</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+CREATE TABLE users(
+    id    INT   PRIMARY KEY  NOT NULL,
+    name  TEXT  NOT NULL
+)
+'''</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"테이블이 생성되었습니다."</span><span class="token punctuation">)</span>
+
+테이블이 생성되었습니다<span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Database가 존재하고, Table 생성한 상태이다.</span>
+<span class="token comment"># 이제 이 table에 data를 입력</span>
+
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(1,"김철수")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(2,"이영희")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(3,"이동국")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(4,"안정환")
+'''</span><span class="token punctuation">)</span>
+
+conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"데이터 입력 완료"</span><span class="token punctuation">)</span>
+
+데이터 입력 완료</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>commit까지 해야 insert가 완료된다.</p>
+<ul>
+<li>select</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 데이터를 보여준다!</span>
+<span class="token comment"># 우선 데이터를 조회해서 Result Set를 가져온다</span>
+
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+SELECT *
+FROM users
+'''</span><span class="token punctuation">)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>cursor<span class="token punctuation">)</span> <span class="token comment"># sqlite3.Cursor</span>
+
+
+<span class="token keyword">for</span> row <span class="token keyword">in</span> cursor<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'김철수'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'이영희'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'이동국'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'안정환'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>    </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>DML</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(5,"김철수")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(6,"이영희")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(7,"이동국")
+'''</span><span class="token punctuation">)</span>
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+INSERT INTO users (id, name)
+VALUES(8,"안정환")
+'''</span><span class="token punctuation">)</span>
+
+conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+SELECT name -- NAME만 보고 싶다
+FROM users
+'''</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> row <span class="token keyword">in</span> cursor<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token string">'김철수'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'이영희'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'이동국'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'안정환'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'김철수'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'이영희'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'이동국'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token string">'안정환'</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>    </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 데이터를 삭제하고 싶다.</span>
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+DELETE FROM users
+WHERE id >= 5
+'''</span><span class="token punctuation">)</span>
+
+conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+SELECT *
+FROM users
+'''</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> row <span class="token keyword">in</span> cursor<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'김철수'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'이영희'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'이동국'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'안정환'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 데이터 입력, 조회, 삭제</span>
+<span class="token comment"># 이제 남은 건 수정!</span>
+
+conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+UPDATE users
+SET name = "이강인"
+WHERE id = 2
+'''</span><span class="token punctuation">)</span>
+
+conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+SELECT *
+FROM users
+'''</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> row <span class="token keyword">in</span> cursor<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'김철수'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'이강인'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'이동국'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'안정환'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+UPDATE users
+SET name = "기성용"
+WHERE id = 1
+'''</span><span class="token punctuation">)</span>
+
+conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+cursor <span class="token operator">=</span> conn<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">'''
+SELECT * -- 테이블의 모든 열을 보여달라
+FROM users
+'''</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> row <span class="token keyword">in</span> cursor<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'기성용'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'이강인'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'이동국'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>
+<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'안정환'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'tuple'</span><span class="token operator">></span>    </code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<p>nltk, spacy, textblob, wordnet</p>
+<ul>
+<li>study_textblob.ipynb</li>
+</ul>
+<p>textblob을 설치한다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">! pip install textblob
+! pip freeze <span class="token operator">></span> requirements<span class="token punctuation">.</span>txt
+
+<span class="token keyword">from</span> textblob <span class="token keyword">import</span> TextBlob
+text <span class="token operator">=</span> <span class="token string">"In this course we will learn how to perform NLP with TextBlob. TextBlob is a Phython package that's built on top of the famous Python package called NLTK."</span>
+
+blob <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>TextBlob<span class="token punctuation">,</span> <span class="token number">154</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> blob<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+
+I
+n
+
+t
+h
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> nltk
+nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token string">"punkt"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span> Downloading package punkt to
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>     C<span class="token punctuation">:</span>\Users\Choi\AppData\Roaming\nltk_data<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>   Package punkt <span class="token keyword">is</span> already up<span class="token operator">-</span>to<span class="token operator">-</span>date!
+<span class="token boolean">True</span>
+
+result <span class="token operator">=</span> blob<span class="token punctuation">.</span>words
+<span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">,</span> result
+
+<span class="token comment"># (textblob.blob.WordList,</span>
+<span class="token comment">#  29,</span>
+<span class="token comment">#  WordList(['In', 'this', 'course', 'we', 'will', 'learn', 'how', 'to', 'perform', 'NLP', 'with', 'TextBlob', 'TextBlob', 'is', 'a', 'Phython', 'package', 'that', "'s", 'built', 'on', 'top', 'of', 'the', 'famous', 'Python', 'package', 'called', 'NLTK']))</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>Word<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'learn'</span><span class="token punctuation">)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string
+
+<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'learn'</span><span class="token punctuation">)</span>
+
+new_string <span class="token operator">=</span> <span class="token string">"Test "</span> <span class="token operator">+</span> result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>new_string<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>new_string<span class="token punctuation">)</span><span class="token punctuation">,</span> new_string
+
+<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'Test In'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="문장-처리" style="position:relative;">문장 처리<a href="#%EB%AC%B8%EC%9E%A5-%EC%B2%98%EB%A6%AC" aria-label="문장 처리 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 문장 (Sentence) 처리</span>
+
+sentences <span class="token operator">=</span> blob<span class="token punctuation">.</span>sentences
+<span class="token builtin">type</span><span class="token punctuation">(</span>sentences<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sentences<span class="token punctuation">)</span><span class="token punctuation">,</span> sentences
+
+<span class="token comment"># (list,</span>
+<span class="token comment">#  2,</span>
+<span class="token comment">#  [Sentence("In this course we will learn how to perform NLP with TextBlob."),</span>
+<span class="token comment">#   Sentence("TextBlob is a Phython package that's built on top of the famous Python package called NLTK.")])</span>
+
+<span class="token keyword">for</span> sentence <span class="token keyword">in</span> sentences<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> sentence<span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'textblob.blob.Sentence'</span><span class="token operator">></span> <span class="token number">62</span> In this course we will learn how to perform NLP <span class="token keyword">with</span> TextBlob<span class="token punctuation">.</span>
+<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'textblob.blob.Sentence'</span><span class="token operator">></span> <span class="token number">91</span> TextBlob <span class="token keyword">is</span> a Phython package that's built on top of the famous Python package called NLTK<span class="token punctuation">.</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>sentences<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sentences<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sentences<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>Sentence<span class="token punctuation">,</span>
+ <span class="token number">62</span><span class="token punctuation">,</span>
+ Sentence<span class="token punctuation">(</span><span class="token string">"In this course we will learn how to perform NLP with TextBlob."</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+sentence <span class="token operator">=</span> sentences<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span><span class="token punctuation">,</span> sentence
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>Sentence<span class="token punctuation">,</span>
+ <span class="token number">91</span><span class="token punctuation">,</span>
+ Sentence<span class="token punctuation">(</span><span class="token string">"TextBlob is a Phython package that's built on top of the famous Python package called NLTK."</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      
+
+sentence<span class="token punctuation">.</span>detect_language<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 'en'</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>sentence<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sentence<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">,</span> sentence<span class="token punctuation">.</span>string
+
+<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span>
+ <span class="token number">91</span><span class="token punctuation">,</span>
+ <span class="token string">"TextBlob is a Phython package that's built on top of the famous Python package called NLTK."</span><span class="token punctuation">)</span>
+
+sentence<span class="token punctuation">.</span>tokens
+
+<span class="token comment"># WordList(['TextBlob', 'is', 'a', 'Phython', 'package', 'that', "'s", 'built', 'on', 'top', 'of', 'the', 'famous', 'Python', 'package', 'called', 'NLTK', '.'])</span>
+
+sentence<span class="token punctuation">.</span>translate
+
+<span class="token operator">&lt;</span>bound method BaseBlob<span class="token punctuation">.</span>translate of Sentence<span class="token punctuation">(</span><span class="token string">"TextBlob is a Phython package that's built on top of the famous Python package called NLTK."</span><span class="token punctuation">)</span><span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="custom-tokenize" style="position:relative;">Custom Tokenize<a href="#custom-tokenize" aria-label="custom tokenize permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Custom Tokenize</span>
+
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> WhitespaceTokenizer
+tokenizer <span class="token operator">=</span> WhitespaceTokenizer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+text_2 <span class="token operator">=</span> <span class="token string">"test test\ntest\ttest"</span>
+
+blob_2 <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span>text_2<span class="token punctuation">,</span> tokenizer <span class="token operator">=</span> tokenizer<span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>blob_2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>blob_2<span class="token punctuation">)</span><span class="token punctuation">,</span> blob_2
+
+<span class="token comment"># (textblob.blob.TextBlob,</span>
+<span class="token comment">#  19,</span>
+<span class="token comment">#  TextBlob("test test</span>
+<span class="token comment">#  test	test"))</span>
+
+blob_2<span class="token punctuation">.</span>tokens
+
+<span class="token comment"># WordList(['test', 'test', 'test', 'test'])</span>
+
+blob_3 <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span>text_2<span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>blob_3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>blob_3<span class="token punctuation">)</span><span class="token punctuation">,</span> blob_3
+
+<span class="token comment"># (textblob.blob.TextBlob,</span>
+<span class="token comment">#  19,</span>
+<span class="token comment">#  TextBlob("test test</span>
+<span class="token comment">#  test	test"))</span>
+
+blob_3<span class="token punctuation">.</span>tokens
+
+<span class="token comment"># WordList(['test', 'test', 'test', 'test'])  </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="pos-tagging" style="position:relative;">POS Tagging<a href="#pos-tagging" aria-label="pos tagging permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># Part-Of_Speech Tagging</span>
+
+blob_3 <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span><span class="token string">"I ran a race in Ottawa"</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>blob_3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>blob_3<span class="token punctuation">)</span><span class="token punctuation">,</span> blob_3
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>TextBlob<span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> TextBlob<span class="token punctuation">(</span><span class="token string">"I ran a race in Ottawa"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+blob_3<span class="token punctuation">.</span>tokens
+
+<span class="token comment"># WordList(['I', 'ran', 'a', 'race', 'in', 'Ottawa'])</span>
+
+
+<span class="token keyword">import</span> nltk
+nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token string">"averaged_perceptron_tagger"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span> Downloading package averaged_perceptron_tagger to
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>     C<span class="token punctuation">:</span>\Users\Choi\AppData\Roaming\nltk_data<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>   Package averaged_perceptron_tagger <span class="token keyword">is</span> already up<span class="token operator">-</span>to<span class="token operator">-</span>
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>       date!
+<span class="token boolean">True</span>
+
+pos <span class="token operator">=</span> blob_3<span class="token punctuation">.</span>tags
+<span class="token builtin">type</span><span class="token punctuation">(</span>pos<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>pos<span class="token punctuation">)</span><span class="token punctuation">,</span> pos
+
+<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'NN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'NN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'NN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'NN'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+first <span class="token operator">=</span> pos<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>first<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>first<span class="token punctuation">)</span><span class="token punctuation">,</span> first
+
+<span class="token punctuation">(</span><span class="token builtin">tuple</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'I'</span><span class="token punctuation">,</span> <span class="token string">'PRP'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>first<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>first<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> first<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>Word<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'I'</span><span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>quiz</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 도전 문제</span>
+<span class="token comment"># 사용자에게 입력 (Americans live in the USA)을 받고, proper noun 의 리스트를 출력하는 프로그램</span>
+<span class="token comment"># POS를 이용</span>
+<span class="token comment"># singular proper noun tag : NNP</span>
+<span class="token comment"># plural proper noun tag : NNPS</span>
+
+<span class="token comment"># 입력 : Americans live in the USA</span>
+<span class="token comment"># 출력 : ['Americans','USA']</span>
+
+<span class="token comment"># 내 답안지</span>
+data <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+blob_4 <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+pos2 <span class="token operator">=</span> blob_4<span class="token punctuation">.</span>tags
+
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>v<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token keyword">in</span> pos2<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token keyword">in</span> <span class="token punctuation">(</span><span class="token string">'NNP'</span><span class="token punctuation">,</span><span class="token string">'NNPS'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        a<span class="token punctuation">.</span>append<span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment">###########################################</span>
+<span class="token comment"># 정답</span>
+
+user_input <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+user_blob <span class="token operator">=</span> TextBlob<span class="token punctuation">(</span>user_input<span class="token punctuation">)</span>
+
+result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+tags <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"NNP"</span><span class="token punctuation">,</span> <span class="token string">"NNPS"</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> pos_tuple <span class="token keyword">in</span> user_blob<span class="token punctuation">.</span>tags<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> pos_tuple<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">in</span> tags<span class="token punctuation">:</span>
+        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>pos_tuple<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h4 id="단어-유사도" style="position:relative;">단어 유사도<a href="#%EB%8B%A8%EC%96%B4-%EC%9C%A0%EC%82%AC%EB%8F%84" aria-label="단어 유사도 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>study_wordnet.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> nltk
+nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token string">"wordnet"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span> Downloading package wordnet to
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>     C<span class="token punctuation">:</span>\Users\Choi\AppData\Roaming\nltk_data<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span>nltk_data<span class="token punctuation">]</span>   Package wordnet <span class="token keyword">is</span> already up<span class="token operator">-</span>to<span class="token operator">-</span>date!
+<span class="token boolean">True</span>
+
+<span class="token keyword">from</span> textblob <span class="token keyword">import</span> Word
+word <span class="token operator">=</span> Word<span class="token punctuation">(</span><span class="token string">"defend"</span><span class="token punctuation">)</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">,</span> word
+
+<span class="token punctuation">(</span>textblob<span class="token punctuation">.</span>blob<span class="token punctuation">.</span>Word<span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token string">'defend'</span><span class="token punctuation">)</span>
+
+synsets <span class="token operator">=</span> word<span class="token punctuation">.</span>get_synsets<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 단어 유사도</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>synsets<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>synsets<span class="token punctuation">)</span><span class="token punctuation">,</span> synsets
+
+<span class="token comment"># (list,</span>
+<span class="token comment">#  7,</span>
+<span class="token comment">#  [Synset('defend.v.01'),</span>
+<span class="token comment">#   Synset('defend.v.02'),</span>
+<span class="token comment">#   Synset('defend.v.03'),</span>
+<span class="token comment">#   Synset('fight.v.02'),</span>
+<span class="token comment">#   Synset('champion.v.01'),</span>
+<span class="token comment">#   Synset('defend.v.06'),</span>
+  <span class="token comment"># Synset('maintain.v.08')])</span>
+
+first_syn <span class="token operator">=</span> synsets<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token builtin">type</span><span class="token punctuation">(</span>first_syn<span class="token punctuation">)</span><span class="token punctuation">,</span> first_syn<span class="token punctuation">,</span> first_syn<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> first_syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># (nltk.corpus.reader.wordnet.Synset,</span>
+<span class="token comment">#  Synset('defend.v.01'),</span>
+<span class="token comment">#  'defend.v.01',</span>
+<span class="token comment">#  [Lemma('defend.v.01.defend'),</span>
+<span class="token comment">#   Lemma('defend.v.01.support'),</span>
+<span class="token comment">#   Lemma('defend.v.01.fend_for')])</span>
+
+lemmas <span class="token operator">=</span> first_syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> lem <span class="token keyword">in</span> lemmas<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># defend</span>
+<span class="token comment"># support</span>
+<span class="token comment"># fend_for</span>
+
+third_syn <span class="token operator">=</span> synsets<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+lemmas <span class="token operator">=</span> third_syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> lem <span class="token keyword">in</span> lemmas<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># fight</span>
+<span class="token comment"># oppose</span>
+<span class="token comment"># fight_back</span>
+<span class="token comment"># fight_down</span>
+<span class="token comment"># defend</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>특정 단어의 유사한 단어를 찾아보자</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">string <span class="token operator">=</span> <span class="token string">"terrific"</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+word <span class="token operator">=</span> Word<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> syn <span class="token keyword">in</span> word<span class="token punctuation">.</span>get_synsets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> lem <span class="token keyword">in</span> syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> string<span class="token punctuation">:</span> <span class="token comment"># string과 유사한 단어를 찾는 거라 제외</span>
+            result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment"># ['fantastic', 'grand', 'howling', 'marvelous', 'marvellous', 'rattling', 'tremendous', 'wonderful', 'wondrous', 'terrifying']</span>
+
+string <span class="token operator">=</span> <span class="token string">"stone"</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+word <span class="token operator">=</span> Word<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> syn <span class="token keyword">in</span> word<span class="token punctuation">.</span>get_synsets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> lem <span class="token keyword">in</span> syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> string<span class="token punctuation">:</span>
+            result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>lem<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment"># ['rock', 'rock', 'gem', 'gemstone', 'pit', 'endocarp', 'Stone', 'Harlan_Stone', 'Harlan_F._Stone', 'Harlan_Fisk_Stone', 'Stone', 'Oliver_Stone', 'Stone', 'Lucy_Stone', 'Stone', 'I._F._Stone', 'Isidor_Feinstein_Stone', 'Stone', 'Harlan_Fiske_Stone', 'Stone', 'Edward_Durell_Stone', 'lapidate', 'pit']</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-6일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-893866d828268bdf98d5.js"],"app":["/app-0dfcf1d989dd570d1f8d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0a5d30d80a86a6beaaa6.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-04658c393fc078044a6e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7d3303cf2ff5e504b9af.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-46aa3abf40fa3f68b9fe.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-893866d828268bdf98d5.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0dfcf1d989dd570d1f8d.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-2ed2469d67f21d902031.js" async=""></script></body></html>
