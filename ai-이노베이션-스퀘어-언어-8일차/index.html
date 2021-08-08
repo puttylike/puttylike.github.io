@@ -1,0 +1,1001 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.10.1"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-2ed2469d67f21d902031.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-0dfcf1d989dd570d1f8d.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-언어-8일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li><a href="#8%EC%9D%BC%EC%B0%A8">8일차</a></li>
+<li><a href="#%EB%AA%BD%EA%B3%A0-db">몽고 DB</a></li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 언어반 8일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>어제에 이어 file 놀이(?)를 했다.</p>
+<p>이후, mongoDB를 설치해 실습했는데, 말로만 들었지 실제로는 이걸 오늘 처음 써봤다.<br>
+생각보다 재밌는게... 역시 db가 체질인가...</p>
+<p>다음주는 휴강이다. 뭐 하지?<br>
+블로그에 올려둔 글들 정리 좀 할까 싶기도 하고.</p>
+<hr>
+<h3 id="8일차" style="position:relative;">8일차<a href="#8%EC%9D%BC%EC%B0%A8" aria-label="8일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>압축파일 만들 때 a로 하면, w처럼 덮어쓰지 않고 추가된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> zipfile
+<span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+<span class="token keyword">import</span> shutil
+
+<span class="token keyword">def</span> <span class="token function">create_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/movies/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/movies/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token comment"># print(os.listdir("."))</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            archive<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">append_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token comment"># print(os.listdir("."))</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            archive<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    shutil<span class="token punctuation">.</span>make_archive<span class="token punctuation">(</span><span class="token string">"directory_archive"</span><span class="token punctuation">,</span><span class="token string">"zip"</span><span class="token punctuation">,</span><span class="token string">"images/"</span><span class="token punctuation">)</span> 지정한 디렉토리 안에 있는걸 알아서 압축해 준다<span class="token punctuation">.</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>shutil.make_archive("directory_archive","zip","images/") 지정한 디렉토리 안에 있는걸 알아서 압축해 준다.</p>
+<hr>
+<ul>
+<li>study_file_015.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+<span class="token keyword">def</span> <span class="token function">read_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>archive<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    read_zip<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>['images/movies/monsters/article01.txt', 'images/movies/monsters/article02.txt', 'images/movies/monsters/article03.txt', 'images/movies/monsters/article04.txt', 'images/movies/monsters/article01.txt', 'images/movies/monsters/article02.txt', 'images/movies/monsters/article03.txt', 'images/movies/monsters/article04.txt', 'images/magazines/monsters/article01.txt', 'images/magazines/monsters/article02.txt', 'images/magazines/monsters/article03.txt', 'images/magazines/monsters/article04.txt']</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+<span class="token keyword">def</span> <span class="token function">read_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>archive<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">retrieve_file_info_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        file_info <span class="token operator">=</span> archive<span class="token punctuation">.</span>getinfo<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/article03.txt"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>file_info<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># read_zip()</span>
+    retrieve_file_info_zip<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ZipInfo filename='images/magazines/monsters/article03.txt' filemode='-rw-rw-rw-' file_size=662>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+<span class="token keyword">def</span> <span class="token function">read_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>archive<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">retrieve_file_info_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        file_info <span class="token operator">=</span> archive<span class="token punctuation">.</span>getinfo<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/article03.txt"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>file_info<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">read_file_in_zip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">with</span> archive<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/article03.txt"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># read_zip()</span>
+    <span class="token comment"># retrieve_file_info_zip()</span>
+    read_file_in_zip<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>b'With everything we make and everything we do, we\nkeep in mind our customers, community, and the\nworld we live in. Every move we make should make the\nworld a better place.\nPhilanthropy is extremely important to us. In fact,\nwe pay each employee to volunteer for non-profit\norganizations of their choice. We know that doing good\nbreeds more doing good, and we are happy to promote\na cycle of volunteerism that keeps on giving.\nIn addition, we support local and national\nemergency support teams with free energy bars and\ndonations. Last year, we distributed over a quarter of a\nmillion bars to help these important personnel to keep\nup their strength and endurance.'</p>
+<ul>
+<li>압축 풀기</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+<span class="token keyword">def</span> <span class="token function">read_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>archive<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">retrieve_file_info_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        file_info <span class="token operator">=</span> archive<span class="token punctuation">.</span>getinfo<span class="token punctuation">(</span>target_file<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>file_info<span class="token punctuation">)</span>    
+
+<span class="token keyword">def</span> <span class="token function">read_file_in_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">with</span> archive<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>target_file<span class="token punctuation">)</span><span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">extract_file</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        archive<span class="token punctuation">.</span>extract<span class="token punctuation">(</span>target_file<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># read_zip("test_archive.zip")</span>
+    <span class="token comment"># retrieve_file_info_zip("test_archive.zip", "images/magazine/monsters/article03.txt")</span>
+    <span class="token comment"># read_file_in_zip("test_archive.zip", "images/magazine/monsters/article03.txt")</span>
+    extract_file<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span> <span class="token string">"images/magazines/monsters/article03.txt"</span><span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>C:\20210807\images\magazines\monsters<br>
+해당 파일 압축 해제 완료</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> zipfile
+
+<span class="token keyword">def</span> <span class="token function">read_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>archive<span class="token punctuation">.</span>namelist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">retrieve_file_info_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        file_info <span class="token operator">=</span> archive<span class="token punctuation">.</span>getinfo<span class="token punctuation">(</span>target_file<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>file_info<span class="token punctuation">)</span>    
+
+<span class="token keyword">def</span> <span class="token function">read_file_in_zip</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        <span class="token keyword">with</span> archive<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>target_file<span class="token punctuation">)</span><span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">extract_file</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        archive<span class="token punctuation">.</span>extract<span class="token punctuation">(</span>target_file<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">extract_all</span><span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> target_directory<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> zipfile<span class="token punctuation">.</span>ZipFile<span class="token punctuation">(</span>original_zipfile<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> archive<span class="token punctuation">:</span>
+        archive<span class="token punctuation">.</span>extractall<span class="token punctuation">(</span>target_directory<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># read_zip("test_archive.zip")</span>
+    <span class="token comment"># retrieve_file_info_zip("test_archive.zip", "images/magazines/monsters/article03.txt")</span>
+    <span class="token comment"># read_file_in_zip("test_archive.zip", "images/magazines/monsters/article03.txt")</span>
+    <span class="token comment"># extract_file("test_archive.zip", "images/magazines/monsters/article03.txt")</span>
+    extract_all<span class="token punctuation">(</span><span class="token string">"test_archive.zip"</span><span class="token punctuation">,</span><span class="token string">"images"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>images 폴더 밑에<br>
+통으로 압축 해제되어 폴더 생겼다.</p>
+<ul>
+<li>tar.gz</li>
+</ul>
+<p>tar의 의미 : tar라는 프로그램으로 디렉토리를 1개의 파일로 묶어주고,<br>
+gz의 의미 : gzip이라는 프로그램으로 tar 파일을 압축했다.</p>
+<ul>
+<li>study_file_016.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+
+<span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"archive.tar.gz"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>print(tar.getnames())</p>
+<p>['descriptions', 'descriptions/description02.txt', 'descriptions/._description01.txt', 'descriptions/description01.txt']</p>
+<p><a href="https://nodejs.org/ko/download/">https://nodejs.org/ko/download/</a></p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"archive.tar.gz"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>tar<span class="token punctuation">.</span>getnames<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   
+        file_info <span class="token operator">=</span> tar<span class="token punctuation">.</span>getmember<span class="token punctuation">(</span><span class="token string">"descriptions/._description01.txt"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>file_info<span class="token punctuation">.</span>name<span class="token punctuation">,</span> file_info<span class="token punctuation">.</span>size<span class="token punctuation">,</span> file_info<span class="token punctuation">.</span>mode<span class="token punctuation">)</span>
+
+    <span class="token comment"># 압축 방법 : gz, bz2, xz</span>
+
+    <span class="token comment"># with tarfile.open("node-v14.17.4-linux-x64.tar.xz", "r:gz") as tar:</span>
+    <span class="token comment">#     print(tar.getnames())   </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>['descriptions', 'descriptions/description02.txt', 'descriptions/._description01.txt', 'descriptions/description01.txt']
+descriptions/._description01.txt 176 420</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"archive.tar.gz"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token comment"># print(tar.getnames())   </span>
+
+        <span class="token comment"># 1개</span>
+        <span class="token comment"># file_info = tar.getmember("descriptions/._description01.txt")</span>
+        <span class="token comment"># print(file_info.name, file_info.size, file_info.mode)</span>
+
+    <span class="token comment"># 압축 방법 : gz, bz2, xz</span>
+    <span class="token comment"># with tarfile.open("node-v14.17.4-linux-x64.tar.xz", "r:gz") as tar:</span>
+    <span class="token comment">#     print(tar.getnames())   </span>
+    <span class="token comment"># 420의 의미 : rwx rwx rwx : r-- -w- ---</span>
+
+        <span class="token comment"># n개</span>
+        <span class="token keyword">for</span> member <span class="token keyword">in</span> tar<span class="token punctuation">.</span>getmembers<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>member<span class="token punctuation">.</span>name<span class="token punctuation">,</span> member<span class="token punctuation">.</span>size<span class="token punctuation">,</span> member<span class="token punctuation">.</span>mode<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>descriptions 0 493
+descriptions/description02.txt 392 420<br>
+descriptions/._description01.txt 176 420
+descriptions/description01.txt 316 420</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+
+<span class="token keyword">def</span> <span class="token function">read_tarfile</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+    <span class="token comment"># print(tar.getnames())   </span>
+
+    <span class="token comment"># 1개</span>
+    <span class="token comment"># file_info = tar.getmember("descriptions/._description01.txt")</span>
+    <span class="token comment"># print(file_info.name, file_info.size, file_info.mode)</span>
+
+    <span class="token comment"># 압축 방법 : gz, bz2, xz</span>
+    <span class="token comment"># with tarfile.open("node-v14.17.4-linux-x64.tar.xz", "r:gz") as tar:</span>
+    <span class="token comment">#     print(tar.getnames())   </span>
+    <span class="token comment"># 420의 의미 : rwx rwx rwx : r-- -w- ---</span>
+
+        <span class="token comment"># n개</span>
+        <span class="token keyword">for</span> member <span class="token keyword">in</span> tar<span class="token punctuation">.</span>getmembers<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>member<span class="token punctuation">.</span>name<span class="token punctuation">,</span> member<span class="token punctuation">.</span>size<span class="token punctuation">,</span> member<span class="token punctuation">.</span>mode<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">read_file_in_tar</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span>member_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">with</span> tar<span class="token punctuation">.</span>extractfile<span class="token punctuation">(</span>member_file<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># read_tarfile("archive.tar.gz")</span>
+    read_file_in_tar<span class="token punctuation">(</span><span class="token string">"archive.tar.gz"</span><span class="token punctuation">,</span> <span class="token string">"descriptions/description01.txt"</span><span class="token punctuation">)</span>
+
+
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>b"Mingle excels at doing twice the work in half the time, with pinpoint accuracy.  These skills serve her well in her role as Senior Data Analyst for an international cloud computing company. She's also got a penchant for ballroom dance, line dancing, and pretty much any kind of activity that lets her groove to music"</p>
+<hr>
+<ul>
+<li>study_file_017.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+<span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+<span class="token keyword">import</span> shutil
+
+<span class="token comment"># images/magazines/monsters에 있는 파일을 tar 형식으로 생성</span>
+<span class="token keyword">def</span> <span class="token function">create_tar_archive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.zip"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            tar<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># # images/movies/monsters에 있는 파일을 기존 tar 파일에 추가</span>
+<span class="token keyword">def</span> <span class="token function">add_to_tar_archive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/movies/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/movies/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.zip"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            tar<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># # images/movies/monsters/monster_new_new_monster01.png만 압축 해제</span>
+<span class="token comment"># def extract_tar():</span>
+
+<span class="token comment"># # extracted_monster_files에 있는 모든 파일을 압축 해제</span>
+<span class="token comment"># def extract_all():</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    create_tar_archive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    add_to_tar_archive<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>monster_archive.zip이 생성되는데,<br>
+이 파일 안에는 images 밑에 magazines, monsters 가 생성된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tarfile
+<span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+<span class="token keyword">import</span> shutil
+
+<span class="token comment"># images/magazines/monsters에 있는 파일을 tar 형식으로 생성</span>
+<span class="token keyword">def</span> <span class="token function">create_tar_archive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/magazines/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.zip"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            tar<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># # images/movies/monsters에 있는 파일을 기존 tar 파일에 추가</span>
+<span class="token keyword">def</span> <span class="token function">add_to_tar_archive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> path <span class="token keyword">in</span> Path<span class="token punctuation">(</span><span class="token string">"images/movies/monsters"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        file_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"images/movies/monsters/"</span> <span class="token operator">+</span> path<span class="token punctuation">.</span>stem <span class="token operator">+</span> path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>file_list<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.zip"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+            tar<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+<span class="token comment"># # images/movies/monsters_new_monster01.png만 압축 해제</span>
+<span class="token keyword">def</span> <span class="token function">extract_tar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token comment"># images/movies/monsters/monsters_new__new_monster01.png만 압축해제</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.tar"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        tar<span class="token punctuation">.</span>extract<span class="token punctuation">(</span><span class="token string">"images/movies/monsters_new_monster01.png"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># # extracted_monster_files에 있는 모든 파일을 압축 해제</span>
+<span class="token keyword">def</span> <span class="token function">extract_all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tarfile<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"monster_archive.tar"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tar<span class="token punctuation">:</span>
+        tar<span class="token punctuation">.</span>extractall<span class="token punctuation">(</span><span class="token string">"extracted_monster_files"</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># create_tar_archive()</span>
+    <span class="token comment"># add_to_tar_archive()</span>
+    extract_tar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    extract_all<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<ul>
+<li>study_file_018.py</li>
+</ul>
+<p>임시 파일 생성</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tempfile
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tempfile<span class="token punctuation">.</span>TemporaryFile<span class="token punctuation">(</span><span class="token string">"w+"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tf<span class="token punctuation">:</span>
+        tf<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"사용자정보"</span><span class="token punctuation">)</span>
+        tf<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>tempfile<span class="token punctuation">.</span>gettempdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 사용자정보</span>
+<span class="token comment"># C:\Users\Choi\AppData\Local\Temp      </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<p>NoSQL : Not Only SQL의 의미</p>
+<p><a href="https://db-engines.com/en/ranking">https://db-engines.com/en/ranking</a></p>
+<p>관계형 데이터베이스의 경우 schema 정의를 해서 데이터를 저장합니다.<br>
+신문 기사를 분석하고 싶다!<br>
+신문 기사를 DB에 저장하는데... 문제가 발생한다.</p>
+<p>관계형 데이터베이스의 경우</p>
+<ol>
+<li>신문 기사가 데이터 베이스에 저장할 길이를 지정해야 한다.</li>
+</ol>
+<p>즉, 최대 글자 수를 정해야 한다!<br>
+이를 지키지 않으면 에러가 발생하거나, 데이터 입력이 안 된다.</p>
+<p>100글자 -> 200글자로 늘렸다.</p>
+<ol start="2">
+<li>검색을 해야 하는데 예전은 숫자 기반으로 검색</li>
+</ol>
+<p>문자 및 문자열 검색이 필요!<br>
+SQL의 경우 like 검색을 많이 한다!
+where [column이름] like '%검색어%'<br>
+=> cost(비용)가 매우 많이 드는 처리</p>
+<p>DB 시스템은</p>
+<p>server &#x3C;---> client 개념 운영이 된다!<br>
+(db 엔진)   (우리가 같은 실제 data를 사용하려는 사람들이 사용하는 프로그램)<br>
+db tool (<a href="https://dbeaver.io/">Dbeaver</a>, MySQL workbench 등등)<br>
+우리가 직접 코딩하는 프로그램<br>
+데이터를 주고 받을 때, 백업 및 복구<br>
+migration 등등을 작업해 줘야 한다.</p>
+<p>SQLite의 경우....<br>
+DB엔진이 1개! 파일이 1개!<br>
+파일만 전달해서 그 파일을 읽어보면 된다!</p>
+<ul>
+<li>ELK stack</li>
+</ul>
+<ul>
+<li>E : Elasticsearch (검색)</li>
+<li>L : Logstack (수집)</li>
+<li>K : Kibana (시각화)</li>
+</ul>
+<p>관계형 데이터베이스는 기본이 SQL<br>
+SQL</p>
+<ul>
+<li>오라클 : PL-SQL</li>
+<li>MSSQL : T-SQL</li>
+<li>PostgreSQL : pSQL</li>
+</ul>
+<p>ANSI SQL</p>
+<hr>
+<h3 id="몽고-db" style="position:relative;">몽고 DB<a href="#%EB%AA%BD%EA%B3%A0-db" aria-label="몽고 db permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><a href="https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&#x26;utm_campaign=gs_apac_south_korea_search_core_brand_atlas_desktop&#x26;utm_term=mongodb&#x26;utm_medium=cpc_paid_search&#x26;utm_ad=e&#x26;utm_ad_campaign_id=12212624365&#x26;gclid=EAIaIQobChMImq3Sraeg8gIVkjMqCh3ZIAArEAAYASAAEgKgmPD_BwE">mongo db</a> 를 다운로드한다.</p>
+<p>시스템 환경 변수 Path에 다음 내용을 추가한다.</p>
+<p>C:\Program Files\MongoDB\Server\5.0\bin</p>
+<p>mongo 버전을 확인해 보자.</p>
+<div class="gatsby-highlight" data-language="cmd"><pre style="counter-reset: linenumber NaN" class="language-cmd line-numbers"><code class="language-cmd">C:\Users\Choi&gt;mongo --version
+MongoDB shell version v5.0.2
+Build Info: {
+    &quot;version&quot;: &quot;5.0.2&quot;,
+    &quot;gitVersion&quot;: &quot;6d9ec525e78465dcecadcff99cce953d380fedc8&quot;,
+    &quot;modules&quot;: [],
+    &quot;allocator&quot;: &quot;tcmalloc&quot;,
+    &quot;environment&quot;: {
+        &quot;distmod&quot;: &quot;windows&quot;,
+        &quot;distarch&quot;: &quot;x86_64&quot;,
+        &quot;target_arch&quot;: &quot;x86_64&quot;
+    }
+}
+
+C:\Users\Choi&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>그 뒤, cmd 창을 켜서 mongo를 입력해 확인한다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">C:\Users\Choi>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e1d154aa-daa7-451e-ba4a-b2621bc2f3f9") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+        https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2021-08-08T11:25:46.687+09:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>에러가 났다면, 보통 상위 폴더명이 한글인 경우이다.</p>
+<p>C:\Program Files\MongoDB\Server\5.0\bin 의<br>
+mongod.cfg 파일에 기본적인 환경설정 내용이 들어가 있다.</p>
+<p><a href="https://127.0.0.1:27017">https://127.0.0.1:27017</a></p>
+<ul>
+<li>새로운 위치에서 사용자 정의대로 mongo 실행하기</li>
+</ul>
+<p>C 밑에 study_mongo 를 만든 뒤, 그 안에 config를 만들어 bin의 파일들을 config 안에 복사한다. data, log 폴더를 생성한다.<br>
+bin 폴더의 mongod.cfg 파일을 열어 path, dbPath를 수정한 뒤, cmd 창에서 아래 내용을 입력한다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">C:\study_mongo>mongod --config=C:\study_mongo\config\mongod.cfg</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>새 cmd 창에서 mongo 를 입력하면 잘 되는 것을 볼 수 있다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">C:\study_mongo>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("5ec219f3-2553-4565-96c3-e369c39a8ffd") }
+MongoDB server version: 5.0.2</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>log도 해당 폴더에 쌓이고, data 폴더에도 파일이 생성되었음을 확인할 수 있다.</p>
+<p>cmd 창에서 mongod를 입력하면 서버가 실행된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">C:\study_mongo>mongod
+{"t":{"$date":"2021-08-08T13:40:34.810+09:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true}}}
+{"t":{"$date":"2021-08-08T13:40:35.948+09:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-08-08T13:40:35.951+09:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-08-08T13:40:35.952+09:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-08-08T13:40:35.957+09:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-08-08T13:40:35.958+09:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","ns":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2021-08-08T13:40:35.958+09:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","ns":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2021-08-08T13:40:35.963+09:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":14004,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"DESKTOP-F0B8BH9"}}
+{"t":{"$date":"2021-08-08T13:40:35.964+09:00"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2021-08-08T13:40:35.964+09:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"5.0.2","gitVersion":"6d9ec525e78465dcecadcff99cce953d380fedc8","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-08-08T13:40:35.966+09:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19042)"}}}
+{"t":{"$date":"2021-08-08T13:40:35.970+09:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-08-08T13:40:35.975+09:00"},"s":"E",  "c":"CONTROL",  "id":20557,   "ctx":"initandlisten","msg":"DBException in initAndListen, terminating","attr":{"error":"NonExistentPath: Data directory C:\\data\\db\\ not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."}}
+{"t":{"$date":"2021-08-08T13:40:35.976+09:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+{"t":{"$date":"2021-08-08T13:40:35.977+09:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-08-08T13:40:35.978+09:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-08-08T13:40:35.978+09:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"initandlisten","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2021-08-08T13:40:35.979+09:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2021-08-08T13:40:35.979+09:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"initandlisten","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2021-08-08T13:40:35.980+09:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"initandlisten","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2021-08-08T13:40:35.980+09:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2021-08-08T13:40:35.981+09:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2021-08-08T13:40:35.989+09:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+{"t":{"$date":"2021-08-08T13:40:35.990+09:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"initandlisten","msg":"Shutting down the ServiceEntryPoint"}
+{"t":{"$date":"2021-08-08T13:40:35.990+09:00"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2021-08-08T13:40:35.991+09:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2021-08-08T13:40:35.992+09:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"initandlisten","msg":"Shutting down the TTL monitor"}
+{"t":{"$date":"2021-08-08T13:40:35.993+09:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2021-08-08T13:40:35.994+09:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2021-08-08T13:40:35.994+09:00"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"initandlisten","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2021-08-08T13:40:35.994+09:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2021-08-08T13:40:35.995+09:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":100}}
+
+C:\study_mongo>mongo</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>기본적인 게 세팅된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<ol>
+<li>mongo 디비 설치</li>
+</ol>
+<p>환경변수 Path에
+C:\Program Files\MongoDB\Server\5.0\bin 를 추가<br>
+왜? 그래야 mongo라는 프로그램을 실행할 수 있다.<br>
+3) 명령 프롬프르를 실행해서<br>
+mongo --version을 실행하면 아래와 같은 정보가 나오면 됩니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">MongoDB shell version v5.0.2
+Build Info: {
+    "version": "5.0.2",
+    "gitVersion": "6d9ec525e78465dcecadcff99cce953d380fedc8",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ol start="4">
+<li>현재 실행중인 mongoDB 프로그램 중지하고</li>
+<li>mongoDB 서비스가 자동으로 실행되는 것을 수동으로 바꿔준다</li>
+</ol>
+<p>=> 우리가 직접 mongoDB 실행 및 중지를 하려고 한다.</p>
+<ol start="6">
+<li>mongo 디비 실습 환경 구성</li>
+</ol>
+<p>C:\study_mongo 디렉토리 생성<br>
+이 디렉토리에 config, data, log 라는 디렉토리들을 생성<br>
+config 안에 C:\Program Files\MongoDB\Server\5.0\bin\에서<br>
+mongod.cfg 파일을 복사해서 붙여넣기 하고<br>
+이 파일을 편집해서<br>
+dbPath: C:\study_mongo\data => 데이터를 어디에 저장할지 지정<br>
+path: C:\study_mongo\log\mongod.log => 로그를 어디다 기록할지 지정</p>
+<ol start="7">
+<li>mongod --config==C:\study_mongo\config\mongod.config 로 몽고 실행</li>
+<li>다른 명령프롬프트를 열어서 mongo를 실행</li>
+<li>show dbs</li>
+</ol>
+<p>admin   0.000GB
+config  0.000GB
+local   0.000GB</p>
+<ul>
+<li>MongoDB에서 이야기하는 Document의 개념</li>
+</ul>
+<ol>
+<li>Key - Value 짝</li>
+<li>Json</li>
+</ol>
+<p>show dbs : 현재 MongoDB에 존재하는 Database들을 보여달라</p>
+<p>use [사용할 Database이름] : 사용할 Database를 지정<br>
+db.[].insertOne([입력할 Document]) : 데이터를 1개 입력<br>
+db.[].find() : 데이터 검색<br>
+db.[].find().pretty() : 검색한 결과를 이쁘게 보여주기</p>
+<hr>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> use cooker
+switched to db cooker
+>
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> doc = {"title":"Tacos", "desc":"Yummie tacos", cook_time : 20};
+{ "title" : "Tacos", "desc" : "Yummie tacos", "cook_time" : 20 }
+
+> db.tacos.insertOne(doc)
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f74190a876cb8deb7f0dd")
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>다른 cmd를 열어서 show dbs하면 cooker가 보인다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> show dbs
+admin   0.000GB
+config  0.000GB
+cooker  0.000GB
+local   0.000GB</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>다시 돌아와 insert한 걸 찾아본다, pretty()를 붙이면 좀 더 이쁘게(?) 볼 수 있다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.tacos.find()
+{ "_id" : ObjectId("610f74190a876cb8deb7f0dd"), "title" : "Tacos", "desc" : "Yummie tacos", "cook_time" : 20 }
+
+> db.tacos.find().pretty()
+{
+        "_id" : ObjectId("610f74190a876cb8deb7f0dd"),
+        "title" : "Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 20
+}
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>같은 걸 doc2로 insert하고 infd한다. 같은 data이지만 id가 구분된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> doc2 = {"title":"Tacos", "desc":"Yummie tacos", cook_time : 20};
+{ "title" : "Tacos", "desc" : "Yummie tacos", "cook_time" : 20 }
+
+> db.tacos.insertOne(doc2)
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f75510a876cb8deb7f0de")
+}
+
+> db.tacos.find().pretty()
+{
+        "_id" : ObjectId("610f74190a876cb8deb7f0dd"),
+        "title" : "Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 20
+}
+{
+        "_id" : ObjectId("610f75510a876cb8deb7f0de"),
+        "title" : "Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 20
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>doc3 = {"title":"Korean Tacos", "desc":"Yummie tacos", cook_time : 20};
+db.tacos.insertOne(doc3)</p>
+<p>doc4 = {"title":"Korean Tacos", "desc":"Yummie tacos", cook_time : 15};
+db.tacos.insertOne(doc4)</p>
+<p>db.tacos.find({"title":"Korean Tacos"}).pretty()</p>
+<p>db.tacos.find({"title":"Korean Tacos", "cook_time":15}).pretty()</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> doc3 = {"title":"Korean Tacos", "desc":"Yummie tacos", cook_time : 20};
+{ "title" : "Korean Tacos", "desc" : "Yummie tacos", "cook_time" : 20 }
+>
+> db.tacos.insertOne(doc3)
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f77179cd4552394adb76a")
+}
+>
+> doc4 = {"title":"Korean Tacos", "desc":"Yummie tacos", cook_time : 15};
+{ "title" : "Korean Tacos", "desc" : "Yummie tacos", "cook_time" : 15 }
+>
+> db.tacos.insertOne(doc4)
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f772a9cd4552394adb76b")
+}
+>
+> db.tacos.find({"title":"Korean Tacos"}).pretty()
+{
+        "_id" : ObjectId("610f77179cd4552394adb76a"),
+        "title" : "Korean Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 20
+}
+{
+        "_id" : ObjectId("610f772a9cd4552394adb76b"),
+        "title" : "Korean Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 15
+}
+> db.tacos.find({"title":"Korean Tacos", "cook_time":15}).pretty()
+{
+        "_id" : ObjectId("610f772a9cd4552394adb76b"),
+        "title" : "Korean Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 15
+}
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>doc5 = {"title":"Korean Tacos2", "desc":"Yummie tacos", cook_time : 15};
+db.tacos.insertOne(doc5)</p>
+<p>Korean Tacos2를 추가한다.<br>
+mongoDB에서는 정규식을 활용해 찾을 수 있다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> doc5 = {"title":"Korean Tacos2", "desc":"Yummie tacos", cook_time : 15};
+{ "title" : "Korean Tacos2", "desc" : "Yummie tacos", "cook_time" : 15 }
+>
+> db.tacos.insertOne(doc5)
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f780a9cd4552394adb76c")
+}
+>
+> db.tacos.find({"title": "Korean Tacos", "title":"Korean Tacos2"}).pretty()
+{
+        "_id" : ObjectId("610f780a9cd4552394adb76c"),
+        "title" : "Korean Tacos2",
+        "desc" : "Yummie tacos",
+        "cook_time" : 15
+}
+> db.tacos.find({"title": { $regex: /Korean Tacos/ }}).pretty()
+{
+        "_id" : ObjectId("610f77179cd4552394adb76a"),
+        "title" : "Korean Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 20
+}
+{
+        "_id" : ObjectId("610f772a9cd4552394adb76b"),
+        "title" : "Korean Tacos",
+        "desc" : "Yummie tacos",
+        "cook_time" : 15
+}
+{
+        "_id" : ObjectId("610f780a9cd4552394adb76c"),
+        "title" : "Korean Tacos2",
+        "desc" : "Yummie tacos",
+        "cook_time" : 15
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>찾은 값 중 title만 보고 싶다면 이렇게 하면 된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.tacos.find({"title": { $regex: /Korean Tacos/ }}, {"title":1}).pretty()
+{ "_id" : ObjectId("610f77179cd4552394adb76a"), "title" : "Korean Tacos" }
+{ "_id" : ObjectId("610f772a9cd4552394adb76b"), "title" : "Korean Tacos" }
+{ "_id" : ObjectId("610f780a9cd4552394adb76c"), "title" : "Korean Tacos2" }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<p>관계형 데이터베이스의 경우<br>
+Database 안에 table을 생성해서 데이터 입력<br>
+MongoDB 에서는<br>
+Database 안에 collection을 생성해서 데이터 입력</p>
+<p>show dbs : Database 목록 보기<br>
+show collections : 사용 중인 Database에 존재하는 collection 목록 보기<br>
+db.getName() : 현재 사용 중인 Database 이름 확인</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> show dbs;
+admin   0.000GB
+config  0.000GB
+cooker  0.000GB
+local   0.000GB
+>
+> show collections;
+monsters
+tacos
+test
+> use local;
+switched to db local
+>
+> show collections;
+startup_log
+> db.startup_log.find()
+{ "_id" : "DESKTOP-F0B8BH9-1628396673615", "hostname" : "DESKTOP-F0B8BH9", "startTime" : ISODate("2021-08-08T04:24:33Z"), "startTimeLocal" : "Sun Aug  8 13:24:33.615", "cmdLine" : { "config" : "C:\\study_mongo\\bin\\mongod.cfg", "net" : { "bindIp" : "127.0.0.1", "port" : 27017 }, "storage" : { "dbPath" : "C:\\study_mongo\\data", "journal" : { "enabled" : true } }, "systemLog" : { "destination" : "file", "logAppend" : true, "path" : "C:\\study_mongo\\log\\mongod.log" } }, "pid" : NumberLong(16704), "buildinfo" : { "version" : "5.0.2", "gitVersion" : "6d9ec525e78465dcecadcff99cce953d380fedc8", "targetMinOS" : "Windows 7/Windows Server 2008 R2", "modules" : [ ], "allocator" : "tcmalloc", "javascriptEngine" : "mozjs", "sysInfo" : "deprecated", "versionArray" : [ 5, 0, 2, 0 ], "openssl" : { "running" : "Windows SChannel" }, "buildEnvironment" : { "distmod" : "windows", "distarch" : "x86_64", "cc" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "ccflags" : "/nologo /WX /FImongo/platform/basic.h /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline", "cxx" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "cxxflags" : "/TP", "linkflags" : "/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF", "target_arch" : "x86_64", "target_os" : "windows", "cppdefines" : "SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _CONSOLE _CRT_SECURE_NO_WARNINGS _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS" }, "bits" : 64, "debug" : false, "maxBsonObjectSize" : 16777216, "storageEngines" : [ "devnull", "ephemeralForTest", "wiredTiger" ] } }
+{ "_id" : "DESKTOP-F0B8BH9-1628398516760", "hostname" : "DESKTOP-F0B8BH9", "startTime" : ISODate("2021-08-08T04:55:16Z"), "startTimeLocal" : "Sun Aug  8 13:55:16.760", "cmdLine" : { "config" : "C:\\study_mongo\\config\\mongod.cfg", "net" : { "bindIp" : "127.0.0.1", "port" : 27017 }, "storage" : { "dbPath" : "C:\\study_mongo\\data", "journal" : { "enabled" : true } }, "systemLog" : { "destination" : "file", "logAppend" : true, "path" : "C:\\study_mongo\\log\\mongod.log" } }, "pid" : NumberLong(22684), "buildinfo" : { "version" : "5.0.2", "gitVersion" : "6d9ec525e78465dcecadcff99cce953d380fedc8", "targetMinOS" : "Windows 7/Windows Server 2008 R2", "modules" : [ ], "allocator" : "tcmalloc", "javascriptEngine" : "mozjs", "sysInfo" : "deprecated", "versionArray" : [ 5, 0, 2, 0 ], "openssl" : { "running" : "Windows SChannel" }, "buildEnvironment" : { "distmod" : "windows", "distarch" : "x86_64", "cc" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "ccflags" : "/nologo /WX /FImongo/platform/basic.h /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline", "cxx" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "cxxflags" : "/TP", "linkflags" : "/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF", "target_arch" : "x86_64", "target_os" : "windows", "cppdefines" : "SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _CONSOLE _CRT_SECURE_NO_WARNINGS _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS" }, "bits" : 64, "debug" : false, "maxBsonObjectSize" : 16777216, "storageEngines" : [ "devnull", "ephemeralForTest", "wiredTiger" ] } }
+{ "_id" : "DESKTOP-F0B8BH9-1628403397177", "hostname" : "DESKTOP-F0B8BH9", "startTime" : ISODate("2021-08-08T06:16:37Z"), "startTimeLocal" : "Sun Aug  8 15:16:37.177", "cmdLine" : { "config" : "C:\\study_mongo\\config\\mongod.cfg", "net" : { "bindIp" : "127.0.0.1", "port" : 27017 }, "storage" : { "dbPath" : "C:\\study_mongo\\data", "journal" : { "enabled" : true } }, "systemLog" : { "destination" : "file", "logAppend" : true, "path" : "C:\\study_mongo\\log\\mongod.log" } }, "pid" : NumberLong(19424), "buildinfo" : { "version" : "5.0.2", "gitVersion" : "6d9ec525e78465dcecadcff99cce953d380fedc8", "targetMinOS" : "Windows 7/Windows Server 2008 R2", "modules" : [ ], "allocator" : "tcmalloc", "javascriptEngine" : "mozjs", "sysInfo" : "deprecated", "versionArray" : [ 5, 0, 2, 0 ], "openssl" : { "running" : "Windows SChannel" }, "buildEnvironment" : { "distmod" : "windows", "distarch" : "x86_64", "cc" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "ccflags" : "/nologo /WX /FImongo/platform/basic.h /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline", "cxx" : "cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x64", "cxxflags" : "/TP", "linkflags" : "/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF", "target_arch" : "x86_64", "target_os" : "windows", "cppdefines" : "SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _CONSOLE _CRT_SECURE_NO_WARNINGS _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS" }, "bits" : 64, "debug" : false, "maxBsonObjectSize" : 16777216, "storageEngines" : [ "devnull", "ephemeralForTest", "wiredTiger" ] } }
+>
+> db.getName()
+local
+>
+> use cooker
+switched to db cooker
+>
+> db.getName()
+cooker
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>document를 test_collection에 하나 insert하려는데 test_collection이 존재하지 않으면, 자동 생성하면서 insert 한다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> show collections
+monsters
+tacos
+test
+test_collection
+>
+> db.test_collection.insertOne({"title":"wow"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f84159cd4552394adb76e")
+}
+>
+> show collections
+monsters
+tacos
+test
+test_collection
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<p>MongoDB Compass를 실행한다.<br>
+create collections를 선택해 test 를 만들고, test document가 title인 data를 insert한다.<br>
+insert된 걸 find로 확인해 본다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.test.find()
+{ "_id" : ObjectId("610f7cd98702cc7e273d1873"), "title" : "test document" }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>monsters collection을 만들어서 monsters.csv를 import해본다.<br>
+import할 때 select delimiter를 COMMA로 선택해서 IMPORT하면, 12개 데이터가 insert된다.</p>
+<p>test Collection에 name이 Python인 data를 insert한다.</p>
+<ul>
+<li>DB 안에 collection, collection 안에 document가 있는 형태이다.</li>
+</ul>
+<p>splunk 퍼포먼스 안 나올 때 mongo DB나 couch db를 쓰면 해결될 때가 있곤 한다.</p>
+<hr>
+<p><a href="https://robomongo.org/">https://robomongo.org/</a><br>
+IDE 및 db tool을 제공한다.</p>
+<ul>
+<li>예제</li>
+</ul>
+<ol>
+<li>데이터베이스 생성 : 20210808</li>
+<li>collection 생성 : recipe</li>
+<li>document field</li>
+</ol>
+<p>title, description, star rating, food type tag,<br>
+user comments (여러개의 값이 가능)</p>
+<ul>
+<li>body</li>
+<li>date</li>
+<li>name</li>
+<li>user_id</li>
+</ul>
+<p>use 20210808
+db.recipe.insertOne({"title":"kimchi","description":"secret","rating":100,"foodtype tag":"traditional food","user comments":{"body":"napa cabbage","date":2021-08-07,"name":"choi","user id":"kkk"}})</p>
+<p>mongoDB에서는 show dbs할 때 목록에 없으면, use 만 해도 db가 생성된다.</p>
+<p>db.recipe.insertOne({"title":"김치찌개","description":"얼큰하게 맛있는 음식","rating":5,"foodtype tag":["김치","찌개","매운"],"user comments":[{"body":"참 맛있어요","date":"2021-08-08","name":"김영하","user id":"1"},{"body":"참 맛있어요","date":"2021-08-08","name":"김영하","user id":"1"}]})</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> use 20210808
+switched to db 20210808
+>
+> db.getName()
+20210808
+>
+> show collections
+>
+> db.recipe.insertOne({"title":"kimchi","description":"secret","rating":100,"foodtype tag":"traditional food","user comments":{"body":"napa cabbage","date":2021-08-07,"name":"choi","user id":"kkk"}})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("610f86119cd4552394adb76f")
+}
+>
+> db.recipe.find()
+{ "_id" : ObjectId("610f86119cd4552394adb76f"), "title" : "kimchi", "description" : "secret", "rating" : 100, "foodtype tag" : "traditional food", "user comments" : { "body" : "napa cabbage", "date" : 2006, "name" : "choi", "user id" : "kkk" } }
+>
+> show collections
+recipe
+>
+> db.recipe.find()
+{ "_id" : ObjectId("610f86119cd4552394adb76f"), "title" : "kimchi", "description" : "secret", "rating" : 100, "foodtype tag" : "traditional food", "user comments" : { "body" : "napa cabbage", "date" : 2006, "name" : "choi", "user id" : "kkk" } }
+{ "_id" : ObjectId("610f8a4c8702cc7e273d1888"), "title" : "김치찌개", "description" : "얼큰하게 맛있는 음식", "rating" : 5, "foodtype tag" : [ "김치", "찌개", "매운" ], "user comments" : [ { "body" : "참 맛있어요", "date" : "2021-08-08", "name" : "김영하", "user id" : "1" }, { "body" : "참 맛있어요", "date" : "2021-08-08", "name" : "김영하", "user id" : "1" } ] }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.getName()
+cooker
+>
+> db.monsters.find().sort({"monsterName":1})
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187c"), "imageFile" : "monster07", "monsterName" : "Blade", "caption" : "Monster APPetite", "description" : "Blade freelances as a mobile app developer and has built some of the most popular Android and iOS apps used in modern monster society, including the award-winning Monster APPetite, which tracks calorie consumption and activity for the health-conscious monster. In his spare time, he competes in national agility contests with his border collie Winston.", "price" : "0.29", "scariness" : "5" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1881"), "imageFile" : "monster12", "monsterName" : "Drift", "caption" : "In the Clouds", "description" : "After years of everyone saying her head was in the clouds, Drift found her calling as a software engineer developing a well-known cloud solution for the computing giant, Red30 Tech. After work, she prefers to unwind by catching wind in her sail and paragliding high in the sky.", "price" : "0.29", "scariness" : "4" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187b"), "imageFile" : "monster06", "monsterName" : "Filo", "caption" : "Baker by Day, Techie by Night", "description" : "Filo was named after the wonderful, buttery pastry crust that monsters adore. She’s a prominent baker and pastry chef in monster circles and is always exploring and sharing new dessert trends. In her off time, however, she's quite the techie and dabbles in web and mobile app development. She even built a custom cake ordering app for her pastry business.", "price" : "0.29", "scariness" : "3" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1880"), "imageFile" : "monster11", "monsterName" : "Frex", "caption" : "Born Leader", "description" : "Frex has always had a knack for leadership, starting from his days of being a Monster Scout. After studying computer science in college, and working as an IT specialist at several large companies, he naturally followed the  management path.  Now, as an IT manager for a Fortune 500 company, he gets to put his technical know-how to work, while also leading a team of talented engineers. Frex's hobbies include golf, billiards, and community service.", "price" : "0.19", "scariness" : "3" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187a"), "imageFile" : "monster05", "monsterName" : "Melville", "caption" : "Networking Guru", "description" : "Setting up computer networks has always come easily to Melville. In his role as Senior Network Engineer for Landon Hotel, Melville builds complex blueprints for communication networks, a task that requires enormous attention to detail and patience. When not at work, Melville chooses less taxing mental activities, like hiking in the hills near his Silicon Valley home.", "price" : "0.19", "scariness" : "2" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1876"), "imageFile" : "monster01", "monsterName" : "Mingle", "caption" : "Double Trouble", "description" : "Mingle excels at doing twice the work in half the time, with pinpoint accuracy.  These skills serve her well in her role as Senior Data Analyst for an international cloud computing company. She's also got a penchant for ballroom dance, line dancing, and pretty much any kind of activity that lets her groove to music.", "price" : "0.29", "scariness" : "2" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187e"), "imageFile" : "monster09", "monsterName" : "Skedaddle", "caption" : "Game of Life", "description" : "When Skedaddle was a teenager, his parents couldn't keep him away from his Game Boy. In fact, they seriously worried that he might not find a suitable career.  Now as a prominent game developer for Red30 Tech, he's found his true calling…and put his family's worries to rest. You probably could have guessed this, but in his spare time Skedaddle loves to pay computer games.", "price" : "0.29", "scariness" : "4" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "imageFile" : "monster10", "monsterName" : "Smiley", "caption" : "Don’t Worry, Be Happy!", "description" : "With the bad rap they get from movies, monsters have it pretty tough. Perhaps no monster has done more to squash stereotypes than Smiley, who can take anyone’s frown and turn it upside down. That's why Smiley has a reputation as the best computer support specialist on her IT team, three years running.", "price" : "0.29", "scariness" : "1" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "imageFile" : "monster04", "monsterName" : "Spook", "caption" : "Safe and Sound", "description" : "Cracking code and battling hackers is Spook's forte. She holds a prominent position as Head of Cyber Security for the Department of Monster Defense, where she thwarts attacks on government computer systems as often as she blinks. When not at work, Spook delights in serving up a fright at haunted mansions and ghost walks.", "price" : "0.29", "scariness" : "5" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "imageFile" : "monster03", "monsterName" : "Squido", "caption" : "An Eye for Design", "description" : "Squido's got his hands or rather tentacles, in everything. First and foremost, he's a web designer with an eye for visual aesthetics, but he's also rather keen on UX design and making sure what he creates translates optimally to the end user. In his off-hours he's an avid nature photographer and bowler.", "price" : "0.29", "scariness" : "3" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "imageFile" : "monster08", "monsterName" : "Timber", "caption" : "Database Expert", "description" : "A natural-born problem-solver, Timber's especially excited to solve complex business problems using databases. As a database administrator for Globe Bank International, he's able to flex his mental muscles using his certifications in Oracle, Microsoft SQL Server, and MySQL. When not behind the computer, Timber can often be found biking, surfing, or lounging around with a good detective novel.", "price" : "0.19", "scariness" : "2" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "imageFile" : "monster02", "monsterName" : "Yodel", "caption" : "Yodelay Hee Hoo!", "description" : "Yodel grew up in a family of singers and loud talkers and could never get a word in edgewise. Then his vast talent for yodeling emerged. Now he performs to adoring fans throughout the world, and always has the loudest voice at the dinner table. Incidentally, he's also a loud proponent of net neutrality, and spends countless hours moderating an internet forum devoted solely to that subject.", "price" : "0.19", "scariness" : "4" }
+>
+> db.monsters.find({},{"monsterName":1})
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1876"), "monsterName" : "Mingle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "monsterName" : "Yodel" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "monsterName" : "Squido" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "monsterName" : "Spook" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187a"), "monsterName" : "Melville" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187b"), "monsterName" : "Filo" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187c"), "monsterName" : "Blade" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "monsterName" : "Timber" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187e"), "monsterName" : "Skedaddle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "monsterName" : "Smiley" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1880"), "monsterName" : "Frex" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1881"), "monsterName" : "Drift" }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>정렬할 때는 sort를 쓰는데, 역순으로 보려면 -1을 하면 된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.monsters.find({},{"monsterName":1}).sort({"monsterName":1})
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187c"), "monsterName" : "Blade" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1881"), "monsterName" : "Drift" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187b"), "monsterName" : "Filo" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1880"), "monsterName" : "Frex" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187a"), "monsterName" : "Melville" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1876"), "monsterName" : "Mingle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187e"), "monsterName" : "Skedaddle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "monsterName" : "Smiley" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "monsterName" : "Spook" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "monsterName" : "Squido" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "monsterName" : "Timber" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "monsterName" : "Yodel" }
+>
+> db.monsters.find({},{"monsterName":1}).sort({"monsterName":-1})
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "monsterName" : "Yodel" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "monsterName" : "Timber" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "monsterName" : "Squido" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "monsterName" : "Spook" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "monsterName" : "Smiley" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187e"), "monsterName" : "Skedaddle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1876"), "monsterName" : "Mingle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187a"), "monsterName" : "Melville" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1880"), "monsterName" : "Frex" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187b"), "monsterName" : "Filo" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1881"), "monsterName" : "Drift" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187c"), "monsterName" : "Blade" }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>find한 결과 중 n개만 보려면 limit을 쓰면 된다. n개 뺴고 보려면 skip을 쓴다.<br>
+갯수는 count로 세면 된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.monsters.find({},{"monsterName":1}).sort({"monsterName":1}).limit(3)
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187c"), "monsterName" : "Blade" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1881"), "monsterName" : "Drift" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187b"), "monsterName" : "Filo" }
+>
+> db.monsters.find({},{"monsterName":1}).sort({"monsterName":-1}).limit(5)
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "monsterName" : "Yodel" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "monsterName" : "Timber" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "monsterName" : "Squido" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "monsterName" : "Spook" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "monsterName" : "Smiley" }
+>
+> db.monsters.find().count()
+12
+>
+> db.monsters.find({},{"monsterName":1}).sort({"monsterName":1}).skip(5)
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1876"), "monsterName" : "Mingle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187e"), "monsterName" : "Skedaddle" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187f"), "monsterName" : "Smiley" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1879"), "monsterName" : "Spook" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1878"), "monsterName" : "Squido" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d187d"), "monsterName" : "Timber" }
+{ "_id" : ObjectId("610f7e1d8702cc7e273d1877"), "monsterName" : "Yodel" }</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>조건문</li>
+</ul>
+<p>number 형태로 price를 import하지 않았더니 정렬이 먹히지 않았다.<br>
+"price" : 0.29 여야 정렬이 된다.
+"price" : "0.29"는 안 되고.</p>
+<p>$gt : greater than<br>
+$lt : less than</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">> db.monsters.find({},{"price":1})
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188d"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188e"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188f"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1890"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1891"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1892"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1893"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1894"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1895"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1896"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1897"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1898"), "price" : 0.29 }
+>
+> db.monsters.find({ "price" : {$gt : 0.20 } }, {"price":1})
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188d"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188f"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1890"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1892"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1893"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1895"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1896"), "price" : 0.29 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1898"), "price" : 0.29 }
+>
+> db.monsters.find({ "price" : {$lt : 0.20 } }, {"price":1})
+{ "_id" : ObjectId("610f8f0a8702cc7e273d188e"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1891"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1894"), "price" : 0.19 }
+{ "_id" : ObjectId("610f8f0a8702cc7e273d1897"), "price" : 0.19 }
+></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-8일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-893866d828268bdf98d5.js"],"app":["/app-0dfcf1d989dd570d1f8d.js"],"component---src-pages-about-js":["/component---src-pages-about-js-0a5d30d80a86a6beaaa6.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-04658c393fc078044a6e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7d3303cf2ff5e504b9af.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-46aa3abf40fa3f68b9fe.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-893866d828268bdf98d5.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0dfcf1d989dd570d1f8d.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-2ed2469d67f21d902031.js" async=""></script></body></html>
