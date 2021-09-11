@@ -1,0 +1,1285 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.13.0"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-9d111699065b1154a31b.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-f81057f30f7387c76463.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-언어-15일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li>
+<p><a href="#15%EC%9D%BC%EC%B0%A8">15일차</a></p>
+<ul>
+<li>
+<p><a href="#logging">LOGGING</a></p>
+</li>
+<li>
+<p><a href="#visual-studio%EC%97%90%EC%84%9C-google-colab-%EC%93%B0%EA%B8%B0">Visual Studio에서 google colab 쓰기</a></p>
+</li>
+<li>
+<p><a href="#nlp">NLP</a></p>
+</li>
+<li>
+<p><a href="#cf-model-%EC%A2%85%EB%A5%98">cf. model 종류</a></p>
+<ul>
+<li><a href="#model-0">model 0</a></li>
+<li><a href="#model-1--simiple-dense-model">Model 1 : simiple Dense Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 언어반 15일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>실무에서 필요한 log를 배웠다. 점점 더 배운 것들에 살을 붙이는 느낌이 든다. 프로젝트 뭐하지...</p>
+<hr>
+<h3 id="15일차" style="position:relative;">15일차<a href="#15%EC%9D%BC%EC%B0%A8" aria-label="15일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="logging" style="position:relative;">LOGGING<a href="#logging" aria-label="logging permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>study_logging.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging.py</span>
+<span class="token comment"># 개발이나 운영 시 어떤 결과나 변수 값을 확인할 때, print를 사용</span>
+<span class="token comment"># print를 사용하다 보면, 그 상황이 언제 발생했는지 모른다.</span>
+<span class="token comment"># 기록이 남지 않는다. 파일로...</span>
+<span class="token comment"># 자바의 경우 Log4j 와 같은 라이브러리를 사용.</span>
+<span class="token comment"># 파이썬은 Logging이라는 기본 라이브러리를 사용</span>
+<span class="token comment"># 로그의 레벨</span>
+<span class="token comment"># DEBUG -> INFO -> WARNING -> ERROR -> CRITICAL : 점점 심각도가 높아지는 레벨</span>
+
+<span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">"debug 모드입니다."</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">"info 모드입니다."</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"warning 모드입니다."</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"error 모드입니다."</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>critical<span class="token punctuation">(</span><span class="token string">"critical 모드입니다."</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 위에 3개만 나온다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># 실행 결과에서 알 수 있는 것!</span>
+<span class="token comment"># WARNING:root:warning 모드입니다.</span>
+<span class="token comment"># ERROR:root:error 모드입니다.</span>
+<span class="token comment"># CRITICAL:root:critical 모드입니다.</span>
+
+<span class="token comment"># 1) root : 기본 logger의 이름이다!</span>
+<span class="token comment"># 2) 기본 logger의 레벨은 warning 이상이다!</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>study_logging_001.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_001.py</span>
+<span class="token comment"># basicConfig(**kwargs) 메소드 : logger를 설정할 때 사용</span>
+<span class="token comment"># 기본적인 파라미터 (parameter)</span>
+<span class="token comment"># 1) Level : Logging의 레벨</span>
+<span class="token comment"># 2) filename : 어디에 저장할 지</span>
+<span class="token comment"># 3) filemode : 파일에 write or append</span>
+<span class="token comment"># 4) format : 로그 메시지의 형식</span>
+
+<span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">"디버그 모드입니다."</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> warning 이상이라 안 보인다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>DEBUG<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">"디버그 모드입니다."</span><span class="token punctuation">)</span>
+<span class="token comment"># DEBUG:root:디버그 모드입니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> basicConfig를 했더니 나온다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+<span class="token comment"># logging.basicConfig(level=logging.DEBUG)</span>
+<span class="token comment"># logging.debug("디버그 모드입니다.")</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    filename <span class="token operator">=</span> <span class="token string">"app.log"</span><span class="token punctuation">,</span>
+    filemode <span class="token operator">=</span> <span class="token string">"w"</span><span class="token punctuation">,</span>
+    <span class="token builtin">format</span> <span class="token operator">=</span> <span class="token string">"%(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">,</span>
+    encoding <span class="token operator">=</span> <span class="token string">"UTF-8"</span>
+<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"이번에는 파일에 저장합니다."</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> app.log 파일이 생기고, 파일 내용은 다음과 같다. (글자가 깨져서 UTF-8로 encoding하였다.)</p>
+<p><strong>root - WARNING - 이번에는 파일에 저장합니다.</strong></p>
+<p>cf. a로 했다면, 반복 실행 시 계속 줄이 늘어났을 것이다.</p>
+<ul>
+<li>study_logging_002.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_002.py</span>
+
+<span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    <span class="token builtin">format</span> <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"에러가 발생했습니다."</span><span class="token punctuation">)</span>
+<span class="token comment"># 에러가 발생했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 에러가 발생했습니다. 가 나온다. format을 수정해 보자.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_002.py</span>
+
+<span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    <span class="token builtin">format</span> <span class="token operator">=</span> <span class="token string">"%(process)d - %(levelname)s - %(message)s"</span>
+<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"에러가 발생했습니다."</span><span class="token punctuation">)</span>
+<span class="token comment"># 4552 - WARNING - 에러가 발생했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_002.py</span>
+
+<span class="token keyword">import</span> logging
+<span class="token keyword">import</span> datetime
+
+<span class="token comment"># logging.basicConfig(</span>
+<span class="token comment">#     format = "%(process)d - %(levelname)s - %(message)s"</span>
+<span class="token comment"># )</span>
+<span class="token comment"># logging.warning("에러가 발생했습니다.")</span>
+
+<span class="token comment"># 반복문이 실행된 시간</span>
+start_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">50000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+end_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>start_time<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>end_time<span class="token punctuation">)</span>
+
+<span class="token comment"># 2021-09-11 09:39:31.738831</span>
+<span class="token comment"># 2021-09-11 09:39:31.743918</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 비효율 적이다. 이럴 때 logging을 쓴다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_002.py</span>
+
+<span class="token keyword">import</span> logging
+<span class="token keyword">import</span> datetime
+
+<span class="token comment"># logging.basicConfig(</span>
+<span class="token comment">#     format = "%(process)d - %(levelname)s - %(message)s"</span>
+<span class="token comment"># )</span>
+<span class="token comment"># logging.warning("에러가 발생했습니다.")</span>
+
+<span class="token comment"># 반복문이 실행된 시간</span>
+start_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">50000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+end_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>start_time<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>end_time<span class="token punctuation">)</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    <span class="token builtin">format</span> <span class="token operator">=</span> <span class="token string">"%(asctime)s - %(message)s"</span><span class="token punctuation">,</span>
+    level <span class="token operator">=</span> logging<span class="token punctuation">.</span>INFO
+<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"누군가가 로그인 했습니다."</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 2021-09-11 09:41:40.820622</span>
+<span class="token comment"># 2021-09-11 09:41:40.829171</span>
+<span class="token comment"># 2021-09-11 09:41:40,831 - 누군가가 로그인 했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_002.py</span>
+
+<span class="token keyword">import</span> logging
+<span class="token keyword">import</span> datetime
+
+<span class="token comment"># logging.basicConfig(</span>
+<span class="token comment">#     format = "%(process)d - %(levelname)s - %(message)s"</span>
+<span class="token comment"># )</span>
+<span class="token comment"># logging.warning("에러가 발생했습니다.")</span>
+
+<span class="token comment"># 반복문이 실행된 시간</span>
+start_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">50000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+end_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>start_time<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>end_time<span class="token punctuation">)</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    <span class="token builtin">format</span> <span class="token operator">=</span> <span class="token string">"%(asctime)s - %(message)s"</span><span class="token punctuation">,</span>
+    datefmt <span class="token operator">=</span> <span class="token string">"%d-%b-%y %H:%M:%S"</span><span class="token punctuation">,</span>
+    level <span class="token operator">=</span> logging<span class="token punctuation">.</span>INFO
+<span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"누군가가 로그인 했습니다."</span><span class="token punctuation">)</span>
+<span class="token comment"># 2021-09-11 09:44:04.108259</span>
+<span class="token comment"># 2021-09-11 09:44:04.117357</span>
+<span class="token comment"># 11-Sep-21 09:44:04 - 누군가가 로그인 했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>study_logging_003.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"에러가 또 발생했습니다."</span><span class="token punctuation">)</span>
+
+<span class="token comment"># ERROR:root:에러가 또 발생했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+name <span class="token operator">=</span> <span class="token string">"서버 B"</span>
+
+logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">에서 에러가 또 발생했습니다."</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># ERROR:root:서버 B에서 에러가 또 발생했습니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+<span class="token comment"># name = "서버 B"</span>
+
+<span class="token comment"># logging.error(f"{name}에서 에러가 또 발생했습니다.")</span>
+
+a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    c <span class="token operator">=</span> a <span class="token operator">/</span> b
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+<span class="token comment"># division by zero</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+<span class="token comment"># name = "서버 B"</span>
+
+<span class="token comment"># logging.error(f"{name}에서 에러가 또 발생했습니다.")</span>
+
+a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    c <span class="token operator">=</span> a <span class="token operator">/</span> b
+    <span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token comment"># print(e)</span>
+    logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"발생한 에러"</span><span class="token punctuation">,</span> exc_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># ERROR:root:발생한 에러</span>
+<span class="token comment"># Traceback (most recent call last):</span>
+  <span class="token comment"># File "c:\20210911\study_logging_003.py", line 10, in &lt;module></span>
+    <span class="token comment"># c = a / b</span>
+<span class="token comment"># ZeroDivisionError: division by zero</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 좀 더 자세한 에러를 볼 수 있다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+<span class="token comment"># name = "서버 B"</span>
+
+<span class="token comment"># logging.error(f"{name}에서 에러가 또 발생했습니다.")</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    filename <span class="token operator">=</span> <span class="token string">"app.log"</span><span class="token punctuation">,</span>
+    filemode <span class="token operator">=</span> <span class="token string">"a"</span><span class="token punctuation">,</span>
+    <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">"%(asctime)s - %(message)s"</span><span class="token punctuation">,</span>
+    encoding <span class="token operator">=</span> <span class="token string">"UTF-8"</span>
+<span class="token punctuation">)</span>
+
+a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    c <span class="token operator">=</span> a <span class="token operator">/</span> b
+    <span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token comment"># print(e)</span>
+    logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"발생한 에러"</span><span class="token punctuation">,</span> exc_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># root - WARNING - 이번에는 파일에 저장합니다.  </span>
+<span class="token comment"># 2021-09-11 10:06:44,331 - 발생한 에러  </span>
+<span class="token comment"># Traceback (most recent call last):  </span>
+<span class="token comment">#   File "c:\20210911\study_logging_003.py", line 17, in &lt;module>  </span>
+<span class="token comment">#     c = a / b  </span>
+<span class="token comment"># ZeroDivisionError: division by zero      </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> "a"여서 에러 내용이 app.log 파일에 추가된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> logging
+
+<span class="token comment"># name = "서버 B"</span>
+
+<span class="token comment"># logging.error(f"{name}에서 에러가 또 발생했습니다.")</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+    filename <span class="token operator">=</span> <span class="token string">"app.log"</span><span class="token punctuation">,</span>
+    filemode <span class="token operator">=</span> <span class="token string">"a"</span><span class="token punctuation">,</span>
+    <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">"%(asctime)s -  - %(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">,</span>
+    encoding <span class="token operator">=</span> <span class="token string">"UTF-8"</span>
+<span class="token punctuation">)</span>
+
+a <span class="token operator">=</span> <span class="token number">5</span>
+b <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    c <span class="token operator">=</span> a <span class="token operator">/</span> b
+    <span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token comment"># print(e)</span>
+    <span class="token comment"># logging.error("발생한 에러", exc_info=True)</span>
+    logging<span class="token punctuation">.</span>exception<span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+
+<span class="token comment"># root - WARNING - 이번에는 파일에 저장합니다.</span>
+<span class="token comment"># 2021-09-11 10:06:44,331 - 발생한 에러</span>
+<span class="token comment"># Traceback (most recent call last):</span>
+<span class="token comment">#   File "c:\20210911\study_logging_003.py", line 17, in &lt;module></span>
+<span class="token comment">#     c = a / b</span>
+<span class="token comment"># ZeroDivisionError: division by zero</span>
+<span class="token comment"># 2021-09-11 10:08:36,640 -  - root - ERROR - division by zero</span>
+<span class="token comment"># Traceback (most recent call last):</span>
+<span class="token comment">#   File "c:\20210911\study_logging_003.py", line 17, in &lt;module></span>
+<span class="token comment">#     c = a / b</span>
+<span class="token comment"># ZeroDivisionError: division by zero</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>study_logging_004.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_004.py</span>
+<span class="token comment"># 나만의 logger를 만들어 보기</span>
+
+<span class="token keyword">import</span> logging
+
+<span class="token comment"># 파이썬 기본 Logger</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"이번에는 경고를 알립니다."</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 나만의 Logger</span>
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"my_logger"</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"이번에는 경고를 알립니다."</span><span class="token punctuation">)</span>
+<span class="token comment"># WARNING:root:이번에는 경고를 알립니다.</span>
+<span class="token comment"># WARNING:my_logger:이번에는 경고를 알립니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_004.py</span>
+<span class="token comment"># 나만의 logger를 만들어 보기</span>
+
+<span class="token keyword">import</span> logging
+
+<span class="token comment"># 파이썬 기본 Logger</span>
+<span class="token comment"># logging.warning("이번에는 경고를 알립니다.")</span>
+
+<span class="token comment"># 나만의 Logger</span>
+<span class="token comment"># logger = logging.getLogger("my_logger")</span>
+<span class="token comment"># logger.warning("이번에는 경고를 알립니다.")</span>
+
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"my_logger"</span><span class="token punctuation">)</span>
+
+c_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>StreamHandler<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># c : console</span>
+f_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>FileHandler<span class="token punctuation">(</span><span class="token string">"my_logger.log"</span><span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>c_handler<span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>f_handler<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"my_logger 에러"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> my_logger.log가 생기는게 글자가 꺠진다.</p>
+<p><strong>my_logger ����</strong></p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_004.py</span>
+<span class="token comment"># 나만의 logger를 만들어 보기</span>
+
+<span class="token keyword">import</span> logging
+
+<span class="token comment"># 파이썬 기본 Logger</span>
+<span class="token comment"># logging.warning("이번에는 경고를 알립니다.")</span>
+
+<span class="token comment"># 나만의 Logger</span>
+<span class="token comment"># logger = logging.getLogger("my_logger")</span>
+<span class="token comment"># logger.warning("이번에는 경고를 알립니다.")</span>
+
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"my_logger"</span><span class="token punctuation">)</span>
+
+c_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>StreamHandler<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># c : console</span>
+f_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>FileHandler<span class="token punctuation">(</span><span class="token string">"my_logger.log"</span><span class="token punctuation">)</span>
+
+c_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+f_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(asctime)s - %(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+
+c_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>c_format<span class="token punctuation">)</span>
+f_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>f_format<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>c_handler<span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>f_handler<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"my_logger 에러"</span><span class="token punctuation">)</span>
+<span class="token comment"># my_logger - ERROR - my_logger 에러</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 이제는 my_logger.log에 시간까지 나온다.</p>
+<p>my_logger ����
+2021-09-11 10:20:11,246 - my_logger - ERROR - my_logger ����</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_004.py</span>
+<span class="token comment"># 나만의 logger를 만들어 보기</span>
+
+<span class="token keyword">import</span> logging
+
+<span class="token comment"># 파이썬 기본 Logger</span>
+<span class="token comment"># logging.warning("이번에는 경고를 알립니다.")</span>
+
+<span class="token comment"># 나만의 Logger</span>
+<span class="token comment"># logger = logging.getLogger("my_logger")</span>
+<span class="token comment"># logger.warning("이번에는 경고를 알립니다.")</span>
+
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"my_logger"</span><span class="token punctuation">)</span>
+
+c_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>StreamHandler<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># c : console</span>
+f_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>FileHandler<span class="token punctuation">(</span><span class="token string">"my_logger.log"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+
+c_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+f_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(asctime)s - %(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+
+c_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>c_format<span class="token punctuation">)</span>
+f_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>f_format<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>c_handler<span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>f_handler<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"my_logger 에러"</span><span class="token punctuation">)</span>
+<span class="token comment"># my_logger - ERROR - my_logger 에러</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> UTF-8도 추가했다.</p>
+<p>my_logger ����
+2021-09-11 10:20:11,246 - my_logger - ERROR - my_logger ����
+2021-09-11 10:21:44,183 - my_logger - ERROR - my_logger 에러</p>
+<p>이번에는 화면에서는 warning까지 보고, 파일에서는 error를 보게 하자.
+(my_logger.log 파일 내용을 지운 뒤 실행)</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># study_logging_004.py</span>
+<span class="token comment"># 나만의 logger를 만들어 보기</span>
+
+<span class="token keyword">import</span> logging
+
+<span class="token comment"># 파이썬 기본 Logger</span>
+<span class="token comment"># logging.warning("이번에는 경고를 알립니다.")</span>
+
+<span class="token comment"># 나만의 Logger</span>
+<span class="token comment"># logger = logging.getLogger("my_logger")</span>
+<span class="token comment"># logger.warning("이번에는 경고를 알립니다.")</span>
+
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"my_logger"</span><span class="token punctuation">)</span>
+
+c_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>StreamHandler<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># c : console</span>
+f_handler <span class="token operator">=</span> logging<span class="token punctuation">.</span>FileHandler<span class="token punctuation">(</span><span class="token string">"my_logger.log"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+c_handler<span class="token punctuation">.</span>setLevel<span class="token punctuation">(</span>logging<span class="token punctuation">.</span>WARNING<span class="token punctuation">)</span>
+f_handler<span class="token punctuation">.</span>setLevel<span class="token punctuation">(</span>logging<span class="token punctuation">.</span>ERROR<span class="token punctuation">)</span>
+
+c_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+f_format <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span><span class="token string">"%(asctime)s - %(name)s - %(levelname)s - %(message)s"</span><span class="token punctuation">)</span>
+
+c_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>c_format<span class="token punctuation">)</span>
+f_handler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>f_format<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>c_handler<span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>f_handler<span class="token punctuation">)</span>
+
+logger<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">"my_logger 경고"</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"my_logger 에러"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># my_logger - WARNING - my_logger 경고</span>
+<span class="token comment"># my_logger - ERROR - my_logger 에러</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 콘솔 상에서는 WARNING부터 뜨고, my_logger.log에는 다음과 같이 ERROR에 대한 내용만 표시된다.</p>
+<p><strong>2021-09-11 10:25:49,034 - my_logger - ERROR - my_logger 에러</strong></p>
+<hr>
+<p>file.conf 파일을 생성한다.</p>
+<ul>
+<li>file.conf</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token punctuation">[</span>loggers<span class="token punctuation">]</span>
+keys <span class="token operator">=</span> root<span class="token punctuation">,</span>sampleLogger
+
+<span class="token punctuation">[</span>handlers<span class="token punctuation">]</span>
+keys <span class="token operator">=</span> consoleHandler
+
+<span class="token punctuation">[</span>formatters<span class="token punctuation">]</span>
+keys <span class="token operator">=</span> sampleFormatter
+
+<span class="token punctuation">[</span>logger_root<span class="token punctuation">]</span>
+level <span class="token operator">=</span> DEBUG
+handlers <span class="token operator">=</span> consoleHandler
+
+<span class="token punctuation">[</span>logger_sampleLogger<span class="token punctuation">]</span>
+level<span class="token operator">=</span>DEBUG
+handlers <span class="token operator">=</span> consoleHandler
+qualname <span class="token operator">=</span> sampleLogger
+propagate <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token punctuation">[</span>handler_consoleHandler<span class="token punctuation">]</span>
+<span class="token keyword">class</span> <span class="token operator">=</span> StreamHandler
+level <span class="token operator">=</span> DEBUG
+formatter <span class="token operator">=</span> sampleFormatter
+arags <span class="token operator">=</span> <span class="token punctuation">(</span>sys<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>formatter_sampleFormatter<span class="token punctuation">]</span>
+<span class="token builtin">format</span> <span class="token operator">=</span> <span class="token operator">%</span><span class="token punctuation">(</span>asctime<span class="token punctuation">)</span>s <span class="token operator">-</span> <span class="token operator">%</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>s <span class="token operator">-</span> <span class="token operator">%</span><span class="token punctuation">(</span>levelname<span class="token punctuation">)</span>s <span class="token operator">-</span> <span class="token operator">%</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>s</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>logger_load_file.py</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># logger_load_file.py</span>
+
+<span class="token keyword">import</span> logging
+<span class="token keyword">import</span> logging<span class="token punctuation">.</span>config
+
+logging<span class="token punctuation">.</span>config<span class="token punctuation">.</span>fileConfig<span class="token punctuation">(</span>fname<span class="token operator">=</span><span class="token string">"file.conf"</span><span class="token punctuation">)</span>
+
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">"configLogger"</span><span class="token punctuation">)</span>
+logger<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">"디버그 모드 입니다."</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 2021-09-11 10:47:05,653 - configLogger - DEBUG - 디버그 모드 입니다.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h4 id="visual-studio에서-google-colab-쓰기" style="position:relative;">Visual Studio에서 google colab 쓰기<a href="#visual-studio%EC%97%90%EC%84%9C-google-colab-%EC%93%B0%EA%B8%B0" aria-label="visual studio에서 google colab 쓰기 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li><a href="https://colab.research.google.com/">https://colab.research.google.com/</a></li>
+</ul>
+<p>google colab을 갖다 쓸 수 있는 package가 개발돼 사용해 보았다.</p>
+<ul>
+<li>run_vscode.ipynb in Colab</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">! pip install colabcode
+
+<span class="token comment"># Collecting colabcode</span>
+<span class="token comment">#   Downloading colabcode-0.3.0-py3-none-any.whl (5.0 kB)</span>
+<span class="token comment"># Collecting nest-asyncio==1.4.3</span>
+<span class="token comment">#   Downloading nest_asyncio-1.4.3-py3-none-any.whl (5.3 kB)</span>
+<span class="token comment"># Collecting uvicorn==0.13.1</span>
+<span class="token comment">#   Downloading uvicorn-0.13.1-py3-none-any.whl (45 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 45 kB 2.5 MB/s</span>
+<span class="token comment"># Collecting jupyterlab==3.0.7</span>
+<span class="token comment">#   Downloading jupyterlab-3.0.7-py3-none-any.whl (8.3 MB)</span>
+<span class="token comment">#      |████████████████████████████████| 8.3 MB 6.8 MB/s</span>
+<span class="token comment"># Collecting pyngrok>=5.0.0</span>
+<span class="token comment">#   Downloading pyngrok-5.1.0.tar.gz (745 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 745 kB 38.5 MB/s</span>
+<span class="token comment"># Collecting tornado>=6.1.0</span>
+<span class="token comment">#   Downloading tornado-6.1-cp37-cp37m-manylinux2010_x86_64.whl (428 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 428 kB 31.1 MB/s</span>
+<span class="token comment"># Collecting nbclassic~=0.2</span>
+<span class="token comment">#   Downloading nbclassic-0.3.1-py3-none-any.whl (18 kB)</span>
+<span class="token comment"># Requirement already satisfied: jupyter-core in /usr/local/lib/python3.7/dist-packages (from jupyterlab==3.0.7->colabcode) (4.7.1)</span>
+<span class="token comment"># Collecting jupyterlab-server~=2.0</span>
+<span class="token comment">#   Downloading jupyterlab_server-2.8.1-py3-none-any.whl (58 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 58 kB 4.5 MB/s</span>
+<span class="token comment"># Requirement already satisfied: packaging in /usr/local/lib/python3.7/dist-packages (from jupyterlab==3.0.7->colabcode) (21.0)</span>
+<span class="token comment"># Collecting jupyter-server~=1.2</span>
+<span class="token comment">#   Downloading jupyter_server-1.11.0-py3-none-any.whl (393 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 393 kB 39.5 MB/s</span>
+<span class="token comment"># Requirement already satisfied: jinja2>=2.10 in /usr/local/lib/python3.7/dist-packages (from jupyterlab==3.0.7->colabcode) (2.11.3)</span>
+<span class="token comment"># Requirement already satisfied: ipython in /usr/local/lib/python3.7/dist-packages (from jupyterlab==3.0.7->colabcode) (5.5.0)</span>
+<span class="token comment"># Requirement already satisfied: typing-extensions in /usr/local/lib/python3.7/dist-packages (from uvicorn==0.13.1->colabcode) (3.7.4.3)</span>
+<span class="token comment"># Collecting h11>=0.8</span>
+<span class="token comment">#   Downloading h11-0.12.0-py3-none-any.whl (54 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 54 kB 2.8 MB/s</span>
+<span class="token comment"># Requirement already satisfied: click==7.* in /usr/local/lib/python3.7/dist-packages (from uvicorn==0.13.1->colabcode) (7.1.2)</span>
+<span class="token comment"># Requirement already satisfied: MarkupSafe>=0.23 in /usr/local/lib/python3.7/dist-packages (from jinja2>=2.10->jupyterlab==3.0.7->colabcode) (2.0.1)</span>
+<span class="token comment"># Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (1.8.0)</span>
+<span class="token comment"># Collecting websocket-client</span>
+<span class="token comment">#   Downloading websocket_client-1.2.1-py2.py3-none-any.whl (52 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 52 kB 1.4 MB/s</span>
+<span class="token comment"># Requirement already satisfied: prometheus-client in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.11.0)</span>
+<span class="token comment"># Collecting anyio&lt;4,>=3.1.0</span>
+<span class="token comment">#   Downloading anyio-3.3.1-py3-none-any.whl (77 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 77 kB 6.0 MB/s</span>
+<span class="token comment"># Requirement already satisfied: nbformat in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (5.1.3)</span>
+<span class="token comment"># Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (5.6.1)</span>
+<span class="token comment"># Collecting jupyter-client>=6.1.1</span>
+<span class="token comment">#   Downloading jupyter_client-7.0.2-py3-none-any.whl (122 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 122 kB 43.3 MB/s</span>
+<span class="token comment"># Requirement already satisfied: traitlets>=4.2.1 in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (5.0.5)</span>
+<span class="token comment"># Requirement already satisfied: terminado>=0.8.3 in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.11.0)</span>
+<span class="token comment"># Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.2.0)</span>
+<span class="token comment"># Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (21.1.0)</span>
+<span class="token comment"># Requirement already satisfied: pyzmq>=17 in /usr/local/lib/python3.7/dist-packages (from jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (22.2.1)</span>
+<span class="token comment"># Collecting requests-unixsocket</span>
+<span class="token comment">#   Downloading requests_unixsocket-0.2.0-py2.py3-none-any.whl (11 kB)</span>
+<span class="token comment"># Requirement already satisfied: idna>=2.8 in /usr/local/lib/python3.7/dist-packages (from anyio&lt;4,>=3.1.0->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (2.10)</span>
+<span class="token comment"># Collecting sniffio>=1.1</span>
+<span class="token comment">#   Downloading sniffio-1.2.0-py3-none-any.whl (10 kB)</span>
+<span class="token comment"># Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.7/dist-packages (from jupyter-client>=6.1.1->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (2.8.2)</span>
+<span class="token comment"># Requirement already satisfied: entrypoints in /usr/local/lib/python3.7/dist-packages (from jupyter-client>=6.1.1->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.3)</span>
+<span class="token comment"># Collecting jupyter-client>=6.1.1</span>
+<span class="token comment">#   Downloading jupyter_client-7.0.1-py3-none-any.whl (122 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 122 kB 40.5 MB/s</span>
+<span class="token comment">#   Downloading jupyter_client-7.0.0-py3-none-any.whl (122 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 122 kB 45.5 MB/s</span>
+<span class="token comment">#   Downloading jupyter_client-6.1.12-py3-none-any.whl (112 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 112 kB 45.9 MB/s</span>
+<span class="token comment"># Requirement already satisfied: babel in /usr/local/lib/python3.7/dist-packages (from jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (2.9.1)</span>
+<span class="token comment"># Collecting jsonschema>=3.0.1</span>
+<span class="token comment">#   Downloading jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)</span>
+<span class="token comment">#      |████████████████████████████████| 56 kB 3.8 MB/s</span>
+<span class="token comment"># Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (2.23.0)</span>
+<span class="token comment"># Collecting json5</span>
+<span class="token comment">#   Downloading json5-0.9.6-py2.py3-none-any.whl (18 kB)</span>
+<span class="token comment"># Requirement already satisfied: attrs>=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (21.2.0)</span>
+<span class="token comment"># Requirement already satisfied: pyrsistent>=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (0.18.0)</span>
+<span class="token comment"># Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.7/dist-packages (from jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (4.6.4)</span>
+<span class="token comment"># Requirement already satisfied: setuptools in /usr/local/lib/python3.7/dist-packages (from jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (57.4.0)</span>
+<span class="token comment"># Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (1.15.0)</span>
+<span class="token comment"># Requirement already satisfied: notebook&lt;7 in /usr/local/lib/python3.7/dist-packages (from nbclassic~=0.2->jupyterlab==3.0.7->colabcode) (5.3.1)</span>
+<span class="token comment"># Requirement already satisfied: ipykernel in /usr/local/lib/python3.7/dist-packages (from notebook&lt;7->nbclassic~=0.2->jupyterlab==3.0.7->colabcode) (4.10.1)</span>
+<span class="token comment"># Requirement already satisfied: PyYAML in /usr/local/lib/python3.7/dist-packages (from pyngrok>=5.0.0->colabcode) (3.13)</span>
+<span class="token comment"># Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado>=0.8.3->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.7.0)</span>
+<span class="token comment"># Requirement already satisfied: cffi>=1.0.0 in /usr/local/lib/python3.7/dist-packages (from argon2-cffi->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (1.14.6)</span>
+<span class="token comment"># Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi>=1.0.0->argon2-cffi->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (2.20)</span>
+<span class="token comment"># Requirement already satisfied: pytz>=2015.7 in /usr/local/lib/python3.7/dist-packages (from babel->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (2018.9)</span>
+<span class="token comment"># Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata->jsonschema>=3.0.1->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (3.5.0)</span>
+<span class="token comment"># Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (0.7.5)</span>
+<span class="token comment"># Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (4.8.0)</span>
+<span class="token comment"># Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (4.4.2)</span>
+<span class="token comment"># Requirement already satisfied: prompt-toolkit&lt;2.0.0,>=1.0.4 in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (1.0.18)</span>
+<span class="token comment"># Requirement already satisfied: simplegeneric>0.8 in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (0.8.1)</span>
+<span class="token comment"># Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from ipython->jupyterlab==3.0.7->colabcode) (2.6.1)</span>
+<span class="token comment"># Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.0.0,>=1.0.4->ipython->jupyterlab==3.0.7->colabcode) (0.2.5)</span>
+<span class="token comment"># Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.7.1)</span>
+<span class="token comment"># Requirement already satisfied: mistune&lt;2,>=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.8.4)</span>
+<span class="token comment"># Requirement already satisfied: testpath in /usr/local/lib/python3.7/dist-packages (from nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.5.0)</span>
+<span class="token comment"># Requirement already satisfied: bleach in /usr/local/lib/python3.7/dist-packages (from nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (4.0.0)</span>
+<span class="token comment"># Requirement already satisfied: pandocfilters>=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (1.4.3)</span>
+<span class="token comment"># Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach->nbconvert->jupyter-server~=1.2->jupyterlab==3.0.7->colabcode) (0.5.1)</span>
+<span class="token comment"># Requirement already satisfied: pyparsing>=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging->jupyterlab==3.0.7->colabcode) (2.4.7)</span>
+<span class="token comment"># Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,>=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (1.24.3)</span>
+<span class="token comment"># Requirement already satisfied: chardet&lt;4,>=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (3.0.4)</span>
+<span class="token comment"># Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests->jupyterlab-server~=2.0->jupyterlab==3.0.7->colabcode) (2021.5.30)</span>
+<span class="token comment"># Building wheels for collected packages: pyngrok</span>
+<span class="token comment">#   Building wheel for pyngrok (setup.py) ... done</span>
+<span class="token comment">#   Created wheel for pyngrok: filename=pyngrok-5.1.0-py3-none-any.whl size=19006 sha256=ba324d307fafdf766af9c3fa488016e002b0932a4c899897c6e0eda9e346f52f</span>
+<span class="token comment">#   Stored in directory: /root/.cache/pip/wheels/bf/e6/af/ccf6598ecefecd44104069371795cb9b3afbcd16987f6ccfb3</span>
+<span class="token comment"># Successfully built pyngrok</span>
+<span class="token comment"># Installing collected packages: tornado, jsonschema, sniffio, jupyter-client, websocket-client, requests-unixsocket, anyio, jupyter-server, json5, nbclassic, jupyterlab-server, h11, uvicorn, pyngrok, nest-asyncio, jupyterlab, colabcode</span>
+<span class="token comment">#   Attempting uninstall: tornado</span>
+<span class="token comment">#     Found existing installation: tornado 5.1.1</span>
+<span class="token comment">#     Uninstalling tornado-5.1.1:</span>
+<span class="token comment">#       Successfully uninstalled tornado-5.1.1</span>
+<span class="token comment">#   Attempting uninstall: jsonschema</span>
+<span class="token comment">#     Found existing installation: jsonschema 2.6.0</span>
+<span class="token comment">#     Uninstalling jsonschema-2.6.0:</span>
+<span class="token comment">#       Successfully uninstalled jsonschema-2.6.0</span>
+<span class="token comment">#   Attempting uninstall: jupyter-client</span>
+<span class="token comment">#     Found existing installation: jupyter-client 5.3.5</span>
+<span class="token comment">#     Uninstalling jupyter-client-5.3.5:</span>
+<span class="token comment">#       Successfully uninstalled jupyter-client-5.3.5</span>
+<span class="token comment">#   Attempting uninstall: nest-asyncio</span>
+<span class="token comment">#     Found existing installation: nest-asyncio 1.5.1</span>
+<span class="token comment">#     Uninstalling nest-asyncio-1.5.1:</span>
+<span class="token comment">#       Successfully uninstalled nest-asyncio-1.5.1</span>
+<span class="token comment"># ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class="token comment"># google-colab 1.0.0 requires tornado~=5.1.0; python_version >= "3.0", but you have tornado 6.1 which is incompatible.</span>
+<span class="token comment"># Successfully installed anyio-3.3.1 colabcode-0.3.0 h11-0.12.0 json5-0.9.6 jsonschema-3.2.0 jupyter-client-6.1.12 jupyter-server-1.11.0 jupyterlab-3.0.7 jupyterlab-server-2.8.1 nbclassic-0.3.1 nest-asyncio-1.4.3 pyngrok-5.1.0 requests-unixsocket-0.2.0 sniffio-1.2.0 tornado-6.1 uvicorn-0.13.1 websocket-client-1.2.1</span>
+<span class="token comment"># WARNING: Upgrading ipython, ipykernel, tornado, prompt-toolkit or pyzmq can</span>
+<span class="token comment"># cause your runtime to repeatedly crash or behave in unexpected ways and is not</span>
+<span class="token comment"># recommended. If your runtime won't connect or execute code, you can reset it</span>
+<span class="token comment"># with "Factory reset runtime" from the "Runtime" menu.</span>
+<span class="token comment"># WARNING: The following packages were previously imported in this runtime:</span>
+<span class="token comment">#   [jupyter_client,tornado]</span>
+<span class="token comment"># You must restart the runtime in order to use newly installed versions.</span>
+
+
+<span class="token keyword">from</span> colabcode <span class="token keyword">import</span> ColabCode
+
+ColabCode<span class="token punctuation">(</span>port<span class="token operator">=</span><span class="token number">10000</span><span class="token punctuation">)</span>
+<span class="token comment"># Code Server can be accessed on: NgrokTunnel: "https://07ca-35-184-116-23.ngrok.io" -> "http://localhost:10000"</span>
+<span class="token comment"># [2021-09-11T01:59:52.583Z] info  code-server 3.10.2 387b12ef4ca404ffd39d84834e1f0776e9e3c005</span>
+<span class="token comment"># [2021-09-11T01:59:52.585Z] info  Using user-data-dir ~/.local/share/code-server</span>
+<span class="token comment"># [2021-09-11T01:59:52.610Z] info  Using config file ~/.config/code-server/config.yaml</span>
+<span class="token comment"># [2021-09-11T01:59:52.610Z] info  HTTP server listening on http://127.0.0.1:10000</span>
+<span class="token comment"># [2021-09-11T01:59:52.611Z] info    - Authentication is disabled</span>
+<span class="token comment"># [2021-09-11T01:59:52.611Z] info    - Not serving HTTPS</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> package 설치 후 런타임 재 시작한다.</p>
+<p><a href="https://07ca-35-184-116-23.ngrok.io">https://07ca-35-184-116-23.ngrok.io</a> 로 접속하면 Visual Studio 같은 게 web에서 열린다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">ColabCode<span class="token punctuation">(</span>port<span class="token operator">=</span><span class="token number">10000</span><span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token string">"coco"</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>GPU로 런 타임 설정해서 아래 결과 값을 볼 수 있다.</p>
+<ul>
+<li>test.ipynb in Colab VS</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>python<span class="token punctuation">.</span>client <span class="token keyword">import</span> device_lib
+device_lib<span class="token punctuation">.</span>list_local_devices<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># [name: "/device:CPU:0"</span>
+<span class="token comment">#  device_type: "CPU"</span>
+<span class="token comment">#  memory_limit: 268435456</span>
+<span class="token comment">#  locality {</span>
+<span class="token comment">#  }</span>
+<span class="token comment">#  incarnation: 684771523533364382, name: "/device:GPU:0"</span>
+<span class="token comment">#  device_type: "GPU"</span>
+<span class="token comment">#  memory_limit: 11345264640</span>
+<span class="token comment">#  locality {</span>
+<span class="token comment">#    bus_id: 1</span>
+<span class="token comment">#    links {</span>
+<span class="token comment">#    }</span>
+<span class="token comment">#  }</span>
+<span class="token comment">#  incarnation: 5353921719274146701</span>
+<span class="token comment">#  physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7"]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h4 id="nlp" style="position:relative;">NLP<a href="#nlp" aria-label="nlp permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>강사님께 nlp_getting_started.zip, helper_functions.py 를 제공 받았다.</p>
+<ul>
+<li>tensorflow_nlp.ipynb</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">print</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span> <span class="token comment"># 2.6.0</span>
+
+!pip install scikit<span class="token operator">-</span>learn
+
+<span class="token comment"># Collecting scikit-learn</span>
+<span class="token comment">#   Using cached scikit_learn-0.24.2-cp39-cp39-win_amd64.whl (6.9 MB)</span>
+<span class="token comment"># Requirement already satisfied: scipy>=0.19.1 in .\venv_20210911\lib\site-packages (from scikit-learn) (1.7.0)</span>
+<span class="token comment"># Collecting threadpoolctl>=2.0.0</span>
+<span class="token comment">#   Using cached threadpoolctl-2.2.0-py3-none-any.whl (12 kB)</span>
+<span class="token comment"># Requirement already satisfied: numpy>=1.13.3 in .\venv_20210911\lib\site-packages (from scikit-learn) (1.19.5)</span>
+<span class="token comment"># Collecting joblib>=0.11</span>
+<span class="token comment">#   Using cached joblib-1.0.1-py3-none-any.whl (303 kB)</span>
+<span class="token comment"># Installing collected packages: threadpoolctl, joblib, scikit-learn</span>
+<span class="token comment"># Successfully installed joblib-1.0.1 scikit-learn-0.24.2 threadpoolctl-2.2.0</span>
+<span class="token comment"># WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.</span>
+<span class="token comment"># You should consider upgrading via the 'c:\20210911\venv_20210911\scripts\python.exe -m pip install --upgrade pip' command.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>NLP : 자연어 처리</p>
+<ol>
+<li>Classification (분류) - 라벨링이 필요</li>
+<li>Machine Translation (번역)</li>
+<li>Text Generation (문장 생성)</li>
+<li>Voice Assistants (보이스 비서)</li>
+</ol>
+<p>==> 이런 자연어들을 하기 위해서 필요한 것이 -> sequence problems!!! (문장을 이루는 단어를 숫자로 표현하는 문제)<br>
+==> NLP (Natural Language Processing) : 자연어에서 정보를 추려내는 것이 목적<br>
+==> NLU (Natural Language Understanding) : 자연어를 이해하는 행동이 목적</p>
+<p>자연어에서 이야기하는 용어</p>
+<ol>
+<li>Text</li>
+<li>Speech</li>
+</ol>
+<p>우리가 하려는 과정은<br>
+텍스트 -> 이 텍스트를 숫자로 변환 -> 모델 생성 -> 패턴을 찾기 위해 모델을 학습 -> 패턴 이용(예측)</p>
+<ul>
+<li><a href="https://becominghuman.ai/a-simple-introduction-to-natural-language-processing-ea66a1747b32">https://becominghuman.ai/a-simple-introduction-to-natural-language-processing-ea66a1747b32</a></li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> helper_functions <span class="token keyword">import</span> unzip_data<span class="token punctuation">,</span> create_tensorboard_callback<span class="token punctuation">,</span> plot_loss_curves<span class="token punctuation">,</span> compare_historys
+unzip_data<span class="token punctuation">(</span><span class="token string">"nlp_getting_started.zip"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+train_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"train.csv"</span><span class="token punctuation">)</span>
+test_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"test.csv"</span><span class="token punctuation">)</span>
+
+train_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> train_df<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> test_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> test_df<span class="token punctuation">.</span>shape
+
+<span class="token comment"># (   id keyword location                                               text  \</span>
+<span class="token comment">#  0   1     NaN      NaN  Our Deeds are the Reason of this #earthquake M...   </span>
+<span class="token comment">#  1   4     NaN      NaN             Forest fire near La Ronge Sask. Canada   </span>
+<span class="token comment">#  2   5     NaN      NaN  All residents asked to 'shelter in place' are ...   </span>
+<span class="token comment">#  3   6     NaN      NaN  13,000 people receive #wildfires evacuation or...   </span>
+<span class="token comment">#  4   7     NaN      NaN  Just got sent this photo from Ruby #Alaska as ...   </span>
+<span class="token comment">#</span>
+<span class="token comment">#     target  </span>
+<span class="token comment">#  0       1  </span>
+<span class="token comment">#  1       1  </span>
+<span class="token comment">#  2       1  </span>
+<span class="token comment">#  3       1  </span>
+<span class="token comment">#  4       1  ,</span>
+<span class="token comment">#  (7613, 5),</span>
+<span class="token comment">#     id keyword location                                               text</span>
+<span class="token comment">#  0   0     NaN      NaN                 Just happened a terrible car crash</span>
+<span class="token comment">#  1   2     NaN      NaN  Heard about #earthquake is different cities, s...</span>
+<span class="token comment">#  2   3     NaN      NaN  there is a forest fire at spot pond, geese are...</span>
+<span class="token comment">#  3   9     NaN      NaN           Apocalypse lighting. #Spokane #wildfires</span>
+<span class="token comment">#  4  11     NaN      NaN      Typhoon Soudelor kills 28 in China and Taiwan,</span>
+<span class="token comment">#  (3263, 4))</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">train_df_shuffled <span class="token operator">=</span> train_df<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>frac <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> random_state <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">)</span>
+train_df_shuffled<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> train_df_shuffled<span class="token punctuation">.</span>shape
+<span class="token comment"># (        id      keyword               location  \</span>
+<span class="token comment">#  2644  3796  destruction                    NaN   </span>
+<span class="token comment">#  2227  3185       deluge                    NaN   </span>
+<span class="token comment">#  5448  7769       police                     UK   </span>
+<span class="token comment">#  132    191   aftershock                    NaN   </span>
+<span class="token comment">#  6845  9810       trauma  Montgomery County, MD   </span>
+<span class="token comment">#</span>
+<span class="token comment">#                                                     text  target  </span>
+<span class="token comment">#  2644  So you have a new weapon that can cause un-ima...       1  </span>
+<span class="token comment">#  2227  The f$&amp;amp;@ing things I do for #GISHWHES Just...       0  </span>
+<span class="token comment">#  5448  DT @georgegalloway: RT @Galloway4Mayor: ÛÏThe...       1  </span>
+<span class="token comment">#  132   Aftershock back to school kick off was great. ...       0  </span>
+<span class="token comment">#  6845  in response to trauma Children of Addicts deve...       0  ,</span>
+<span class="token comment">#  (7613, 5))</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>우리가 하려는 것<br>
+입력 (text 컬럼) -> 머신러닝 알고리즘 -> 출력 (target 컬럼)</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">train_df<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 결과값이 0과 1 밖에 없기에 binary classification 문제</span>
+
+
+<span class="token comment"># 0    4342</span>
+<span class="token comment"># 1    3271</span>
+<span class="token comment"># Name: target, dtype: int64</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"총 학습할 데이터의 수 : </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>train_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"총 테스트할 데이터의 수 : </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>test_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"총 데이터의 수 : </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>train_df<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">len</span><span class="token punctuation">(</span>test_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># 총 학습할 데이터의 수 : 7613</span>
+<span class="token comment"># 총 테스트할 데이터의 수 : 3263</span>
+<span class="token comment"># 총 데이터의 수 : 10876</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> random
+random_index <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_df<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> row <span class="token keyword">in</span> train_df_shuffled<span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"target"</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span><span class="token punctuation">[</span>random_index<span class="token punctuation">:</span>random_index <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span>itertuples<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    _<span class="token punctuation">,</span> text<span class="token punctuation">,</span> target <span class="token operator">=</span> row
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Target: </span><span class="token interpolation"><span class="token punctuation">{</span>target<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">,</span> <span class="token string">"부정"</span> <span class="token keyword">if</span> target <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token string">"긍정"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Text: \n</span><span class="token interpolation"><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---\n"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Target: 0 긍정</span>
+<span class="token comment"># Text:</span>
+<span class="token comment"># Last chance to work at the old FFA foodstand at the fairgrounds. We are finishing demolition at 9am.  Any help would be appreciated</span>
+<span class="token comment"># ---</span>
+<span class="token comment">#</span>
+<span class="token comment"># Target: 1 부정</span>
+<span class="token comment"># Text:</span>
+<span class="token comment"># #forbes #europe China's Stock Market Crash: Are There Gems In The Rubble? http://t.co/C0SlAbBP7j</span>
+<span class="token comment"># ---</span>
+<span class="token comment">#</span>
+<span class="token comment"># Target: 0 긍정</span>
+<span class="token comment"># Text:</span>
+<span class="token comment"># So yeah splatoon is still lots of fun and default splattershot jr is still the only weapon layout I'm good at</span>
+<span class="token comment"># ---</span>
+<span class="token comment">#</span>
+<span class="token comment"># Target: 0 긍정</span>
+<span class="token comment"># Text:</span>
+<span class="token comment"># @RaynbowAffair Editor In Chief @DiamondKesawn Releases Issue #7 http://t.co/ge0yd3mKAv of #RAmag. #Fashion #Models and #Mayhem</span>
+<span class="token comment"># ---</span>
+<span class="token comment">#</span>
+<span class="token comment"># Target: 1 부정</span>
+<span class="token comment"># Text:</span>
+<span class="token comment"># I just watched emmerdale nd I don't know who most of them are but a slightly attractive man named Ross just got beat up nd now he's dead    </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">train_df_shuffled<span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 2644    So you have a new weapon that can cause un-ima...</span>
+<span class="token comment"># 2227    The f$&amp;amp;@ing things I do for #GISHWHES Just...</span>
+<span class="token comment"># 5448    DT @georgegalloway: RT @Galloway4Mayor: ÛÏThe...</span>
+<span class="token comment"># 132     Aftershock back to school kick off was great. ...</span>
+<span class="token comment"># 6845    in response to trauma Children of Addicts deve...</span>
+<span class="token comment">#                               ...                        </span>
+<span class="token comment"># 5226    @Eganator2000 There aren't many Obliteration s...</span>
+<span class="token comment"># 5390    just had a panic attack bc I don't have enough...</span>
+<span class="token comment"># 860     Omron HEM-712C Automatic Blood Pressure Monito...</span>
+<span class="token comment"># 7603    Officials say a quarantine is in place at an A...</span>
+<span class="token comment"># 7270    I moved to England five years ago today. What ...</span>
+<span class="token comment"># Name: text, Length: 7613, dtype: object</span>
+
+train_df_shuffled<span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>to_numpy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># array(['So you have a new weapon that can cause un-imaginable destruction.',</span>
+<span class="token comment">#        'The f$&amp;amp;@ing things I do for #GISHWHES Just got soaked in a deluge going for pads and tampons. Thx @mishacollins @/@',</span>
+<span class="token comment">#        'DT @georgegalloway: RT @Galloway4Mayor: \x89ÛÏThe CoL police can catch a pickpocket in Liverpool Stree... http://t.co/vXIn1gOq4Q',</span>
+<span class="token comment">#        ...,</span>
+<span class="token comment">#        'Omron HEM-712C Automatic Blood Pressure Monitor STANDARD AND LARGE BP CUFFS http://t.co/gJBAInQWN9 http://t.co/jPhgpL1c5x',</span>
+<span class="token comment">#        'Officials say a quarantine is in place at an Alabama home over a possible Ebola case after developing symptoms... http://t.co/rqKK15uhEY',</span>
+<span class="token comment">#        'I moved to England five years ago today. What a whirlwind of time it has been! http://t.co/eaSlGeA1B7'],</span>
+<span class="token comment">#       dtype=object)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+train_sentences<span class="token punctuation">,</span> val_sentences<span class="token punctuation">,</span> train_labels<span class="token punctuation">,</span> val_labels <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>
+    train_df_shuffled<span class="token punctuation">[</span><span class="token string">"text"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>to_numpy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    train_df_shuffled<span class="token punctuation">[</span><span class="token string">"target"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>to_numpy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    test_size <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">,</span>
+    random_state <span class="token operator">=</span> <span class="token number">42</span>
+<span class="token punctuation">)</span>
+
+<span class="token builtin">len</span><span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_labels<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>val_sentences<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>val_labels<span class="token punctuation">)</span>
+<span class="token comment"># (6851, 6851, 762, 762)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span>
+<span class="token comment"># numpy.ndarray</span>
+
+train_sentences<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> train_labels<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span>
+
+<span class="token comment"># (array(['@mogacola @zamtriossu i screamed after hitting tweet',</span>
+<span class="token comment">#         'Imagine getting flattened by Kurt Zouma',</span>
+<span class="token comment">#         '@Gurmeetramrahim #MSGDoing111WelfareWorks Green S welfare force ke appx 65000 members har time disaster victim ki help ke liye tyar hai....',</span>
+<span class="token comment">#         "@shakjn @C7 @Magnums im shaking in fear he's gonna hack the planet",</span>
+<span class="token comment">#         'Somehow find you and I collide http://t.co/Ee8RpOahPk',</span>
+<span class="token comment">#         '@EvaHanderek @MarleyKnysh great times until the bus driver held us hostage in the mall parking lot lmfao',</span>
+<span class="token comment">#         'destroy the free fandom honestly',</span>
+<span class="token comment">#         'Weapons stolen from National Guard Armory in New Albany still missing #Gunsense http://t.co/lKNU8902JE',</span>
+<span class="token comment">#         '@wfaaweather Pete when will the heat wave pass? Is it really going to be mid month? Frisco Boy Scouts have a canoe trip in Okla.',</span>
+<span class="token comment">#         'Patient-reported outcomes in long-term survivors of metastatic colorectal cancer - British Journal of Surgery http://t.co/5Yl4DC1Tqt'],</span>
+<span class="token comment">#        dtype=object),</span>
+<span class="token comment">#  array([0, 0, 1, 0, 0, 1, 1, 0, 1, 1], dtype=int64))</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>이제 모든 데이터 준비가 끝났습니다!<br>
+라벨인 target은 숫자! -> 기계가 아주 잘 인식!!!<br>
+문제는 text가 문자열! -> 기계가 인식하기 어려움!!!<br>
+문자열을 숫자로 바꾸어 주는 과정이 필요합니다</p>
+<p>NLP에서는 텍스트를 숫자로 바꾸어주는 2가지 주요 개념이 존재!</p>
+<ol>
+<li>Tokenization : 단어, 문자 등을 바로 숫자로 변환</li>
+</ol>
+<ol>
+<li>word-level tokenization : 모든 기본 단위가 word</li>
+<li>Character-level tokenization : A ~ Z => 1 ~ 26, 모든 글자가 단위</li>
+<li>Sub-word-level tokenization : word-level tokenization 과 character-level tokenization 의 중간 / favorite => favor + rite</li>
+</ol>
+<ol start="2">
+<li>Embedding : 자연어를 학습할 수 있는 형태로 표현한 것, 이런 표현은 feature vector 의 형태로 제공합니다.</li>
+</ol>
+<p>dance라는 단어가 있을 때 [-0.3412, 0.3424, -0.2343, 0.9934, 0.1112] 와 같이 표현됨<br>
+feature vector의 크기는 조정이 가능하다.</p>
+<ol>
+<li>자신만의 embedding을 사용</li>
+<li>사전에 학습된 embedding을 사용</li>
+</ol>
+<p>각각 어떤 것을 사용해야 하는 지는 문제에 따라 다르다!</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token comment"># from tensorflow.keras.layers.experimental.preprocessing import TextVectorization</span>
+
+max_vocab_length <span class="token operator">=</span> <span class="token number">10000</span>
+max_length <span class="token operator">=</span> <span class="token number">15</span>
+
+text_vectorizer <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>TextVectorization<span class="token punctuation">(</span>
+    max_tokens <span class="token operator">=</span> max_vocab_length<span class="token punctuation">,</span> <span class="token comment"># None</span>
+    standardize <span class="token operator">=</span> <span class="token string">"lower_and_strip_punctuation"</span><span class="token punctuation">,</span>
+    split <span class="token operator">=</span> <span class="token string">"whitespace"</span><span class="token punctuation">,</span>
+    ngrams <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span>
+    output_mode <span class="token operator">=</span> <span class="token string">"int"</span><span class="token punctuation">,</span>
+    output_sequence_length <span class="token operator">=</span> max_length <span class="token comment"># None</span>
+<span class="token punctuation">)</span>
+
+<span class="token builtin">round</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>
+    <span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> train_sentences<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+<span class="token comment"># 15</span>
+
+sample_sentence <span class="token operator">=</span> <span class="token string">"There's a flood in my street!"</span>
+text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>sample_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># AttributeError: 'NoneType' object has no attribute 'ndims'</span>
+<span class="token comment"># ---------------------------------------------------------------------------</span>
+<span class="token comment"># AttributeError                            Traceback (most recent call last)</span>
+<span class="token comment"># ~\AppData\Local\Temp/ipykernel_21788/2448844681.py in &lt;module></span>
+<span class="token comment">#       1 sample_sentence = "There's a flood in my street!"</span>
+<span class="token comment"># ----> 2 text_vectorizer([sample_sentence])</span>
+<span class="token comment">#</span>
+<span class="token comment"># c:\20210911\venv_20210911\lib\site-packages\keras\engine\base_layer.py in __call__(self, *args, **kwargs)</span>
+<span class="token comment">#    1028       with tf.name_scope(name_scope):</span>
+<span class="token comment">#    1029         if not self.built:</span>
+<span class="token comment"># -> 1030           self._maybe_build(inputs)</span>
+<span class="token comment">#    1031</span>
+<span class="token comment">#    1032         if self._autocast:</span>
+<span class="token comment">#</span>
+<span class="token comment"># c:\20210911\venv_20210911\lib\site-packages\keras\engine\base_layer.py in _maybe_build(self, inputs)</span>
+<span class="token comment">#    2657         # operations.</span>
+<span class="token comment">#    2658         with tf_utils.maybe_init_scope(self):</span>
+<span class="token comment"># -> 2659           self.build(input_shapes)  # pylint:disable=not-callable</span>
+<span class="token comment">#    2660       # We must set also ensure that the layer is marked as built, and the build</span>
+<span class="token comment">#    2661       # shape is stored since user defined build functions may not be calling</span>
+<span class="token comment">#</span>
+<span class="token comment"># c:\20210911\venv_20210911\lib\site-packages\keras\layers\preprocessing\text_vectorization.py in build(self, input_shape)</span>
+<span class="token comment">#     413     # the expression needs to evaluate to True in that case.</span>
+<span class="token comment">#     414     if self._split is not None:</span>
+<span class="token comment"># --> 415       if input_shape.ndims > 1 and not input_shape[-1] == 1:  # pylint: disable=g-comparison-negation</span>
+<span class="token comment">#     416         raise RuntimeError(</span>
+<span class="token comment">#     417             "When using TextVectorization to tokenize strings, the innermost "</span>
+<span class="token comment">#</span>
+<span class="token comment"># AttributeError: 'NoneType' object has no attribute 'ndims'</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">text_vectorizer<span class="token punctuation">.</span>adapt<span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span>
+
+sample_sentence <span class="token operator">=</span> <span class="token string">"There's a flood in my street!"</span>
+text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>sample_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &lt;tf.Tensor: shape=(1, 15), dtype=int64, numpy=</span>
+<span class="token comment"># array([[264,   3, 232,   4,  13, 698,   0,   0,   0,   0,   0,   0,   0,</span>
+<span class="token comment">#           0,   0]], dtype=int64)></span>
+
+sample_sentence <span class="token operator">=</span> <span class="token string">"I love tensorflow"</span>
+text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>sample_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># &lt;tf.Tensor: shape=(1, 15), dtype=int64, numpy=</span>
+<span class="token comment"># array([[  8, 110,   1,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,</span>
+<span class="token comment">#           0,   0]], dtype=int64)></span>
+
+sample_sentence <span class="token operator">=</span> <span class="token string">"I Can do TensorFlow"</span>
+text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>sample_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># &lt;tf.Tensor: shape=(1, 15), dtype=int64, numpy=</span>
+<span class="token comment"># array([[ 8, 71, 68,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]],</span>
+<span class="token comment">#       dtype=int64)></span>
+
+random_sentence <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"원래 Text : \n</span><span class="token interpolation"><span class="token punctuation">{</span>random_sentence<span class="token punctuation">}</span></span><span class="token string">\n\nVector : "</span></span><span class="token punctuation">)</span>
+text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>random_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 원래 Text :</span>
+<span class="token comment"># National free root beer float day is tomorrow at A&amp;amp;W from 2pm-close!! Help support the Wounded Warrior Project with donations!! :)</span>
+<span class="token comment">#</span>
+<span class="token comment"># Vector :</span>
+<span class="token comment"># &lt;tf.Tensor: shape=(1, 15), dtype=int64, numpy=</span>
+<span class="token comment"># array([[ 372,  268, 1998, 3157, 5627,  101,    9,  665,   17,    1,   20,</span>
+<span class="token comment">#            1,  148,  724,    2]], dtype=int64)></span>
+
+words_in_vocab <span class="token operator">=</span> text_vectorizer<span class="token punctuation">.</span>get_vocabulary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token builtin">type</span><span class="token punctuation">(</span>words_in_vocab<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>words_in_vocab<span class="token punctuation">)</span>
+<span class="token comment"># (list, 10000)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">top_5_words <span class="token operator">=</span> words_in_vocab<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>  <span class="token comment"># [UNK] : unknown 를 의미</span>
+bottom_5_words <span class="token operator">=</span> words_in_vocab<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"vocab에 있는 단어 총 갯수 : </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>words_in_vocab<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"자주 사용하는 단어 5개 : </span><span class="token interpolation"><span class="token punctuation">{</span>top_5_words<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"자주 사용하지 않는 단어 5개 : </span><span class="token interpolation"><span class="token punctuation">{</span>bottom_5_words<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># vocab에 있는 단어 총 갯수 : 10000</span>
+<span class="token comment"># 자주 사용하는 단어 5개 : ['', '[UNK]', 'the', 'a', 'in']</span>
+<span class="token comment"># 자주 사용하지 않는 단어 5개 : ['pages', 'paeds', 'pads', 'padres', 'paddytomlinson1']</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>정말 간단하게 tokenization을 했습니다. 문장의 숫자로 이루어진 벡터로 만들었습니다.<br>
+embedding 의 특징 : tokenization의 경우 tensorflow = 1, I = 8<br>
+이 값들은 우리가 다시 새로운 데이터셋으로 adapt를 하지 않으면 계속 유지<br>
+embedding은 단어들 간의 관계 (relation) 를 표현하기 때문에, 학습을 하면서 변경이 된다! 즉 개선이 된다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras <span class="token keyword">import</span> layers
+
+embedding <span class="token operator">=</span> layers<span class="token punctuation">.</span>Embedding<span class="token punctuation">(</span>
+    input_dim <span class="token operator">=</span> max_vocab_length<span class="token punctuation">,</span>
+    output_dim <span class="token operator">=</span> <span class="token number">128</span><span class="token punctuation">,</span> <span class="token comment"># embedding vector의 크기</span>
+    embeddings_initializer <span class="token operator">=</span> <span class="token string">"uniform"</span><span class="token punctuation">,</span>
+    input_length <span class="token operator">=</span> max_length
+<span class="token punctuation">)</span>
+embedding
+<span class="token comment"># &lt;keras.layers.embeddings.Embedding at 0x196e1579c70></span>
+
+random_sentence <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>train_sentences<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"원래 Text : \n</span><span class="token interpolation"><span class="token punctuation">{</span>random_sentence<span class="token punctuation">}</span></span><span class="token string">\n\nEmbedded : "</span></span><span class="token punctuation">)</span>
+sample_embed <span class="token operator">=</span> embedding<span class="token punctuation">(</span>text_vectorizer<span class="token punctuation">(</span><span class="token punctuation">[</span>random_sentence<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sample_embed
+
+<span class="token comment"># 원래 Text :</span>
+<span class="token comment"># you know you hate your body when you buy 2 bags of chips and a variety pack of fruit snacks and a redbull as a snack</span>
+<span class="token comment">#</span>
+<span class="token comment"># Embedded :</span>
+<span class="token comment"># &lt;tf.Tensor: shape=(1, 15, 128), dtype=float32, numpy=</span>
+<span class="token comment"># array([[[ 0.01604695,  0.01195837,  0.02108758, ..., -0.01086847,</span>
+<span class="token comment">#          -0.00126393, -0.04815496],</span>
+<span class="token comment">#         [ 0.01539134, -0.00607415, -0.04399014, ..., -0.02553501,</span>
+<span class="token comment">#           0.00666219, -0.01786902],</span>
+<span class="token comment">#         [ 0.01604695,  0.01195837,  0.02108758, ..., -0.01086847,</span>
+<span class="token comment">#          -0.00126393, -0.04815496],</span>
+<span class="token comment">#         ...,</span>
+<span class="token comment">#         [ 0.01247936, -0.03029374, -0.01231338, ...,  0.03724704,</span>
+<span class="token comment">#          -0.0136613 ,  0.02655739],</span>
+<span class="token comment">#         [-0.03074473, -0.04212143, -0.03628118, ..., -0.04794819,</span>
+<span class="token comment">#           0.04486473, -0.01825254],</span>
+<span class="token comment">#         [ 0.0017719 ,  0.02762953,  0.00576092, ..., -0.00769533,</span>
+<span class="token comment">#           0.04047073,  0.01910094]]], dtype=float32)></span>
+
+sample_embed<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment"># &lt;tf.Tensor: shape=(128,), dtype=float32, numpy=</span>
+<span class="token comment"># array([ 0.0017719 ,  0.02762953,  0.00576092, -0.02491102, -0.00222634,</span>
+<span class="token comment">#         0.01752745, -0.03988715, -0.03050656,  0.02643761,  0.0349772 ,</span>
+<span class="token comment">#         0.01758212, -0.03912541, -0.00220684, -0.03991275, -0.0434656 ,</span>
+<span class="token comment">#         0.00156709,  0.03946022, -0.03152581, -0.02101412,  0.03169811,</span>
+<span class="token comment">#        -0.04501311,  0.04223461,  0.00746323,  0.00575532, -0.00642367,</span>
+<span class="token comment">#        -0.00025815,  0.02878416,  0.04595664,  0.03297694, -0.00218439,</span>
+<span class="token comment">#         0.01926506,  0.03976199,  0.01538695,  0.03490357,  0.04897077,</span>
+<span class="token comment">#        -0.04156059, -0.03843235,  0.03867966,  0.01113564, -0.04918754,</span>
+<span class="token comment">#        -0.02906932, -0.02085818, -0.00975494, -0.0485001 , -0.00451384,</span>
+<span class="token comment">#        -0.00347937,  0.0284773 ,  0.04650864, -0.01117046, -0.02865242,</span>
+<span class="token comment">#        -0.04595688, -0.03664583, -0.04612042, -0.04288439, -0.00325724,</span>
+<span class="token comment">#        -0.03541756, -0.04809557, -0.01100819,  0.02438462,  0.03978891,</span>
+<span class="token comment">#         0.04713306, -0.00754955,  0.04313323,  0.0352681 ,  0.00296178,</span>
+<span class="token comment">#         0.0148525 , -0.01441542, -0.01116187, -0.01071953,  0.040983  ,</span>
+<span class="token comment">#         0.02459097,  0.03056414, -0.04393554, -0.00844286,  0.00874809,</span>
+<span class="token comment">#         0.01403275,  0.04505434, -0.04122646, -0.00493395,  0.01095944,</span>
+<span class="token comment">#        -0.03004657,  0.02214528, -0.02823061, -0.01829363,  0.00805568,</span>
+<span class="token comment">#         0.00981044,  0.00553564, -0.02893294, -0.04027383, -0.01187878,</span>
+<span class="token comment">#        -0.01643758, -0.04089917, -0.0177583 , -0.00818657,  0.03467036,</span>
+<span class="token comment">#         0.00178019,  0.0038445 , -0.02472655,  0.02292592,  0.03782992,</span>
+<span class="token comment">#        -0.00211736,  0.03521632,  0.01590879,  0.01909075, -0.00529789,</span>
+<span class="token comment">#         0.03217762, -0.00871228, -0.03338279,  0.00646237, -0.03346044,</span>
+<span class="token comment">#         0.04871375,  0.03352395, -0.04951804,  0.02168662,  0.00934714,</span>
+<span class="token comment">#         0.02047885, -0.00092132,  0.00374854,  0.00496209, -0.04535836,</span>
+<span class="token comment">#         0.00301783, -0.0427185 ,  0.02428141, -0.00596142, -0.04625877,</span>
+<span class="token comment">#        -0.00769533,  0.04047073,  0.01910094], dtype=float32)></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="cf-model-종류" style="position:relative;">cf. model 종류<a href="#cf-model-%EC%A2%85%EB%A5%98" aria-label="cf model 종류 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>이제 우리는 학습할 수 있는 데이터를 준비했습니다.</p>
+<ol>
+<li>Model 0 : Naïve Bayes</li>
+<li>Model 1 : Feed-forward neural network (dense model)</li>
+<li>Model 2 : LSTM</li>
+<li>Model 3 : GRU</li>
+<li>Model 4 : Bidirectional-LSTM</li>
+<li>Model 5 : 1D CNN</li>
+<li>Model 6 : Tensorflow Hub pretrained feature extractor</li>
+<li>model 7 : 전이학습</li>
+</ol>
+<h5 id="model-0" style="position:relative;">model 0<a href="#model-0" aria-label="model 0 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>feature_extraction<span class="token punctuation">.</span>text <span class="token keyword">import</span> TfidfVectorizer
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>naive_bayes <span class="token keyword">import</span> MultinomialNB
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>pipeline <span class="token keyword">import</span> Pipeline
+
+model_0 <span class="token operator">=</span> Pipeline<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">(</span><span class="token string">"tfidf"</span><span class="token punctuation">,</span> TfidfVectorizer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment"># tfidf 를 사용해서 단어를 숫자로 변경</span>
+    <span class="token punctuation">(</span><span class="token string">"clf"</span><span class="token punctuation">,</span> MultinomialNB<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 텍스트를 모델링</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+model_0<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>train_sentences<span class="token punctuation">,</span> train_labels<span class="token punctuation">)</span>
+<span class="token comment"># model_0.fit(train_sentences, train_labels)</span>
+
+baseline_score <span class="token operator">=</span> model_0<span class="token punctuation">.</span>score<span class="token punctuation">(</span>val_sentences<span class="token punctuation">,</span> val_labels<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Model 0의 accuracy는 </span><span class="token interpolation"><span class="token punctuation">{</span>baseline_score <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">:</span><span class="token format-spec">.2f</span><span class="token punctuation">}</span></span><span class="token string">%"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># Model 0의 accuracy는 79.27%</span>
+
+baseline_preds <span class="token operator">=</span> model_0<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>val_sentences<span class="token punctuation">)</span>
+baseline_preds<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">]</span>
+<span class="token comment"># array([1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],</span>
+<span class="token comment">#       dtype=int64)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score<span class="token punctuation">,</span> precision_recall_fscore_support
+
+<span class="token keyword">def</span> <span class="token function">calculate_results</span><span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    model_accuracy <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+    model_precision<span class="token punctuation">,</span> model_recall<span class="token punctuation">,</span> model_f1<span class="token punctuation">,</span> _ <span class="token operator">=</span> precision_recall_fscore_support<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token string">"weighted"</span><span class="token punctuation">)</span>
+    model_results <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"accuracy"</span> <span class="token punctuation">:</span> model_accuracy<span class="token punctuation">,</span>
+        <span class="token string">"precision"</span> <span class="token punctuation">:</span> model_precision<span class="token punctuation">,</span>
+        <span class="token string">"recall"</span> <span class="token punctuation">:</span> model_recall<span class="token punctuation">,</span>
+        <span class="token string">"f1"</span> <span class="token punctuation">:</span> model_f1
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> model_results
+
+baseline_results <span class="token operator">=</span> calculate_results<span class="token punctuation">(</span>y_true <span class="token operator">=</span> val_labels<span class="token punctuation">,</span> y_pred <span class="token operator">=</span> baseline_preds<span class="token punctuation">)</span>
+baseline_results
+
+<span class="token comment"># {'accuracy': 79.26509186351706,</span>
+<span class="token comment">#  'precision': 0.8111390004213173,</span>
+<span class="token comment">#  'recall': 0.7926509186351706,</span>
+<span class="token comment">#  'f1': 0.7862189758049549}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="model-1--simiple-dense-model" style="position:relative;">Model 1 : simiple Dense Model<a href="#model-1--simiple-dense-model" aria-label="model 1  simiple dense model permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> helper_functions <span class="token keyword">import</span> create_tensorboard_callback
+
+SAVE_DIR <span class="token operator">=</span> <span class="token string">"model_logs"</span>
+
+<span class="token comment"># Functional API로 모델을 생성! 이전에는 Sequential 방법을 사용</span>
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras <span class="token keyword">import</span> layers
+inputs <span class="token operator">=</span> layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token comment"># 입력이 1차원 문자열</span>
+x <span class="token operator">=</span> text_vectorizer<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>
+x <span class="token operator">=</span> embedding<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+x <span class="token operator">=</span> layers<span class="token punctuation">.</span>GlobalAveragePooling1D<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+outputs <span class="token operator">=</span> layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">"sigmoid"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+model_1 <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>Model<span class="token punctuation">(</span>inputs<span class="token punctuation">,</span> outputs<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"model_1_dense"</span><span class="token punctuation">)</span>
+
+model_1<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>
+    loss <span class="token operator">=</span> <span class="token string">"binary_crossentropy"</span><span class="token punctuation">,</span>
+    optimizer <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers<span class="token punctuation">.</span>Adam<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    metrics <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"accuracy"</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+
+model_1<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Model: "model_1_dense"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_7 (InputLayer)         [(None, 1)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># text_vectorization_2 (TextVe (None, 15)                0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># embedding (Embedding)        (None, 15, 128)           1280000   </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># global_average_pooling1d_5 ( (None, 128)               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_2 (Dense)              (None, 1)                 129       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,280,129</span>
+<span class="token comment"># Trainable params: 1,280,129</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+model_1_history <span class="token operator">=</span> model_1<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>
+    train_sentences<span class="token punctuation">,</span>
+    train_labels<span class="token punctuation">,</span>
+    epochs <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    validation_data <span class="token operator">=</span> <span class="token punctuation">(</span>val_sentences<span class="token punctuation">,</span> val_labels<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    callbacks <span class="token operator">=</span> <span class="token punctuation">[</span>create_tensorboard_callback<span class="token punctuation">(</span>
+        dir_name <span class="token operator">=</span> SAVE_DIR<span class="token punctuation">,</span>
+        experiment_name <span class="token operator">=</span> <span class="token string">"simple_dense_model"</span>
+    <span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># Saving TensorBoard log files to: model_logs/simple_dense_model/20210911-160446</span>
+<span class="token comment"># Epoch 1/5</span>
+<span class="token comment"># 215/215 [==============================] - 5s 24ms/step - loss: 0.2016 - accuracy: 0.9276 - val_loss: 0.5046 - val_accuracy: 0.7874</span>
+<span class="token comment"># Epoch 2/5</span>
+<span class="token comment"># 215/215 [==============================] - 5s 22ms/step - loss: 0.1727 - accuracy: 0.9407 - val_loss: 0.5274 - val_accuracy: 0.7848</span>
+<span class="token comment"># Epoch 3/5</span>
+<span class="token comment"># 215/215 [==============================] - 5s 24ms/step - loss: 0.1498 - accuracy: 0.9486 - val_loss: 0.5554 - val_accuracy: 0.7795</span>
+<span class="token comment"># Epoch 4/5</span>
+<span class="token comment"># 215/215 [==============================] - 5s 25ms/step - loss: 0.1314 - accuracy: 0.9558 - val_loss: 0.5861 - val_accuracy: 0.7756</span>
+<span class="token comment"># Epoch 5/5</span>
+<span class="token comment"># 215/215 [==============================] - 5s 24ms/step - loss: 0.1159 - accuracy: 0.9599 - val_loss: 0.6204 - val_accuracy: 0.7717</span>
+
+<span class="token keyword">from</span> helper_functions <span class="token keyword">import</span> plot_loss_curves
+
+plot_loss_curves<span class="token punctuation">(</span>model_1_history<span class="token punctuation">)</span>
+</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">model_1_pred_probs <span class="token operator">=</span> model_1<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>val_sentences<span class="token punctuation">)</span>
+model_1_pred_probs<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">(</span>model_1_pred_probs<span class="token punctuation">)</span><span class="token punctuation">,</span> model_1_pred_probs<span class="token punctuation">.</span>shape
+
+<span class="token comment"># (array([[0.4043827 ],</span>
+<span class="token comment">#         [0.7951132 ],</span>
+<span class="token comment">#         [0.9976214 ],</span>
+<span class="token comment">#         [0.11395535],</span>
+<span class="token comment">#         [0.03749672],</span>
+<span class="token comment">#         [0.9505458 ],</span>
+<span class="token comment">#         [0.87235737],</span>
+<span class="token comment">#         [0.9968441 ],</span>
+<span class="token comment">#         [0.9879987 ],</span>
+<span class="token comment">#         [0.37055197]], dtype=float32),</span>
+<span class="token comment">#  numpy.ndarray,</span>
+<span class="token comment">#  (762, 1))</span>
+
+model_1_preds <span class="token operator">=</span> tf<span class="token punctuation">.</span>squeeze<span class="token punctuation">(</span>tf<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span>model_1_pred_probs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+model_1_preds<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">]</span>
+
+<span class="token comment"># &lt;tf.Tensor: shape=(20,), dtype=float32, numpy=</span>
+<span class="token comment"># array([0., 1., 1., 0., 0., 1., 1., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0.,</span>
+<span class="token comment">#        0., 0., 1.], dtype=float32)></span>
+
+model_1_results <span class="token operator">=</span> calculate_results<span class="token punctuation">(</span>y_true <span class="token operator">=</span> val_labels<span class="token punctuation">,</span> y_pred <span class="token operator">=</span> model_1_preds<span class="token punctuation">)</span>
+model_1_results
+
+<span class="token comment"># {'accuracy': 77.55905511811024,</span>
+<span class="token comment">#  'precision': 0.7786932114612464,</span>
+<span class="token comment">#  'recall': 0.7755905511811023,</span>
+<span class="token comment">#  'f1': 0.7729519699688302}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>model_1_results<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">></span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>baseline_results<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># array([False, False, False, False])</span>
+
+words_in_vocab <span class="token operator">=</span> text_vectorizer<span class="token punctuation">.</span>get_vocabulary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token builtin">len</span><span class="token punctuation">(</span>words_in_vocab<span class="token punctuation">)</span><span class="token punctuation">,</span> words_in_vocab<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token comment"># (10000, ['', '[UNK]', 'the', 'a', 'in', 'to', 'of', 'and', 'i', 'is'])</span>
+
+model_1<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Model: "model_1_dense"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_8 (InputLayer)         [(None, 1)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># text_vectorization_2 (TextVe (None, 15)                0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># embedding (Embedding)        (None, 15, 128)           1280000   </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># global_average_pooling1d_6 ( (None, 128)               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_3 (Dense)              (None, 1)                 129       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,280,129</span>
+<span class="token comment"># Trainable params: 1,280,129</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-언어-15일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-55ff3df016f1bf520dc3.js"],"app":["/app-f81057f30f7387c76463.js"],"component---src-pages-about-js":["/component---src-pages-about-js-01b4957cf3a65784e9dc.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-47c9a9e86f5834f6d116.js"],"component---src-pages-index-js":["/component---src-pages-index-js-dbf9480c3ca0918d5a04.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-f04405e2ce36edc47b27.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-55ff3df016f1bf520dc3.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-f81057f30f7387c76463.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-9d111699065b1154a31b.js" async=""></script></body></html>
