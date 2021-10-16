@@ -1,0 +1,608 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.13.0"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-9d111699065b1154a31b.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-0e6676e41df17ef172ed.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-시각-심화-3일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li>
+<p><a href="#3%EC%9D%BC%EC%B0%A8">3일차</a></p>
+<ul>
+<li>
+<p><a href="#%EC%8B%A0%EA%B2%BD%EB%A7%9D">신경망</a></p>
+</li>
+<li>
+<p><a href="#tf-20">TF 2.0</a></p>
+<ul>
+<li><a href="#%EA%B8%B0%EB%B3%B8-%EC%98%88%EC%A0%9C---sequential-functional">기본 예제 - Sequential, Functional</a></li>
+<li><a href="#partial-model">partial model</a></li>
+<li><a href="#concatenate--model-%EC%97%B0%EA%B2%B0">concatenate : model 연결</a></li>
+<li><a href="#%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80-%EC%98%88%EC%A0%9C">선형회귀 예제</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 심화 시각반 3일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>가장 빨리 실력이 느셨던 분들은 처음부터 끝까지 본인이 써보는 연습 해보고 나중에 빈 jupyter notebook에 써보는 사람이라고 했다.<br>
+그래서 직접 타이핑 해보고 있다. 작년에 기초(중급) 과정과 다른 점이라면, 파이썬 기본적인 내용은 생략되었고, 문제에 대해서 고민할 시간이 조금 촉박해진 점 정도이다.</p>
+<hr>
+<h3 id="3일차" style="position:relative;">3일차<a href="#3%EC%9D%BC%EC%B0%A8" aria-label="3일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="신경망" style="position:relative;">신경망<a href="#%EC%8B%A0%EA%B2%BD%EB%A7%9D" aria-label="신경망 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>시스템은 input, output 및 알고리즘에 대한 정의가 있어야 한다.<br>
+머신러닝, 딥러닝 시스템도 마찬가지다.</p>
+<p>X * W + b<br>
+(X에 W로 평균적인 변화를 줘서 b로 조정)</p>
+<ul>
+<li>딥러닝의 궁극적인 목표 : 정답 T 와 계산값(output) Y의 차이인 loss 손실값를 최소화되는 W, b를 찾는 것</li>
+</ul>
+<p>cf. a loss/a w = <strong>현재</strong> w 값이 조금 변할 때 loss는 얼마나 변하는 가<br>
+=> 미분은 현재 값이 있어야 의미가 있어서 w, b를 랜덤으로 초기화</p>
+<ul>
+<li>손실 함수</li>
+</ul>
+<ul>
+<li>모든 손실함수에서 나타나는 공통점 2가지</li>
+</ul>
+<ol>
+<li>입력 값 개수만큼 합치고(시그마) 나누어 평균을 내고 있습니다.</li>
+<li>Y - T</li>
+</ol>
+<ul>
+<li>수학적 insight</li>
+</ul>
+<p>정답과 계산값 차이의 평균</p>
+<p>은닉층이 있으면 딥러닝 아키텍처이다.</p>
+<p>feed forward<br>
+입력값 data를 통해 출력값을 만들어내는 과정</p>
+<p>입력층 node는 정답을 만들어내는 값 갯수만큼, 출력층 node는 정답의 갯수만큼 필요하다.</p>
+<ul>
+<li>활성화 함수</li>
+</ul>
+<p>변곡점을 갖고 있는 함수로, 입력 데이터를 특정 범위 이내로 바꾸는 역할을 한다.<br>
+그래서 활성화 함수가 되려면 변곡점이 필요하다.</p>
+<p>sigmoid는 가장 basic하나 성능이 낮고,
+relu는 image에 잘 쓰이고,
+tanh는 주로 LSTM, RNN에 쓰인다. 다만 이들은 변곡점이 하나라 binary 분류만 가능하다.<br>
+=> 2개 이상의 데이터를 분류하기 위해 one-hot cneoding을 활용한다.</p>
+<ul>
+<li>one-hot encoding</li>
+</ul>
+<p>2개 이상의 정답이 있는 경우, 그 정답을 표현하는 방식</p>
+<ul>
+<li>딥러닝 순서</li>
+</ul>
+<ol>
+<li>data definition => numpy</li>
+<li>init w, b => 모델 구축 과정</li>
+<li>feed forward, loss function => 모델 compile 과정</li>
+<li>learning => model.fit</li>
+</ol>
+<hr>
+<h4 id="tf-20" style="position:relative;">TF 2.0<a href="#tf-20" aria-label="tf 20 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>사용 친화적이나 성능이 낮아졌다.<br>
+TF가 forks가 많다.</p>
+<ul>
+<li>keras vs tf vs pytorch</li>
+</ul>
+<p>개발자 관점에서 largest dataset 때문에 tf가 좋고,<br>
+실무 관점에서 TDD 방법으론 rapid prototyping 때문에 keras가 좋다.<br>
+=> 그래서 이 수업에서는 tf로 배운다.</p>
+<ul>
+<li>keras in tf 2.0</li>
+</ul>
+<p>keras의 창시자 프랑수와 슐레는 tf.keras를 권장한다.<br>
+keras의 모델은 신경망 자체이고, 모든 모델의 기본 단위는 layer로 나타낸다.</p>
+<ul>
+<li>TF에서 model 생성 순서</li>
+</ul>
+<p>: model 생성 => layer 추가</p>
+<p>cf. ANN에서 신경망 layer는 1차원 벡터이다.</p>
+<ul>
+<li>loss</li>
+</ul>
+<p>mse는 정답이 실수로 나온다.</p>
+<hr>
+<h5 id="기본-예제---sequential-functional" style="position:relative;">기본 예제 - Sequential, Functional<a href="#%EA%B8%B0%EB%B3%B8-%EC%98%88%EC%A0%9C---sequential-functional" aria-label="기본 예제   sequential functional permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<ul>
+<li>Sequential</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential<span class="token punctuation">,</span> Model
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense<span class="token punctuation">,</span> Input
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+t_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 모델</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 입력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'linear'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+<span class="token comment"># model.add(Dense(1, input_shape=(1,), activation='linear'))</span>
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> loss<span class="token operator">=</span><span class="token string">'mse'</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten (Flatten)            (None, 1)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense (Dense)                (None, 1)                 2         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 2</span>
+<span class="token comment"># Trainable params: 2</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+
+test_input_data <span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3.1</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">15.0</span><span class="token punctuation">,</span> <span class="token number">20.1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+label_data <span class="token operator">=</span> test_input_data <span class="token operator">+</span> <span class="token number">2.0</span>
+
+result <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>test_input_data<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>label_data<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># [[-1.1856544]</span>
+<span class="token comment">#  [ 4.9851327]</span>
+<span class="token comment">#  [ 5.490935 ]</span>
+<span class="token comment">#  [17.124386 ]</span>
+<span class="token comment">#  [22.28357  ]]</span>
+<span class="token comment"># [[-1.1]</span>
+<span class="token comment">#  [ 5. ]</span>
+<span class="token comment">#  [ 5.5]</span>
+<span class="token comment">#  [17. ]</span>
+<span class="token comment">#  [22.1]]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 데이터의 다양성 부족으로 두 자릿 수 input은 예측에 실패했다.<br>
+다양한 데이터로 학습해야 한다.</p>
+<ul>
+<li>Functional</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential<span class="token punctuation">,</span> Model
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense<span class="token punctuation">,</span> Input
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+t_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+input_ <span class="token operator">=</span> Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># x = Flatten()(Input_)</span>
+output_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'linear'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>input_<span class="token punctuation">)</span>
+model <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span>input_<span class="token punctuation">,</span> outputs<span class="token operator">=</span>output_<span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> loss<span class="token operator">=</span><span class="token string">'mse'</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "model"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_1 (InputLayer)         [(None, 1)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense (Dense)                (None, 1)                 2         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 2</span>
+<span class="token comment"># Trainable params: 2</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+
+test_input_data <span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3.1</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">3.5</span><span class="token punctuation">,</span> <span class="token number">15.0</span><span class="token punctuation">,</span> <span class="token number">20.1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+label_data <span class="token operator">=</span> test_input_data <span class="token operator">+</span> <span class="token number">2.0</span>
+
+result <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>test_input_data<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>label_data<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># [[-1.1754843]</span>
+<span class="token comment">#  [ 4.986898 ]</span>
+<span class="token comment">#  [ 5.492011 ]</span>
+<span class="token comment">#  [17.109617 ]</span>
+<span class="token comment">#  [22.261774 ]]</span>
+<span class="token comment"># [[-1.1]</span>
+<span class="token comment">#  [ 5. ]</span>
+<span class="token comment">#  [ 5.5]</span>
+<span class="token comment">#  [17. ]</span>
+<span class="token comment">#  [22.1]]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 다중 입력 방식을 위해, 혹은 큰 아키텍처 설계에는 functional 방식을 쓰는 게 좋다.</p>
+<hr>
+<h5 id="partial-model" style="position:relative;">partial model<a href="#partial-model" aria-label="partial model permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<ul>
+<li>Sequential-2</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential<span class="token punctuation">,</span> Model
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense<span class="token punctuation">,</span> Input
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 모델</span>
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 입력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_3"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_13 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_14 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_15 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_16 (Dense)             (None, 10)                330       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,058</span>
+<span class="token comment"># Trainable params: 1,058</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+<span class="token keyword">for</span> idx <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>output<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> idx <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  partial_model <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs <span class="token operator">=</span> model<span class="token punctuation">.</span>inputs<span class="token punctuation">,</span> outputs<span class="token operator">=</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>output<span class="token punctuation">)</span>
+  partial_model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>  
+
+<span class="token comment"># 0 flatten_3 (None, 4)</span>
+<span class="token comment"># 1 dense_13 (None, 8)</span>
+<span class="token comment"># 2 dense_14 (None, 16)</span>
+<span class="token comment"># 3 dense_15 (None, 32)</span>
+<span class="token comment"># 4 dense_16 (None, 10)</span>
+<span class="token comment"># Model: "model_16"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3_input (InputLayer) [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 0</span>
+<span class="token comment"># Trainable params: 0</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_17"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3_input (InputLayer) [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_13 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 40</span>
+<span class="token comment"># Trainable params: 40</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_18"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3_input (InputLayer) [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_13 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_14 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 184</span>
+<span class="token comment"># Trainable params: 184</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_19"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3_input (InputLayer) [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_13 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_14 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_15 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 728</span>
+<span class="token comment"># Trainable params: 728</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_20"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3_input (InputLayer) [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 4)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_13 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_14 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_15 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_16 (Dense)             (None, 10)                330       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,058</span>
+<span class="token comment"># Trainable params: 1,058</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________  </span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>Functional-2</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">input_ <span class="token operator">=</span> Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+layer_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>input_<span class="token punctuation">)</span>
+layer2_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>layer_<span class="token punctuation">)</span>
+layer3_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>layer2_<span class="token punctuation">)</span>
+output_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>layer3_<span class="token punctuation">)</span>
+model <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span>input_<span class="token punctuation">,</span> outputs<span class="token operator">=</span>output_<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "model_21"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_17 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_18 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_19 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_20 (Dense)             (None, 10)                330       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,058</span>
+<span class="token comment"># Trainable params: 1,058</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+<span class="token keyword">for</span> idx <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>output<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> idx <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  partial_model <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs <span class="token operator">=</span> model<span class="token punctuation">.</span>inputs<span class="token punctuation">,</span> outputs<span class="token operator">=</span>model<span class="token punctuation">.</span>layers<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>output<span class="token punctuation">)</span>
+  partial_model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 0 input_2 (None, 4)</span>
+<span class="token comment"># 1 dense_17 (None, 8)</span>
+<span class="token comment"># 2 dense_18 (None, 16)</span>
+<span class="token comment"># 3 dense_19 (None, 32)</span>
+<span class="token comment"># 4 dense_20 (None, 10)</span>
+<span class="token comment"># Model: "model_22"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 0</span>
+<span class="token comment"># Trainable params: 0</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_23"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_17 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 40</span>
+<span class="token comment"># Trainable params: 40</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_24"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_17 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_18 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 184</span>
+<span class="token comment"># Trainable params: 184</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_25"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_17 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_18 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_19 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 728</span>
+<span class="token comment"># Trainable params: 728</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Model: "model_26"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># input_2 (InputLayer)         [(None, 4)]               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_17 (Dense)             (None, 8)                 40        </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_18 (Dense)             (None, 16)                144       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_19 (Dense)             (None, 32)                544       </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_20 (Dense)             (None, 10)                330       </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 1,058</span>
+<span class="token comment"># Trainable params: 1,058</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h5 id="concatenate--model-연결" style="position:relative;">concatenate : model 연결<a href="#concatenate--model-%EC%97%B0%EA%B2%B0" aria-label="concatenate  model 연결 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<ul>
+<li>Functional-3</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential<span class="token punctuation">,</span> Model
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense<span class="token punctuation">,</span> Input<span class="token punctuation">,</span>concatenate
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+input_ <span class="token operator">=</span> Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+layer_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>input_<span class="token punctuation">)</span>
+layer2_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>layer_<span class="token punctuation">)</span>
+output_1 <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span>input_<span class="token punctuation">,</span> outputs<span class="token operator">=</span>layer2_<span class="token punctuation">)</span>
+
+input2_ <span class="token operator">=</span> Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+layer3_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>input2_<span class="token punctuation">)</span>
+output_2 <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span>input2_<span class="token punctuation">,</span> outputs<span class="token operator">=</span>layer3_<span class="token punctuation">)</span>
+
+layer4_ <span class="token operator">=</span> concatenate<span class="token punctuation">(</span><span class="token punctuation">[</span>output_1<span class="token punctuation">.</span>output<span class="token punctuation">,</span>output_2<span class="token punctuation">.</span>output<span class="token punctuation">]</span><span class="token punctuation">)</span>
+output_ <span class="token operator">=</span> Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>layer4_<span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span><span class="token punctuation">[</span>input_<span class="token punctuation">,</span>input2_<span class="token punctuation">]</span><span class="token punctuation">,</span> outputs<span class="token operator">=</span>output_<span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Model: "model_14"</span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># Layer (type)                    Output Shape         Param #     Connected to                     </span>
+<span class="token comment"># ==================================================================================================</span>
+<span class="token comment"># input_16 (InputLayer)           [(None, 4)]          0                                            </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># dense_29 (Dense)                (None, 8)            40          input_16[0][0]                   </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># input_17 (InputLayer)           [(None, 8)]          0                                            </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># dense_30 (Dense)                (None, 16)           144         dense_29[0][0]                   </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># dense_31 (Dense)                (None, 8)            72          input_17[0][0]                   </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># concatenate_5 (Concatenate)     (None, 24)           0           dense_30[0][0]                   </span>
+<span class="token comment">#                                                                  dense_31[0][0]                   </span>
+<span class="token comment"># __________________________________________________________________________________________________</span>
+<span class="token comment"># dense_32 (Dense)                (None, 10)           250         concatenate_5[0][0]              </span>
+<span class="token comment"># ==================================================================================================</span>
+<span class="token comment"># Total params: 506</span>
+<span class="token comment"># Trainable params: 506</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># __________________________________________________________________________________________________</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>cf. 이 강의에서는 Sequential을 위주로 실습한다.</p>
+<p>index를 활용해 partial model을 구축할 수 있다.</p>
+<p>선형 회귀에선 정확도라는 표현은 쓰지 않는다. 근사치의 범위를 의사결정을 통해 정해야 한다.<br>
+분류에서는 정답에 대한 정확도가 중요하다.</p>
+<h5 id="선형회귀-예제" style="position:relative;">선형회귀 예제<a href="#%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80-%EC%98%88%EC%A0%9C" aria-label="선형회귀 예제 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential<span class="token punctuation">,</span> Model
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense<span class="token punctuation">,</span> Input
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+t_data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 모델</span>
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 입력층</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'linear'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 출력층</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> loss<span class="token operator">=</span><span class="token string">'mse'</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_1"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_1 (Flatten)          (None, 3)                 0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_1 (Dense)              (None, 1)                 4         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 4</span>
+<span class="token comment"># Trainable params: 4</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+
+test_input_data <span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+result <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>test_input_data<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># [[-5.0004225]</span>
+<span class="token comment">#  [-2.9998817]</span>
+<span class="token comment">#  [-3.9989595]</span>
+<span class="token comment">#  [ 8.998792 ]</span>
+<span class="token comment">#  [ 7.000638 ]]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>weights<span class="token punctuation">)</span>
+<span class="token comment"># [&lt;tf.Variable 'dense_1/kernel:0' shape=(3, 1) dtype=float32, numpy=</span>
+<span class="token comment"># array([[ 1.9998769],</span>
+<span class="token comment">#        [-3.0001278],</span>
+<span class="token comment">#        [ 1.9999152]], dtype=float32)>, &lt;tf.Variable 'dense_1/bias:0' shape=(1,) dtype=float32, numpy=array([0.00083253], dtype=float32)>]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-시각-심화-3일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-55ff3df016f1bf520dc3.js"],"app":["/app-0e6676e41df17ef172ed.js"],"component---src-pages-about-js":["/component---src-pages-about-js-01b4957cf3a65784e9dc.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-47c9a9e86f5834f6d116.js"],"component---src-pages-index-js":["/component---src-pages-index-js-dbf9480c3ca0918d5a04.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-f04405e2ce36edc47b27.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-55ff3df016f1bf520dc3.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0e6676e41df17ef172ed.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-9d111699065b1154a31b.js" async=""></script></body></html>
