@@ -122,6 +122,15 @@ tanh는 주로 LSTM, RNN에 쓰인다. 다만 이들은 변곡점이 하나라 b
 </ol>
 <hr>
 <h4 id="tf-20" style="position:relative;">TF 2.0<a href="#tf-20" aria-label="tf 20 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ul>
+<li>딥러닝 순서 in TF</li>
+</ul>
+<ol>
+<li>data definition => numpy (tensor로 만드는 작업)</li>
+<li>model create : init w, b => 모델 구축 과정 : sequential/functional</li>
+<li>model compile : loss, learning(optimizer, w, b) ... cf. SGD, ADAM</li>
+<li>learning (model.fit) : for문 2개로 볼 수 있다</li>
+</ol>
 <p>사용 친화적이나 성능이 낮아졌다.<br>
 TF가 forks가 많다.</p>
 <ul>
@@ -138,13 +147,18 @@ keras의 모델은 신경망 자체이고, 모든 모델의 기본 단위는 lay
 <ul>
 <li>TF에서 model 생성 순서</li>
 </ul>
-<p>: model 생성 => layer 추가</p>
+<ul>
+<li>sequential : model 생성 => layer ADD</li>
+<li>functional : layer 생성 => model (input, output) 생성</li>
+</ul>
 <p>cf. ANN에서 신경망 layer는 1차원 벡터이다.</p>
 <ul>
 <li>loss</li>
 </ul>
 <p>mse는 정답이 실수로 나온다.</p>
 <hr>
+<p>TF 기본 아키텍처는 모델이다. Sequential, Functional,<br>
+그리고 Subclassing이 있는데 Subclassing은 안 쓴다.</p>
 <h5 id="기본-예제---sequential-functional" style="position:relative;">기본 예제 - Sequential, Functional<a href="#%EA%B8%B0%EB%B3%B8-%EC%98%88%EC%A0%9C---sequential-functional" aria-label="기본 예제   sequential functional permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
 <ul>
 <li>Sequential</li>

@@ -1,0 +1,661 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;color:hsla(0,0%,0%,1);font-family:'Playfair Display',serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.08rem;font-size:1.16543rem;line-height:1.44rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.27rem solid hsla(0,0%,0%,0.2);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.08rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.08rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.08rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.08rem / 2);margin-top:calc(1.08rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.08rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#9f392b;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.1eaa876ab1d442be3ba9.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}</style><meta name="generator" content="Gatsby 3.13.0"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link href="//fonts.googleapis.com/css?family=Playfair+Display:700|Fira+Sans:400,400i,700,700i" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-9d111699065b1154a31b.js"/><link as="script" rel="preload" href="/framework-24ad6bf468f69b85cc4b.js"/><link as="script" rel="preload" href="/app-0e6676e41df17ef172ed.js"/><link as="script" rel="preload" href="/commons-71b7b1d300b3ebc29573.js"/><link as="script" rel="preload" href="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"/><link as="fetch" rel="preload" href="/page-data/ai-이노베이션-스퀘어-시각-심화-4일차/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1x3051k">.css-1x3051k{margin:0 auto;max-width:720px;padding:2.88rem;padding-top:2.16rem;}</style><main class="css-1x3051k"><a href="/"><style data-emotion-css="i0b9uu">.css-i0b9uu{margin-bottom:2.88rem;display:inline-block;font-style:normal;}</style><h3 class="css-i0b9uu">Blog</h3></a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><a class="css-146q31f" href="/about/">About</a><p class="css-146q31f"> / </p><a class="css-146q31f" href="/contact/">Contact</a><div class="sc-bdnxRM jIvSMM"><div class="sc-bdnxRM hzYCxF"><nav class="sc-bdnxRM dSYgIj table-of-contents" color="grey01" width="calc((100vw - 720px) / 2 - 50px)"><h3 class="sc-bdnxRM jiIaSW">TABLE OF CONTENTS</h3><div class="sc-bdnxRM jCvOkx"><ul>
+<li>
+<p><a href="#4%EC%9D%BC%EC%B0%A8">4일차</a></p>
+<ul>
+<li>
+<p><a href="#tf-%EC%9D%B4%EC%96%B4%EC%84%9C">TF 이어서</a></p>
+</li>
+<li>
+<p><a href="#logistic-regression-%EC%98%88%EC%A0%9C-diabetes">Logistic Regression 예제 (diabetes)</a></p>
+</li>
+<li>
+<p><a href="#%EB%8B%A4%EC%A4%91%EB%B6%84%EB%A5%98-%EC%98%88%EC%A0%9C">다중분류 예제</a></p>
+</li>
+<li>
+<p><a href="#mnist">MNIST</a></p>
+<ul>
+<li><a href="#confusion-matrix">confusion matrix</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#fashion-mnist">fashion MNIST</a></p>
+</li>
+<li>
+<p><a href="#overfitting">overfitting</a></p>
+<ul>
+<li><a href="#dropout">dropout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav></div><header class="sc-bdnxRM fzUdiI"><div font-size="24px" class="sc-bdnxRM eFFssn">AI 이노베이션 스퀘어 3기 심화 시각반 4일차 후기</div><div color="#bbb" class="sc-bdnxRM jBinAJ"></div></header><style data-emotion-css="8xh4e7">.css-8xh4e7{line-height:30px;position:static;}</style><div class="sc-bdnxRM fzUdiI css-8xh4e7"><p>이따금 말에 찔릴 때가 있다. 인격은 지갑에서 나오고, 카리스마, 리더십은 실력에서 나온다라. ㅎㅎ...</p>
+<hr>
+<h3 id="4일차" style="position:relative;">4일차<a href="#4%EC%9D%BC%EC%B0%A8" aria-label="4일차 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h4 id="tf-이어서" style="position:relative;">TF 이어서<a href="#tf-%EC%9D%B4%EC%96%B4%EC%84%9C" aria-label="tf 이어서 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>for epochs,
+for step ...<br>
+training<br>
+validation<br>
+test
+=> validation은 epochs 당 필요</p>
+<ul>
+<li>data</li>
+</ul>
+<ul>
+<li>training data : w, b update (during learning)</li>
+<li>validation data : 검증 (during learning)</li>
+<li>test data : test (after learning)</li>
+</ul>
+<p>cf. [tensorflow 2.x 강의 03] Keras (케라스)</p>
+<ul>
+<li>linear Regression</li>
+</ul>
+<p>활성화함수 linear<br>
+loss mse
+metrics 불필요</p>
+<ul>
+<li>logistic Regression</li>
+</ul>
+<p>활성화함수 sigmoid<br>
+loss binary_crossentropy
+metrics accuracy</p>
+<h4 id="logistic-regression-예제-diabetes" style="position:relative;">Logistic Regression 예제 (diabetes)<a href="#logistic-regression-%EC%98%88%EC%A0%9C-diabetes" aria-label="logistic regression 예제 diabetes permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD<span class="token punctuation">,</span> Adam
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+  loaded_data <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span><span class="token string">'./diabetes.csv'</span><span class="token punctuation">,</span>delimiter<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">)</span>
+
+  x_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+  t_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"x_data shape = "</span><span class="token punctuation">,</span> x_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"t_data shape = "</span><span class="token punctuation">,</span> t_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>   
+
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> err<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># x_data shape =  (759, 8)</span>
+<span class="token comment"># t_data shape =  (759, 1)</span>
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>t_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span>learning_rate<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              loss<span class="token operator">=</span><span class="token string">'binary_crossentropy'</span><span class="token punctuation">,</span> metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_2"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># dense (Dense)                (None, 1)                 9         </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 9</span>
+<span class="token comment"># Trainable params: 9</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># Epoch 500/500</span>
+<span class="token comment"># 19/19 - 0s - loss: 0.4834 - accuracy: 0.7743 - val_loss: 0.4932 - val_accuracy: 0.7237</span>
+
+model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">)</span>
+<span class="token comment"># 24/24 [==============================] - 0s 1ms/step - loss: 0.4853 - accuracy: 0.7642</span>
+<span class="token comment"># [0.485337495803833, 0.7641633749008179]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token comment"># graph</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># graph</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'accuracy'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation accuracy'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> step 값이 19인 이유<br>
+(759*0.8)/32 = 18.975</p>
+<p>=> val 의 loss, accuracy graph 상으로는 오버피팅 문제가 보인다.</p>
+<hr>
+<p>정답은 없지만, 동일 조건이면 parameter가 작은 게 좋다.<br>
+위 예제를 다중분류로 변형해 실습해 보자.</p>
+<h4 id="다중분류-예제" style="position:relative;">다중분류 예제<a href="#%EB%8B%A4%EC%A4%91%EB%B6%84%EB%A5%98-%EC%98%88%EC%A0%9C" aria-label="다중분류 예제 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>keras에서 to_categorical 로 one-hot encoding 할 수 있다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python">t_data_one_hot <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>to_categorical<span class="token punctuation">(</span>t_data<span class="token punctuation">,</span> num_classes<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>t_data<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> t_data_one_hot<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token comment"># (759, 1) (759, 2)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>다중분류는 softmax, 이항분류는 sigmoid를 써야 한다.</p>
+<p>다중분류 시 one-hot encoding한 경우에는 categorical_crossentropy<br>
+one-hot encoding 안 하고 정수로 하는 경우에는 sparse_crossentropy 를 쓴다.</p>
+<ul>
+<li>다중분류 시 one-hot encoding한 경우</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>utils <span class="token keyword">import</span> to_categorical
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+  loaded_data <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span><span class="token string">'./diabetes.csv'</span><span class="token punctuation">,</span>delimiter<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">)</span>
+
+  x_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+  t_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"x_data shape = "</span><span class="token punctuation">,</span> x_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"t_data shape = "</span><span class="token punctuation">,</span> t_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>   
+
+  t_data <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>t_data<span class="token punctuation">,</span> num_classes<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"t_data shape = "</span><span class="token punctuation">,</span> t_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>   
+
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> err<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># x_data shape =  (759, 8)</span>
+<span class="token comment"># t_data shape =  (759, 1)</span>
+<span class="token comment"># t_data shape =  (759, 2)</span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>
+                input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span>learning_rate<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              loss<span class="token operator">=</span><span class="token string">'categorical_crossentropy'</span><span class="token punctuation">,</span>metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>                  
+<span class="token comment"># Model: "sequential_2"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># dense_2 (Dense)              (None, 2)                 18        </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 18</span>
+<span class="token comment"># Trainable params: 18</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># Epoch 500/500</span>
+<span class="token comment"># 19/19 - 0s - loss: 0.4710 - accuracy: 0.7759 - val_loss: 0.4828 - val_accuracy: 0.7434</span>
+
+model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">)</span>
+<span class="token comment"># 24/24 [==============================] - 0s 1ms/step - loss: 0.4733 - accuracy: 0.7694</span>
+<span class="token comment"># [0.47329020500183105, 0.7694334387779236]</span>
+
+<span class="token comment"># loss</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># accuracy</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation accuracy'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>다중분류 시 one-hot encoding 안 한 경우</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD<span class="token punctuation">,</span> Adam
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+  loaded_data <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span><span class="token string">'./diabetes.csv'</span><span class="token punctuation">,</span>delimiter<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">)</span>
+
+  x_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+  t_data <span class="token operator">=</span> loaded_data<span class="token punctuation">[</span> <span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"x_data shape = "</span><span class="token punctuation">,</span> x_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"t_data shape = "</span><span class="token punctuation">,</span> t_data<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>   
+
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> err<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># x_data shape =  (759, 8)</span>
+<span class="token comment"># t_data shape =  (759, 1)  </span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment"># 2여야 함</span>
+                input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span>learning_rate<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              loss<span class="token operator">=</span><span class="token string">'sparse_categorical_crossentropy'</span><span class="token punctuation">,</span>metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_5"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># dense_4 (Dense)              (None, 2)                 18        </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 18</span>
+<span class="token comment"># Trainable params: 18</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># Epoch 500/500</span>
+<span class="token comment"># 19/19 - 0s - loss: 0.4723 - accuracy: 0.7776 - val_loss: 0.4855 - val_accuracy: 0.7368</span>
+
+model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>x_data<span class="token punctuation">,</span> t_data<span class="token punctuation">)</span>
+<span class="token comment"># 24/24 [==============================] - 0s 1ms/step - loss: 0.4748 - accuracy: 0.7694</span>
+<span class="token comment"># [0.47482922673225403, 0.7694334387779236]</span>
+
+<span class="token comment"># loss</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation loss'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># accuracy</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'train accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation accuracy'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h4 id="mnist" style="position:relative;">MNIST<a href="#mnist" aria-label="mnist permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>MNIST data는 흑백이다.</p>
+<p>참고로 open cv를 이용해 image를 read할 때 BGR로 읽는다.<br>
+cf. opencv bgr to rgb<br>
+요즘 추세는 RGB.</p>
+<p>cf. CIFAR-10</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> cifar10
+
+<span class="token punctuation">(</span>x_train2<span class="token punctuation">,</span> t_train2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x_test2<span class="token punctuation">,</span> t_test2<span class="token punctuation">)</span> <span class="token operator">=</span> cifar10<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_train2.shape = '</span><span class="token punctuation">,</span> x_train2<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_train2.shape = '</span><span class="token punctuation">,</span> t_train2<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_test2.shape = '</span><span class="token punctuation">,</span> x_test2<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_test2.shape = '</span><span class="token punctuation">,</span> t_test2<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token comment"># x_train2.shape =  (50000, 32, 32, 3) , t_train2.shape =  (50000, 1)</span>
+<span class="token comment"># x_test2.shape =  (10000, 32, 32, 3) , t_test2.shape =  (10000, 1)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>데이터를 그대로 학습하는 데 쓰면 신경망 down될 수도 있고,<br>
+0 ~ 1 사이 값으로 학습하는 게 학습이 잘 된다. 그래서 scaling (normalization)하는 작업이 필요하다.<br>
+최대값, 최소값의 차이로 값을 나눠야 한다.<br>
+=> 원래 값은 반대로 구하면 된다.</p>
+<p>일반적인 신경망에서는 Flatten하여 1차원으로 데이터를 신경망에 넣어야 한다.</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> mnist
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>utils <span class="token keyword">import</span> to_categorical
+<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> t_train<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> t_test<span class="token punctuation">)</span> <span class="token operator">=</span> mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_train.shape = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_train.shape = '</span><span class="token punctuation">,</span> t_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_test.shape = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_test.shape = '</span><span class="token punctuation">,</span> t_test<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token comment"># x_train.shape =  (60000, 28, 28) , t_train.shape =  (60000,)</span>
+<span class="token comment"># x_test.shape =  (10000, 28, 28) , t_test.shape =  (10000,)</span>
+
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token comment"># 48개의 이미지 출력</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># (6,1), (12,1), (12,6), (6,6) 등으로 다양하게 해본다</span>
+
+<span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># 48 개 이미지 출력</span>
+
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 4행 12열</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>x_train<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">)</span>    <span class="token comment"># 1행 1열 -> 1행 2열 -> ...-> 1행 12열 -> 2행 1열 -> ...</span>
+    plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span>  <span class="token comment"># plt.axis('off) 하면 x, y 축의 0~25 사라짐    </span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>t_train<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># x_train, x_test 값 범위를 0~1 사이로 정규화</span>
+
+x_train <span class="token operator">=</span> x_train <span class="token operator">/</span> <span class="token number">255.0</span>
+x_test <span class="token operator">=</span> x_test <span class="token operator">/</span> <span class="token number">255.0</span>
+
+<span class="token comment"># 정규화 결과 확인</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'train max = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">', train min = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'test max = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">', test min = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># train max =  1.0 , train min =  0.0</span>
+<span class="token comment"># test max =  1.0 , test min =  0.0</span>
+
+<span class="token comment"># 정답 데이터 one-hot encoding</span>
+
+t_train <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>t_train<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+t_test <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>t_test<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment"># one-hot encoding 확인</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'train label = '</span><span class="token punctuation">,</span> t_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">', decimal value = '</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'test label = '</span><span class="token punctuation">,</span> t_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">', decimal value = '</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># train label =  [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.] , decimal value =  5</span>
+<span class="token comment"># test label =  [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.] , decimal value =  7</span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 모델 생성</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              loss<span class="token operator">=</span><span class="token string">'categorical_crossentropy'</span><span class="token punctuation">,</span>
+              metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_1"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_1 (Flatten)          (None, 784)               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_2 (Dense)              (None, 100)               78500     </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_3 (Dense)              (None, 10)                1010      </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 79,510</span>
+<span class="token comment"># Trainable params: 79,510</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> t_train<span class="token punctuation">,</span> epochs <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span> validation_split <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+<span class="token comment"># Epoch 30/30</span>
+<span class="token comment"># 1500/1500 [==============================] - 3s 2ms/step - loss: 0.0905 - accuracy: 0.9758 - val_loss: 0.1144 - val_accuracy: 0.9678</span>
+
+model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> t_test<span class="token punctuation">)</span>
+<span class="token comment"># 313/313 [==============================] - 1s 2ms/step - loss: 0.1090 - accuracy: 0.9691</span>
+<span class="token comment"># [0.10904819518327713, 0.9690999984741211]</span>
+
+<span class="token comment"># loss</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Loss Trend'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'training loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation loss'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># accuracy</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Accuracy Trend'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'epochs'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'training accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>hist<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'validation accuracy'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'best'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h5 id="confusion-matrix" style="position:relative;">confusion matrix<a href="#confusion-matrix" aria-label="confusion matrix permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> confusion_matrix
+<span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns
+
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+predicted_value <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span>
+
+cm <span class="token operator">=</span> confusion_matrix<span class="token punctuation">(</span>np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_test<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>predicted_value<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+sns<span class="token punctuation">.</span>heatmap<span class="token punctuation">(</span>cm<span class="token punctuation">,</span> annot<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> fmt<span class="token operator">=</span><span class="token string">'d'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> confusion_matrix
+<span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns
+
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+predicted_value <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span>
+
+cm <span class="token operator">=</span> confusion_matrix<span class="token punctuation">(</span>np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_test<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>predicted_value<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>cm<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'label = %d\t(%d/%d)\taccuracy = %.3f'</span><span class="token punctuation">)</span> <span class="token operator">%</span>
+          <span class="token punctuation">(</span>i<span class="token punctuation">,</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>cm<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>cm<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+           np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>cm<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>cm<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>=> 숫자 1에 대해 98%, 숫자 5에 대해 80%의 정확도를 갖고 있다.</p>
+<p>다중분류 - 정답이 2개 이상인 경우<br>
+출력층의 노드는 정답의 갯수 n만큼 필요<br>
+dense(n, activation = 'softmax')</p>
+<p>input은 model에 넣기 전에 one hot encoding / sparse로 처리</p>
+<hr>
+<h4 id="fashion-mnist" style="position:relative;">fashion MNIST<a href="#fashion-mnist" aria-label="fashion mnist permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> fashion_mnist
+fashion_mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>=> val graph로 봐서는 overfitting이 밠생했다. 어떻게 줄일 수 있을까?</p>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Flatten<span class="token punctuation">,</span> Dense
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> fashion_mnist
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>utils <span class="token keyword">import</span> to_categorical
+
+<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> t_train<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> t_test<span class="token punctuation">)</span> <span class="token operator">=</span> fashion_mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_train.shape = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_train.shape = '</span><span class="token punctuation">,</span> t_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'x_test.shape = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">', t_test.shape = '</span><span class="token punctuation">,</span> t_test<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token comment"># x_train.shape =  (60000, 28, 28) , t_train.shape =  (60000,)</span>
+<span class="token comment"># x_test.shape =  (10000, 28, 28) , t_test.shape =  (10000,)</span>
+
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token comment"># 48개의 이미지 출력</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># (6,1), (12,1), (12,6), (6,6) 등으로 다양하게 해본다</span>
+
+<span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># 48 개 이미지 출력</span>
+
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 4행 12열</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>x_train<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">)</span>    <span class="token comment"># 1행 1열 -> 1행 2열 -> ...-> 1행 12열 -> 2행 1열 -> ...</span>
+    plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span>  <span class="token comment"># plt.axis('off) 하면 x, y 축의 0~25 사라짐    </span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>t_train<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># x_train, x_test 값 범위를 0~1 사이로 정규화</span>
+
+x_train <span class="token operator">=</span> x_train <span class="token operator">/</span> <span class="token number">255.0</span>
+x_test <span class="token operator">=</span> x_test <span class="token operator">/</span> <span class="token number">255.0</span>
+
+<span class="token comment"># 정규화 결과 확인</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'train max = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">', train min = '</span><span class="token punctuation">,</span> x_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'test max = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">', test min = '</span><span class="token punctuation">,</span> x_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># train max =  1.0 , train min =  0.0</span>
+<span class="token comment"># test max =  1.0 , test min =  0.0</span>
+
+<span class="token comment"># 정답 데이터 one-hot encoding</span>
+
+t_train <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>t_train<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+t_test <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>t_test<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment"># one-hot encoding 확인</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'train label = '</span><span class="token punctuation">,</span> t_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">', decimal value = '</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'test label = '</span><span class="token punctuation">,</span> t_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">', decimal value = '</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>t_test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># train label =  [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.] , decimal value =  9</span>
+<span class="token comment"># test label =  [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.] , decimal value =  9</span>
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 모델 생성</span>
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span>input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>optimizers <span class="token keyword">import</span> SGD
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span>SGD<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              loss<span class="token operator">=</span><span class="token string">'categorical_crossentropy'</span><span class="token punctuation">,</span>
+              metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Model: "sequential_3"</span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># Layer (type)                 Output Shape              Param #   </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># flatten_3 (Flatten)          (None, 784)               0         </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_5 (Dense)              (None, 100)               78500     </span>
+<span class="token comment"># _________________________________________________________________</span>
+<span class="token comment"># dense_6 (Dense)              (None, 10)                1010      </span>
+<span class="token comment"># =================================================================</span>
+<span class="token comment"># Total params: 79,510</span>
+<span class="token comment"># Trainable params: 79,510</span>
+<span class="token comment"># Non-trainable params: 0</span>
+<span class="token comment"># _________________________________________________________________</span>
+
+hist <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> t_train<span class="token punctuation">,</span> epochs <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span> validation_split <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+<span class="token comment"># Epoch 30/30</span>
+<span class="token comment"># 1500/1500 [==============================] - 3s 2ms/step - loss: 0.3288 - accuracy: 0.8836 - val_loss: 0.3374 - val_accuracy: 0.8809</span>
+
+model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> t_test<span class="token punctuation">)</span>
+<span class="token comment"># 313/313 [==============================] - 1s 2ms/step - loss: 0.3629 - accuracy: 0.8692</span>
+<span class="token comment"># [0.3628668189048767, 0.8691999912261963]</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<hr>
+<h4 id="overfitting" style="position:relative;">overfitting<a href="#overfitting" aria-label="overfitting permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>ML/DL의 대표적인 문제 로<br>
+training data에만 w,b가 최적화되는 문제</p>
+<ul>
+<li>오버 피팅 을 줄이는 방법</li>
+</ul>
+<p><strong>dropout</strong><br>
+cf. batch normalization - 특정 조건에서만 잘 되곤 함, 논란 있음</p>
+<p>X * W + b = Y, Y - T : loss<br>
+X,T는 고정이니<br>
+원래부터 조금씩 변하는 W, b 값을 강제로 변화를 준다 = dropout</p>
+<h5 id="dropout" style="position:relative;">dropout<a href="#dropout" aria-label="dropout permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h5>
+<p>보통 dropout은 은닉층과 출력층 사이에 넣는다.</p>
+<p>dropout은 hyper parameter의 일종이다. data, 시스템 환경 등 저마다 결과가 다를 수 있다.<br>
+데이터 도메인 지식이 요구된다.</p>
+<ul>
+<li>fashion mnist 예제에 dropout 추가</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre style="counter-reset: linenumber NaN" class="language-python line-numbers"><code class="language-python"><span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Dropout
+
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.25</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># dropout</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<ul>
+<li>0.25 droupout 추가 시- val과 train graph가 가까워진다</li>
+</ul>
+<p>Epoch 30/30<br>
+1500/1500 [==============================] - 3s 2ms/step - loss: 0.2587 - accuracy: 0.9033 - val_loss: 0.3283 - val_accuracy: 0.8788</p>
+<ul>
+<li>0.5 dropout 추가 시 - val과 train graph가 가까워진다</li>
+</ul>
+<p>Epoch 30/30
+1500/1500 [==============================] - 3s 2ms/step - loss: 0.3544 - accuracy: 0.8662 - val_loss: 0.3604 - val_accuracy: 0.8676</p>
+<ul>
+<li>0.75 dropout 추가 시 - 오히려 더 안 좋아진다</li>
+</ul>
+<p>Epoch 50/50<br>
+480/480 [==============================] - 1s 3ms/step - loss: 0.4748 - accuracy: 0.8226 - val_loss: 0.3722 - val_accuracy: 0.8662</p></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ai-이노베이션-스퀘어-시각-심화-4일차/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-55ff3df016f1bf520dc3.js"],"app":["/app-0e6676e41df17ef172ed.js"],"component---src-pages-about-js":["/component---src-pages-about-js-01b4957cf3a65784e9dc.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-47c9a9e86f5834f6d116.js"],"component---src-pages-index-js":["/component---src-pages-index-js-dbf9480c3ca0918d5a04.js"],"component---src-pages-my-files-js":["/component---src-pages-my-files-js-f04405e2ce36edc47b27.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-6eaa04bdf1ac86b2d473.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-33322b93090050d5fb1b.js"]};/*]]>*/</script><script src="/polyfill-55ff3df016f1bf520dc3.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-33322b93090050d5fb1b.js" async=""></script><script src="/e3fcc2076860498e4deed45a66207f3abfe77099-7463bcd7e6ea2ff920c3.js" async=""></script><script src="/commons-71b7b1d300b3ebc29573.js" async=""></script><script src="/app-0e6676e41df17ef172ed.js" async=""></script><script src="/framework-24ad6bf468f69b85cc4b.js" async=""></script><script src="/webpack-runtime-9d111699065b1154a31b.js" async=""></script></body></html>
